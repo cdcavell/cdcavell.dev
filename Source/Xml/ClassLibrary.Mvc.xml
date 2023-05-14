@@ -1,0 +1,1130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Mvc.Authorization.CustomAuthorizeAttribute">
+            <summary>
+            Custom  authorization attribute
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/26/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Authorization.CustomAuthorizeAttribute.#ctor(System.String)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="permissions">string</param>
+            <method>CustomAuthorizeAttribute(string permissions) : base(typeof(CustomAuthorizeFilter))</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Authorization.CustomAuthorizeFilter">
+            <summary>
+            Custom  authorization filter
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/26/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Authorization.CustomAuthorizeFilter.#ctor(Microsoft.Extensions.Logging.ILogger{ClassLibrary.Mvc.Authorization.CustomAuthorizeFilter},Microsoft.AspNetCore.Http.IHttpContextAccessor,System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger&lt;CustomAuthorizeFilter&gt;</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="permissions">List&lt;string&gt;</param>
+            <method>CustomAuthorizeFilter(ILogger&lt;CustomAuthorizeFilter&gt; logger, IHttpContextAccessor httpContextAccessor, List&lt;string&gt; permissions)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Authorization.CustomAuthorizeFilter.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Validation method
+            </summary>
+            <param name="context">AuthorizationFilterContext</param>
+            <method>OnAuthorization(AuthorizationFilterContext context)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Authorization.CustomCookieAuthenticationEvents">
+            <summary>
+            Class to set absolute authentication cookie lifetime. After a given period 
+            user won't be able to extend it anymore and will be kicked from the app.
+            &lt;br/&gt;&lt;br/&gt;
+            https://brokul.dev/authentication-cookie-lifetime-and-sliding-expiration
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/28/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Authorization.CustomCookieAuthenticationEvents.SigningIn(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)">
+            <summary>
+            Signing In Method
+            </summary>
+            <param name="context">CookieSigningInContext</param>
+            <method>SigningIn(CookieSigningInContext context)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Authorization.CustomCookieAuthenticationEvents.ValidatePrincipal(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)">
+            <summary>
+            Validate Principal Method
+            </summary>
+            <param name="context">CookieValidatePrincipalContext</param>
+            <returns>WebApplication</returns>
+            <method>ValidatePrincipal(CookieValidatePrincipalContext context)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Controllers.WebBaseController`1">
+            <class>WebBaseController</class>
+            <summary>
+            Base controller class for web application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/31/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 12/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.1 | 10/15/2022 | Block Harassing IP Addresses |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/08/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 09/04/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">
+            <value>ILogger</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._webHostEnvironment">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._httpContextAccessor">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._localizer">
+            <value>IStringLocalizer</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._sharedLocalizer">
+            <value>IStringLocalizer&lt;SharedResource&gt;</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._cultureName">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._invalidModelState">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._logMessageHeader">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._remoteIPAddress">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._controller">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._action">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._id">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._pathQueryString">
+            <value>string</value>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Controllers.WebBaseController`1._queryString">
+            <value>string</value>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            WebBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            )
+            </method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action method is invoked
+            </summary>
+            <param name="context">ActionExecutingContext</param>
+            <exception>ArgumentNullException</exception>
+            <exception>NullReferenceException</exception>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.InvalidModelState">
+            <summary>
+            Return BadRequestObjectResult containing ModelState error messages
+            </summary>
+            <returns>BadRequestObjectResult</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.ValidateModel``1(``0)">
+            <summary>
+            Global model validation method (View found in HomeSite.ClassLibrary.Razor)
+            </summary>
+            <param name="model">Model</param>
+            <returns>KeyValuePair&lt;int, string&gt;</returns>
+            <method>ValidateModel&lt;M&gt;(M model)</method>
+            <exception>ArgumentNullException</exception>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.ExceptionMessage(System.Exception)">
+            <summary>
+            Exception Message
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.SetCulture(ClassLibrary.Mvc.Models.Home.CultureModel)">
+            <summary>
+            Set current culture language
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Controllers.WebBaseController`1.Error(System.Int32)">
+            <summary>
+            Global error handling
+            </summary>
+            <param name="id">int</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Http.ApiClient">
+            <summary>
+            Http client to handle api requests. 
+            and can be overriden with TimeOut property.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Http.ApiClient.StatusCode">
+            <value>HttpStatusCode</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Http.ApiClient.IsResponseSuccess">
+            <value>bool</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Http.ApiClient.TimeOut">
+            <value>TimeSpan</value>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.#ctor(System.String)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="baseUrl">string</param>
+            <method>ApiClient(string baseUrl)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.SetBearerToken(System.String)">
+            <summary>
+            Set Bearer Authentication Header
+            </summary>
+            <param name="token">string</param>
+            <method>SetBearerToken(string token)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.AddRequestHeader(System.String,System.String)">
+            <summary>
+            Add request header
+            </summary>
+            <param name="name">string</param>
+            <param name="value">value</param>
+            <method>AddRequestHeader(string name, string value)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.GetResponseString">
+            <summary>
+            Get response string
+            </summary>
+            <returns>string</returns>
+            <method>GetResponseString()</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.GetResponseObject``1">
+            <summary>
+            Get response object
+            </summary>
+            <returns>T?</returns>
+            <method>GetResponseObject&lt;T&gt;()</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.SendFormUrlEncodedRequest(System.Net.Http.HttpMethod,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Send Form URL Encoded Request
+            </summary>
+            <param name="httpMethod">HttpMethod</param>
+            <param name="requestUri">string</param>
+            <param name="content">Dictionary&lt;string, string&gt;</param>
+            <returns>Task&lt;HttpStatusCode&gt;</returns>
+            <method>SendFormUrlEncodedRequest(HttpMethod httpMethod, string requestUri, Dictionary&lt;string, string&gt; content)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.SendJasonRequest(System.Net.Http.HttpMethod,System.String,System.Object)">
+            <summary>
+            Send Jason Request
+            </summary>
+            <param name="httpMethod">HttpMethod</param>
+            <param name="requestUri">string</param>
+            <param name="content">Object</param>
+            <returns>Task&lt;HttpStatusCode&gt;</returns>
+            <method>SendJasonRequest(HttpMethod httpMethod, string requestUri, Object content)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.SendRequest(System.Net.Http.HttpMethod,System.String)">
+            <summary>
+            Send Request (No Content)
+            </summary>
+            <param name="httpMethod">HttpMethod</param>
+            <param name="requestUri">string</param>
+            <returns>Task&lt;HttpStatusCode&gt;</returns>
+            <method>SendRequest(HttpMethod httpMethod, string requestUri)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.ApiClient.SendRawRequest(System.Net.Http.HttpMethod,System.String)">
+            <summary>
+            Send Raw Request (No Content)
+            </summary>
+            <param name="httpMethod">HttpMethod</param>
+            <param name="requestUri">string</param>
+            <returns>Task&lt;HttpStatusCode&gt;</returns>
+            <method>SendRequestRaw(HttpMethod httpMethod, string requestUri)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Http.StatusCodeDefinition">
+            <summary>
+            Class for returning defintion of given Html status code
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.StatusCodeDefinition.GetCodeDefinition(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <returns>
+            KeyValuePair\&lt;int, string\&gt;
+            </returns>
+            <param name="code">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>GetCodeDefinition(int code, string culture, IStringLocalizer&lt;SharedResource&gt; sharedLocalizer)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Http.StatusCodeDefinition.ToString(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <returns>
+            string
+            </returns>
+            <param name="code">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>ToString(int code, string culture, IStringLocalizer&lt;SharedResource&gt; sharedLocalizer)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Localization.CultureHelper">
+            <class>CultureHelper</class>
+            <summary>
+            Culture Helper class by Nadeem Afana
+            https://afana.me/archive/2011/01/14/aspnet-mvc-internationalization.aspx/
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.IsRighToLeft">
+            <summary>
+            Returns true if the language is a right-to-left language. Otherwise, false.
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetImplementedCulture(System.String)">
+            <summary>
+            Returns a valid culture name based on "name" parameter. If "name" is not valid, it returns the default culture "en-US"
+            </summary>
+            <param name="name">Culture's name (e.g. en-US)</param>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetDefaultCulture">
+            <summary>
+            Returns default culture name which is the first name decalared (e.g. en-US)
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetSupportedCultures">
+            <summary>
+            Returns list of supported culture names
+            </summary>
+            <returns>List&lt;string&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetCurrentCulture">
+            <summary>
+            Returns current culture name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetCurrentNeutralCulture">
+            <summary>
+            Returns current neutral culture name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Localization.CultureHelper.GetNeutralCulture(System.String)">
+            <summary>
+            Returns neutral culture name for given culture
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Localization.SharedResource">
+            <class>SharedResource</class>
+            <summary>
+            Shared Resource for Localization Resources
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Models.Home.CultureModel">
+            <class>CultureModel</class>
+            <summary>
+            Culture model class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/23/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="F:ClassLibrary.Mvc.Models.Home.CultureModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.CultureModel.Culture">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.CultureModel.ReturnUrl">
+            <value>string</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Models.Home.ErrorViewModel">
+            <summary>
+            Error view model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.ErrorViewModel.StatusCode">
+            <value>int</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.ErrorViewModel.StatusMessage">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.ErrorViewModel.Exception">
+            <value>Exception</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Models.Home.ErrorViewModel.RequestId">
+            <value>string</value>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Models.Home.ErrorViewModel.#ctor(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="statusCode">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>ErrorViewModel(int statusCode, string culture, IStringLocalizer&lt;SharedResource&gt; )</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
+            <summary>
+            AppSettings Web Service
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/25/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.1 | 10/15/2022 | Block Harassing IP Addresses |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.#ctor(Microsoft.Extensions.Options.IOptions{ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options">IOptions&lt;AppSettingsServiceOptions&gt;</param>
+            <method>UserAuthorizationService(IOptions&lt;UserAuthorizationServiceOptions&gt; options)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AssemblyName">
+            <summary>
+            Get AssemblyName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AssemblyVersion">
+            <summary>
+            Get AssemblyVersion value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.LastModifiedDate">
+            <summary>
+            Get LastModifiedDate value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.EnvironmentName">
+            <summary>
+            Get EnvironmentName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.IsDevelopment">
+            <summary>
+            Get IsDevelopment value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.IsProduction">
+            <summary>
+            Get IsProduction value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.GetApiScopes">
+            <summary>
+            Get ApiScopes object
+            </summary>
+            <returns>List&lt;ApiScope&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.GetClients">
+            <summary>
+            Get Clients object
+            </summary>
+            <returns>List&lt;Client&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.ToJson">
+            <summary>
+            Get raw json string value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.ToObject``1">
+            <summary>
+            Get full json dynamic object
+            </summary>
+            <returns>T?</returns>
+            <method>public T? ToObject&lt;T&gt;()</method>
+            <exception>NullReferenceException</exception>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.IsIPAddressBlocked(System.String)">
+            <summary>
+            Get if IPAddress is blocked
+            </summary>
+            <param name="ipAddress">string</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.GetRoles">
+            <summary>
+            Get Roles object
+            </summary>
+            <returns>List&lt;Role&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.GetSysAdmin">
+            <summary>
+            Get System Administrator object
+            </summary>
+            <returns>SysAdmin</returns>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions">
+            <summary>
+            AppSettings Service Options
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions.AppSettings">
+            <value>object</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptionsExtention">
+            <summary>
+            AppSettings Web Service Options Extension
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptionsExtention.AddAppSettingsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions})">
+            <summary>
+            Add AppSettings Web Service Options Extention
+            </summary>
+            <param name="serviceCollection">IServiceCollection</param>
+            <param name="options">Action&lt;UserAuthorizationServiceOptions&gt;</param>
+            <method>AddAppSettingsService(this IServiceCollection serviceCollection, Action&lt;UserAuthorizationServiceOptions&gt; options)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService">
+            <summary>
+            AppSettings Web Service Interface
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/25/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.1 | 10/15/2022 | Block Harassing IP Addresses |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AssemblyName">
+            <summary>
+            Get AssemblyName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AssemblyVersion">
+            <summary>
+            Get AssemblyVersion value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.LastModifiedDate">
+            <summary>
+            Get LastModifiedDate value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.EnvironmentName">
+            <summary>
+            Get EnvironmentName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.IsDevelopment">
+            <summary>
+            Get IsDevelopment value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.IsProduction">
+            <summary>
+            Get IsProduction value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.GetApiScopes">
+            <summary>
+            Get ApiScopes object
+            </summary>
+            <returns>List&lt;ApiScope&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.GetClients">
+            <summary>
+            Get Clients object
+            </summary>
+            <returns>List&lt;Client&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.ToJson">
+            <summary>
+            Get raw json string value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.ToObject``1">
+            <summary>
+            Get dynamic object
+            </summary>
+            <returns>T?</returns>
+            <method>public T ToObject&lt;T&gt;()</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.IsIPAddressBlocked(System.String)">
+            <summary>
+            Get if IPAddress is blocked
+            </summary>
+            <param name="ipAddress">string</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.GetRoles">
+            <summary>
+            Get Roles object
+            </summary>
+            <returns>List&lt;Role&gt;</returns>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.GetSysAdmin">
+            <summary>
+            Get System Administrator object
+            </summary>
+            <returns>SysAdmin</returns>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/25/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.1 | 10/15/2022 | Block Harassing IP Addresses |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Contstructor 
+            </summary>
+            <param name="configuration">IConfiguration</param>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.AssemblyName">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.AssemblyVersion">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.EnvironmentName">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.IsDevelopment">
+            <value>bool</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.IsProduction">
+            <value>bool</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.LastModifiedDateTime">
+            <value>DateTime</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.Clients">
+            <value>List&lt;Client&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.ApiScopes">
+            <value>List&lt;ApiScope&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.BlockList">
+            <value>List&lt;string&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.Roles">
+            <value>List&lt;Role&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.SysAdmin">
+            <value>SysAdmin</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.Models.Role">
+            <summary>
+            Role information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/24/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.Role.Name">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.Role.Claims">
+            <value>List&lt;string&gt;</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.AppSettings.Models.SysAdmin">
+            <summary>
+            System Administrator information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/25/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.AppSettings.Models.SysAdmin.Email">
+            <value>string</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.Email.EmailService">
+            <summary>
+            Email Web Service
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.Email.EmailService.MailMessage">
+            <value>MailMessage</value>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.Email.EmailService.#ctor(Microsoft.Extensions.Logging.ILogger{ClassLibrary.Mvc.Services.Email.EmailService},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{ClassLibrary.Mvc.Services.Email.EmailServiceOptions})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">ILogger&lt;EmailService&gt;</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="options">IOptions&lt;EmailServiceOptions&gt;</param>
+            <method>EmailService(ILogger&lt;EmailService&gt; logger, IHttpContextAccessor httpContextAccessor, IOptions&lt;EmailServiceOptions&gt; options)</method>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.Email.EmailService.Send(MimeKit.MimeMessage)">
+            <summary>
+            Send mail message
+            </summary>
+            <param name="mailMessage">MimeMessage</param>
+            <returns>Task</returns>
+            <exception cref="T:System.Exception">Invalid Property</exception>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.Email.EmailServiceOptions">
+            <summary>
+            Email Web Service Options
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.Email.EmailServiceOptions.Host">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.Email.EmailServiceOptions.Port">
+            <value>int</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.Email.EmailServiceOptions.Credentials">
+            <value>NetworkCredential</value>
+        </member>
+        <member name="P:ClassLibrary.Mvc.Services.Email.EmailServiceOptions.EnableSsl">
+            <value>bool</value>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.Email.EmailServiceOptionsExtention">
+            <summary>
+            Email Web Service Options Extension
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.Email.EmailServiceOptionsExtention.AddEmailService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{ClassLibrary.Mvc.Services.Email.EmailServiceOptions})">
+            <summary>
+            Add Email Web Service Options Extention
+            </summary>
+            <param name="serviceCollection">IServiceCollection</param>
+            <param name="options">Action&lt;UserAuthorizationServiceOptions&gt;</param>
+            <method>AddAppSettingsService(this IServiceCollection serviceCollection, Action&lt;UserAuthorizationServiceOptions&gt; options)</method>
+        </member>
+        <member name="T:ClassLibrary.Mvc.Services.Email.IEmailService">
+            <summary>
+            Email Web Service Interface
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Mvc.Services.Email.IEmailService.Send(MimeKit.MimeMessage)">
+            <summary>
+            Send mail message
+            </summary>
+            <param name="mailMessage">MimeMessage</param>
+            <returns>Task</returns>
+        </member>
+        <member name="T:System.Security.Claims.ClaimsPrincipalExtensions">
+            <summary>
+            Extension methods for existing ClaimsPrincipal types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/31/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipalExtensions.LogMessageHeader(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Method to return standard log message header
+            </summary>
+            <param name="claimsPrincipal">this ClaimsPrincipal</param>
+            <returns>string</returns>
+            <method>LogMessageHeader(this ClaimsPrincipal claimsPrincipal)</method>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipalExtensions.HasRoleValue(System.Security.Claims.ClaimsPrincipal,System.String)">
+            <summary>
+            Method to return if User.Claims has given role value
+            </summary>
+            <param name="claimsPrincipal">this ClaimsPrincipal</param>
+            <param name="roleValues">string</param>
+            <returns>bool</returns>
+            <method>HasRoleValue(this ClaimsPrincipal claimsPrincipal, string roleValue)</method>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipalExtensions.GetEmail(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Method to return if User.Claims has given role value
+            </summary>
+            <param name="claimsPrincipal">this ClaimsPrincipal</param>
+            <returns>string</returns>
+            <method>GetEmail(this ClaimsPrincipal claimsPrincipal)</method>
+        </member>
+        <member name="T:System.StringExtensions">
+            <summary>
+            Extension methods for existing string types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 09/04/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.StringExtensions.IsValidEmail(System.String)">
+            <summary>
+            Method to determine if string is a valid email address
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsValidEmail(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.IsValidUrl(System.String)">
+            <summary>
+            Method to determine if string is a valid url
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsValidUrl(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.IsLocalUrl(System.String)">
+            <summary>
+            Method to determine if string is a local url
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsLocalUrl(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.Clean(System.String)">
+            <summary>
+            Method to remove "Carriage Return" and "Line Feed" as well as Html filtering to provide proper neutralization.
+            </summary>
+            <param name="value">this string</param>
+            <returns>string</returns>
+            <method>Clean(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.IsValidGuid(System.String)">
+            <summary>
+            Method to determine if string is a valid Guid
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsValidGuid(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.UTF8(System.String)">
+            <summary>
+            UTF8 Encoding
+            </summary>
+            <param name="input">this string</param>
+            <returns>string</returns>
+            <method>UTF8(this string input)</method>
+        </member>
+        <member name="M:System.StringExtensions.Sha256(System.String)">
+            <summary>
+            Creates a SHA256 hash of the specified input.
+            </summary>
+            <param name="input">The input.</param>
+            <returns>A hash</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Http.HttpRequestExtensions">
+            <summary>
+            Extension methods for existing HttpRequest types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.0.0 | 09/04/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.IsLocalUrl(Microsoft.AspNetCore.Http.HttpRequest,System.String)">
+            <summary>
+            Method to determine if string is a local url
+            </summary>
+            <param name="request">this HttpRequest</param>
+            <param name="url">string</param>
+            <returns>bool</returns>
+            <method>IsLocalUrl(this HttpRequest request, string url)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.GetUri(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Method to return Uri of HttpRequest
+            </summary>
+            <param name="request">this HttpRequest</param>
+            <returns>bool</returns>
+            <method>GetUri(this HttpRequest request)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.GetRemoteAddress(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Method to return IPAddress of reomote address for HttpRequest
+            </summary>
+            <param name="request">HttpRequest</param>
+            <returns>IPAddress</returns>
+            <method>GetRemoteAddress(this IPAddress ipAddress)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.IsAjaxRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Method to return if HttpRequest is an AJax request
+            </summary>
+            <param name="httpRequest">this HttpRequest</param>
+            <returns>bool</returns>
+            <method>IsAjaxRequest(this HttpRequest httpRequest)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.LogMessageHeader(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Method to return standard log message header
+            </summary>
+            <param name="httpRequest">this HttpRequest</param>
+            <returns>string</returns>
+            <method>LogMessageHeader(this HttpRequest httpRequest)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Http.HttpRequestExtensions.IsAuthority(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Method to return if request is for authority server
+            </summary>
+            <param name="httpRequest">this HttpRequest</param>
+            <returns>bool</returns>
+            <method>IsAuthority(this HttpRequest httpRequest)</method>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Html.IHtmlContentExtensions">
+            <summary>
+            Extension methods for existing IHtmlContent types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/31/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Html.IHtmlContentExtensions.GetString(Microsoft.AspNetCore.Html.IHtmlContent)">
+            <summary>
+            Returns HTML string for IHtmlContent.
+            &lt;br /&gt;&lt;br /&gt;
+            Original Developer: cygnim (https://stackoverflow.com/users/1152681/cygnim)
+            &lt;br /&gt;&lt;br /&gt;
+            Original Source: https://stackoverflow.com/a/33679999/8041900
+            </summary>
+            <param name="content">IHtmlContent</param>
+            <returns>string</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelperExtensions">
+            <summary>
+            Extension methods for existing IHtmlHelper types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/20/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelperExtensions.Gravatar(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper,System.String,System.Nullable{System.Int32},Microsoft.AspNetCore.Mvc.Rendering.GravatarRating,Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage,System.Object)">
+            <summary>
+            Creates HTML for an &lt;c&gt;img&lt;/c&gt; element that presents a Gravatar icon (https://en.gravatar.com/).
+            &lt;br /&gt;&lt;br /&gt;
+            Original Developer: Ricardo Polo Jaramillo (https://stackoverflow.com/users/909974/ricardo-polo-jaramillo)
+            &lt;br /&gt;&lt;br /&gt;
+            Original Source: https://stackoverflow.com/a/3561841/8041900
+            </summary>
+            <param name="html">The &lt;see cref="IHtmlHelper"/&gt; upon which this extension method is provided.</param>
+            <param name="email">The email address used to identify the icon.</param>
+            <param name="size">An optional parameter that specifies the size of the square image in pixels.</param>
+            <param name="rating">An optional parameter that specifies the safety level of allowed images.</param>
+            <param name="defaultImage">An optional parameter that controls what image is displayed for email addresses that don't have associated Gravatar icons.</param>
+            <param name="htmlAttributes">An optional parameter holding additional attributes to be included on the <c>img</c> element.</param>
+            <returns>An HTML string of the <c>img</c> element that presents a Gravatar icon.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating">
+            <summary>
+            GravatarRating Enumeration
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.Default">
+            <summary>
+            The default value as specified by the Gravatar service.  That is, no rating value is specified
+            with the request.  At the time of authoring, the default level was <see cref="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.G"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.G">
+            <summary>
+            Suitable for display on all websites with any audience type.  This is the default.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.Pg">
+            <summary>
+            May contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.R">
+            <summary>
+            May contain such things as harsh profanity, intense violence, nudity, or hard drug use.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarRating.X">
+            <summary>
+            May contain hardcore sexual imagery or extremely disturbing violence.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage">
+            <summary>
+            GravatarDefaultImage Enumeration
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.Default">
+            <summary>
+            The default value image.  That is, the image returned when no specific default value is included
+            with the request.  At the time of authoring, this image is the Gravatar icon.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.Http404">
+            <summary>
+            Do not load any image if none is associated with the email hash, instead return an HTTP 404 (File Not Found) response.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.MysteryMan">
+            <summary>
+            A simple, cartoon-style silhouetted outline of a person (does not vary by email hash).
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.Identicon">
+            <summary>
+            A geometric pattern based on an email hash.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.MonsterId">
+            <summary>
+            A generated 'monster' with different colors, faces, etc.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Mvc.Rendering.GravatarDefaultImage.Wavatar">
+            <summary>
+            Generated faces with differing features and backgrounds.
+            </summary>
+        </member>
+    </members>
+</doc>

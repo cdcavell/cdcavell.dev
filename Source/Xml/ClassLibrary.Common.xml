@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary.Common</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Common.AsciiCodes">
+            <summary>
+            Static class for converting ascii decimal value to string equivalent.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.NUL">
+            <value>(null)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.SOH">
+            <value>(start of heading)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.STX">
+            <value>(start of text)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.ETX">
+            <value>(end of text)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.EOT">
+            <value>(end of transmission)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.ENQ">
+            <value>(enquiry)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.ACK">
+            <value>(acknowledge)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.BEL">
+            <value>(bell)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.BS">
+            <value>(backspace)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.TAB">
+            <value>(horizontal tab)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.LF">
+            <value>(NL line feed, new line)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.VT">
+            <value>(vertical tab)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.FF">
+            <value>(NP form feed, new page)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.CR">
+            <value>(carriage return)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.SO">
+            <value>(shift out)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.SI">
+            <value>(shift in)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.DLE">
+            <value>(data link escape)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.DC1">
+            <value>(device control 1)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.DC2">
+            <value>(device control 2)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.DC3">
+            <value>(device control 3)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.DC4">
+            <value>(device control 4)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.NAK">
+            <value>(negative acknowledge)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.SYN">
+            <value>(synchronous idle)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.ETB">
+            <value>(end of trans. block)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.CAN">
+            <value>(cancel)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.EM">
+            <value>(end of medium)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.SUB">
+            <value>(substitute)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.ESC">
+            <value>(escape)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.FS">
+            <value>(file separator)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.GS">
+            <value>(group separator)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.RS">
+            <value>(record separator)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.US">
+            <value>(unit separator)</value>
+        </member>
+        <member name="P:ClassLibrary.Common.AsciiCodes.CRLF">
+            <value>(carriage return) + (NL line feed, new line)</value>
+        </member>
+        <member name="M:ClassLibrary.Common.AsciiCodes.ToChar(System.Int32)">
+            <summary>
+            Method to return char value of given ascii decimal
+            </summary>
+            <param name="dec">int</param>
+            <returns>char</returns>
+            <method>ToChar(int dec)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.AsciiCodes.ToString(System.Int32)">
+            <summary>
+            Method to return string value of given ascii decimal
+            </summary>
+            <param name="dec">int</param>
+            <returns>string</returns>
+            <method>ToString(int dec)</method>
+        </member>
+        <member name="T:ClassLibrary.Common.Html.Tags">
+            <summary>
+            Class to return string of Html tag.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.LineBreak">
+            <summary>
+            Method to return one new line
+            </summary>
+            <returns>
+            string
+            </returns>
+            <method>LineBreak()</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.LineBreak(System.Int32)">
+            <summary>
+            Method to return multple new lines
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="count">int</param>
+            <method>LineBreak(int count)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Space">
+            <summary>
+            Method to return one space
+            </summary>
+            <returns>
+            string
+            </returns>
+            <method>Space()</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Space(System.Int32)">
+            <summary>
+            Method to return multipe spaces
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="count">int</param>
+            <method>Space(int count)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Brackets(System.String)">
+            <summary>
+            Method to wrap given string in brakets
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Brackets(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Bold(System.String)">
+            <summary>
+            Method to wrap given string in bold tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Bold(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Italic(System.String)">
+            <summary>
+            Method to wrap given string in italic tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Italic(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Important(System.String)">
+            <summary>
+            Method to wrap given string in strong tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Important(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Emphasized(System.String)">
+            <summary>
+            Method to wrap given string in em tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Emphasized(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Marked(System.String)">
+            <summary>
+            Method to wrap given string in mark tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Marked(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Small(System.String)">
+            <summary>
+            Method to wrap given string in small tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Small(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Deleted(System.String)">
+            <summary>
+            Method to wrap given string in del tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Deleted(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Inserted(System.String)">
+            <summary>
+            Method to wrap given string in ins tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Inserted(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Subscript(System.String)">
+            <summary>
+            Method to wrap given string in sub tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Subscript(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Superscript(System.String)">
+            <summary>
+            Method to wrap given string in sup tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Superscript(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Quote(System.String)">
+            <summary>
+            Method to wrap given string in q tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Quote(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.BlockQuote(System.String,System.String)">
+            <summary>
+            Method to wrap given string in blockquote tags with given citing
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <param name="cite">string</param>
+            <method>BlockQuote(string item, string cite)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Abbreviation(System.String)">
+            <summary>
+            Method to wrap given string in abbr tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Abbreviation(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Address(System.String)">
+            <summary>
+            Method to wrap given string in address tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Address(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Cite(System.String)">
+            <summary>
+            Method to wrap given string in cite tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Cite(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.BidirectionalOverride(System.String)">
+            <summary>
+            Method to wrap given string in bdo tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>BidirectionalOverride(string item)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Html.Tags.Paragraph(System.String)">
+            <summary>
+            Method to wrap given string in p tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Paragraph(string item)</method>
+        </member>
+        <member name="T:ClassLibrary.Common.Security.PasswordStore">
+            <summary>
+            Password utility class&lt;br /&gt;
+            ------------------------------------------------------------&lt;br /&gt;
+            Obtained from: https://stackoverflow.com/a/39855417/8041900 &lt;br /&gt;
+            ------------------------------------------------------------&lt;br /&gt;
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 05/14/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.PasswordStore.GeneratePassword(System.Int32,System.Int32)">
+            <summary>Generates a random password of the specified length.</summary>
+            <returns>A random password of the specified length.</returns>
+            <param name="length">The number of characters in the generated password. The length must be between 1 and 128 characters. </param>
+            <param name="numberOfNonAlphanumericCharacters">The minimum number of non-alphanumeric characters (such as @, #, !, %, &amp;, and so on) in the generated password.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="length" /> is less than 1 or greater than 128 -or-<paramref name="numberOfNonAlphanumericCharacters" /> is less than 0 or greater than <paramref name="length" />. </exception>
+        </member>
+        <member name="T:ClassLibrary.Common.Security.RandomGenerator">
+            <summary>
+            Class for generating random number.&lt;br /&gt;&lt;br /&gt;
+            https://stackoverflow.com/a/42426750/8041900
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 05/14/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.RandomGenerator.#ctor">
+            <summary>
+            Constructor Method
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.RandomGenerator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns random number 
+            </summary>
+            <param name="minValue">int</param>
+            <param name="maxExclusiveValue">int</param>
+            <returns>int</returns>
+        </member>
+        <member name="T:ClassLibrary.Common.Security.SelfSignedCertificate">
+            <summary>
+            Class for dynamically building self-signed certificate.
+            Certificate can be constructed to be valid from one day
+            through maximum of ten years. Defaults to one day.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 05/14/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor">
+            <summary>
+            Constructor Method
+            </summary>
+            <method>SelfSignedCertificate()</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor(System.Int32)">
+            <summary>
+            Constructor Method
+            </summary>
+            <param name="daysValid">int</param>
+            <method>SelfSignedCertificate(int daysValid)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor(System.String)">
+            <summary>
+            Constructor Method
+            </summary>
+            <param name="certificateName">string</param>
+            <method>SelfSignedCertificate(string certificateName)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor(System.String,System.String)">
+            <summary>
+            Constructor Method
+            </summary>
+            <param name="certificateName">string</param>
+            <param name="password">string</param>
+            <method>SelfSignedCertificate(string certificateName, string password)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor Method
+            </summary>
+            <param name="certificateName">string</param>
+            <param name="daysValid">int</param>
+            <method>SelfSignedCertificate(int daysValid, string certificateName)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Constructor Method
+            </summary>
+            <param name="daysValid">int</param>
+            <param name="certificateName">string</param>
+            <param name="password">string</param>
+            <method>SelfSignedCertificate(int daysValid, string certificateName, string password)</method>
+        </member>
+        <member name="M:ClassLibrary.Common.Security.SelfSignedCertificate.Get">
+            <summary>
+            Method to extract certificate
+            </summary>
+            <method>Get()</method>
+            <returns>X509Certificate2</returns>
+        </member>
+        <member name="P:ClassLibrary.Common.Security.SelfSignedCertificate.Name">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Common.Security.SelfSignedCertificate.PublicKey">
+            <value>byte[]</value>
+        </member>
+        <member name="P:ClassLibrary.Common.Security.SelfSignedCertificate.PublicKeyBase64">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Common.Security.SelfSignedCertificate.EffectiveDate">
+            <value>DateTime</value>
+        </member>
+        <member name="P:ClassLibrary.Common.Security.SelfSignedCertificate.ExperationDate">
+            <value>DateTime</value>
+        </member>
+        <member name="T:ClassLibrary.Common.Xml.Transform">
+            <summary>
+            Class to perform XSLT Transformation
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Common.Xml.Transform.Write(System.String,System.String,System.String)">
+            <summary>
+            Method to perform XSLT Transformation and write out file
+            </summary>
+            <param name="inputXslt">string</param>
+            <param name="inputXml">string</param>
+            <param name="outputFile">string</param>
+            <method>Write(string inputXslt, string inputXml, string outputFile)</method>
+        </member>
+        <member name="T:System.Reflection.AssemblyExtensions">
+            <summary>
+            Extension methods for existing Assembly types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/07/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.Reflection.AssemblyExtensions.GetParentAssembly(System.Reflection.Assembly)">
+            <summary>
+            Method to return parent assembly in chain
+            </summary>
+            <param name="value">Assembly</param>
+            <method>GetParentAssembly(this Assembly assembly)</method>
+        </member>
+        <member name="T:System.DateTimeExtensions">
+            <summary>
+            Extension methods for existing DateTime types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.0.0 | 08/20/2022 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.DateTimeExtensions.Timestamp(System.DateTime)">
+            <summary>
+            Method to return timestamp of current DateTime value
+            </summary>
+            <param name="value">this DateTime</param>
+            <returns>string</returns>
+            <method>Timestamp(this DateTime value)</method>
+        </member>
+        <member name="M:System.DateTimeExtensions.Age(System.DateTime)">
+            <summary>
+            Method to return age of current DateTime value in years
+            </summary>
+            <param name="value">this DateTime</param>
+            <returns>string</returns>
+            <method>Timestamp(this DateTime value)</method>
+        </member>
+    </members>
+</doc>
