@@ -40,6 +40,7 @@
 		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
 		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
 		<_findLibraryFile Include="../../../Source/Xml/ClassLibrary.Common.dll" />
+		<_findEnvironmentFile Include="../../../EnvironmentVariables/cdcavell.dev.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,12 +72,12 @@
 	  </EmbeddedResource>
 	</ItemGroup>
 
-	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)') AND Exists('@(_findEnvironmentFile)')">
 		<Exec Command="cd ../../../Source/Xml/" />
 		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
 	</Target>
 
-	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)') AND Exists('@(_findEnvironmentFile)')">
 		<Exec Command="cd ../../../Source/Xml/wiki/" />
 		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
 			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
