@@ -73,8 +73,14 @@
 
 	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
 		<Exec Command="cd ../../../Source/Xml/wiki/" />
-		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
-		<Exec Command="git add ." WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
+		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
+			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
+		</Exec>
+		<Exec Command="Echo Skipped staging" Condition=" '@(ErrorCode)' != '0'" />
+		<Exec Command="git add ." WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
+			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
+		</Exec>
+		<Exec Command="Echo Skipped commit" Condition=" '@(ErrorCode)' != '0'" />
 		<Exec Command="git commit -m &quot;Update wiki submodule&quot;" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
 			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
 		</Exec>
