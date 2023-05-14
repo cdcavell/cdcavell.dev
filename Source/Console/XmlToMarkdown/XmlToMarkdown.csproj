@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.0.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
+    <Authors>Christopher D. Cavell</Authors>
+    <Copyright>2022 - Christopher D. Cavell</Copyright>
+    <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Libraries\ClassLibrary.Common\ClassLibrary.Common.csproj" />
+	</ItemGroup>
+
+	<Target Name="DeleteXmlToMarkdown" AfterTargets="BeforeBuild" DependsOnTargets="BeforeBuild">
+		<ItemGroup>
+			<_deleteExecFile Include="../../../Source/Xml/$(TargetFileName)" />
+			<_deleteRuntimeFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
+			<_deleteLibraryFile Include="../../../Source/Xml/ClassLibrary.Common.dll" />
+			<_deleteTransformFile Include="../../../Source/Xml/Transform.xsl" />
+		</ItemGroup>
+		<Delete Files="@(_deleteExecFile)" Condition="Exists(@(_deleteExecFile))" />
+		<Delete Files="@(_deleteRuntimeFile)" Condition="Exists(@(_deleteRuntimeFile))" />
+		<Delete Files="@(_deleteLibraryFile)" Condition="Exists(@(_deleteLibraryFile))" />
+		<Delete Files="@(_deleteTransformFile)" Condition="Exists(@(_deleteTransformFile))" />
+	</Target>
+
+	<Target Name="CopyXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="DeleteXmlToMarkdown">
+		<ItemGroup>
+			<_copyExecFile Include="$(TargetDir)$(TargetFileName)" />
+			<_copyRuntimeFile Include="$(TargetDir)XmlToMarkdown.runtimeconfig.json" />
+			<_copyLibraryFile Include="$(TargetDir)ClassLibrary.Common.dll" />
+			<_copyTransformFile Include="$(ProjectDir)Transform.xsl" />
+		</ItemGroup>
+		<Copy SourceFiles="@(_copyExecFile)" DestinationFolder="../../../Source/Xml/" />
+		<Copy SourceFiles="@(_copyRuntimeFile)" DestinationFolder="../../../Source/Xml/" />
+		<Copy SourceFiles="@(_copyLibraryFile)" DestinationFolder="../../../Source/Xml/" />
+		<Copy SourceFiles="@(_copyTransformFile)" DestinationFolder="../../../Source/Xml/" />
+	</Target>
+
+	<ItemGroup>
+		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
+		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
+		<_findLibraryFile Include="../../../Source/Xml/ClassLibrary.Common.dll" />
+	</ItemGroup>
+
+	<Target Name="BuildXmlToMarkdown" AfterTargets="CopyXmlToMarkdown" DependsOnTargets="CopyXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+		<Exec Command="cd ../../../Source/Xml/" />
+		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
+	</Target>
+
+</Project>

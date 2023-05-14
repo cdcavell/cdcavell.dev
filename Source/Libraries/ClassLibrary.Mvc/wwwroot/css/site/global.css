@@ -1,0 +1,68 @@
+﻿/*----------- site.css -----------*/
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    line-height: 1.15;
+    background: url("/_content/ClassLibrary.Mvc/img/Jackdaw.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+::selection {
+    background-color: rgba(40, 56, 35, 0.9); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background-color: rgba(40, 56, 35, 0.9); /* Gecko Browsers */
+}
+
+.logo {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.request-id {
+    font-size: x-small;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-collapse .navbar-nav {
+        border-radius: 10px;
+        background-color: rgba(40, 56, 35, 0.9);
+    }
+
+    .navbar .navbar-collapse .navbar-nav li {
+        border: 2px solid #f8f9fa;
+        border-radius: 20px;
+        margin: 4px;
+    }
+
+    .languages-block {
+        display: none;
+    }
+
+    .social-media-block {
+        display: none;
+    }
+
+    .mbYTP_wrapper {
+        width: 25%;
+        height: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-item-collapse {
+        display: none;
+    }
+
+    .mbYTP_wrapper {
+        width: 115%;
+        height: 115%;
+    }
+}

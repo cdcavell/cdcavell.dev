@@ -1,0 +1,42 @@
+﻿
+<video autoplay muted id="BackgroundVideo">
+    <source src="/vid/Jackdaw.mp4" type="video/mp4">
+</video>
+
+<div class="container m-0 p-0 h-100 w-100">
+    <div class="row m-0 p-0 h-100 align-items-center justify-content-center">
+
+        <h1 id="header1" class="display-1">W E L C O M E</h1>
+        <div id="fader" class="col-12 m-0 p-0 text-center">
+            <h2 class="display-1">W E L C O M E</h2>
+            <h2 class="display-1">W E L K O M</h2>
+            <h2 class="display-1">B I E N V E N U E</h2>
+            <h2 class="display-1">B I E N V E N I D O S</h2>
+            <h2 class="display-1">よ う こ そ</h2>
+            <h2 class="display-1">أ ه ل ا ب ك</h2>
+            <h2 class="display-1">Л А С К А В О&nbsp;&nbsp;П Р О С И М О</h2>
+        </div>
+
+    </div>  
+</div>
+
+<input type="hidden" id="cultureId" name="cultureId" value="@ViewBag.CultureName">
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/home.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="/js/home.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Home.Index();
+        });
+
+    </script>
+}

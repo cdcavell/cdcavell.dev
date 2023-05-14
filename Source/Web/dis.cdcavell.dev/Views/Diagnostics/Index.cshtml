@@ -1,0 +1,82 @@
+﻿@model dis.cdcavell.dev.Models.Diagnostics.DiagnosticsViewModel
+
+@{
+    List<System.Security.Claims.Claim> claims = new();
+    IDictionary<string, string?> items = new Dictionary<string, string?>();
+    items.Clear();
+
+    if (Model.AuthenticateResult != null)
+    {
+        if (Model.AuthenticateResult.Principal != null)
+            claims = Model.AuthenticateResult.Principal.Claims.ToList();
+
+        if (Model.AuthenticateResult.Properties != null)
+            items = Model.AuthenticateResult.Properties.Items;
+    }
+}
+
+<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-4 text-center m-auto pb-3" lang="@ViewBag.CultureName">@Localizer["Authentication Cookie"]</h1>
+    </div>
+</div>
+
+<div class="row m-0 p-0 align-items-top justify-content-center">
+    <div class="col-12 ms-2 ps-2">
+
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Claims</h2>
+                    </div>
+                    <div class="card-body">
+                        <dl>
+                            @foreach (var claim in claims)
+                            {
+                                <dt>@claim.Type</dt>
+                                <dd>@claim.Value</dd>
+                            }
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Properties</h2>
+                    </div>
+                    <div class="card-body">
+                        <dl>
+                            @foreach (var prop in items)
+                            {
+                                <dt>@prop.Key</dt>
+                                <dd>@prop.Value</dd>
+                            }
+                            @if (Model.Clients.Any())
+                            {
+                                <dt>Clients</dt>
+                                <dd>
+                                    @{
+                                        var clients = Model.Clients.ToArray();
+                                        for (var i = 0; i < clients.Length; i++)
+                                        {
+                                            <text>@clients[i]</text>
+                                            if (i < clients.Length - 1)
+                                            {
+                                                <text>, </text>
+                                            }
+                                        }
+                                    }
+                                </dd>
+                            }
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

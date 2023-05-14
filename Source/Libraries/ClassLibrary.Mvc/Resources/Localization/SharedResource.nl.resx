@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>Ongeldige modelstatus</value>
+  </data>
+  <data name="Site-Description" xml:space="preserve">
+    <value>Een doorlopende ontwikkeling van een .NET 6.0 MVC-toepassing.</value>
+  </data>
+  <data name="Site-Title" xml:space="preserve">
+    <value>Persoonlijke website voor Christopher D. Cavell</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>Status code</value>
+  </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>Doorgaan</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>Schakelprotocollen</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>oke</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>Gemaakt</value>
+  </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>Geaccepteerd</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>Niet-geautoriseerde informatie</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>Geen inhoud</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>Inhoud resetten</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>Gedeeltelijke inhoud</value>
+  </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Meerkeuzes - De gevraagde bron komt overeen met een van een reeks representaties, elk met zijn eigen specifieke locatie, en agentgestuurde onderhandelingsinformatie (sectie 12) wordt verstrekt zodat de gebruiker (of user-agent) een voorkeursrepresentatie kan selecteren en zijn verzoek omleiden naar die locatie.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Permanent verplaatst: aan de aangevraagde resource is een nieuwe permanente URI toegewezen en toekomstige verwijzingen naar deze resource MOETEN een van de geretourneerde URI's gebruiken.</value>
+  </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Gevonden: de aangevraagde resource bevindt zich tijdelijk onder een andere URI. Aangezien de omleiding af en toe kan worden gewijzigd, MOET de client de Request-URI blijven gebruiken voor toekomstige verzoeken.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Zie Overige - Het antwoord op het verzoek kan worden gevonden onder een andere URI en MOET worden opgehaald met behulp van een GET-methode op die bron.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>Niet gewijzigd - Als de client een voorwaardelijk GET-verzoek heeft uitgevoerd en toegang is toegestaan, maar het document niet is gewijzigd, MOET de server reageren met deze statuscode. Het 304-antwoord MOET GEEN berichttekst bevatten en wordt dus altijd beëindigd door de eerste lege regel na de koptekstvelden.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Proxy gebruiken - De gevraagde bron MOET toegankelijk zijn via de proxy die in het veld Locatie wordt gegeven. Het veld Locatie geeft de URI van de proxy weer. De ontvanger wordt geacht dit ene verzoek via de proxy te herhalen.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Ongebruikt - De 306-statuscode werd gebruikt in een eerdere versie van de specificatie, wordt niet meer gebruikt en de code is gereserveerd.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Tijdelijke omleiding: de aangevraagde resource bevindt zich tijdelijk onder een andere URI. Aangezien de omleiding KAN worden gewijzigd, MOET de klant de Request-URI blijven gebruiken voor toekomstige verzoeken.</value>
+  </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>Ongeldig verzoek - Het verzoek kon niet worden begrepen door de server vanwege een onjuiste syntaxis. De klant MOET het verzoek NIET herhalen zonder wijzigingen.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>Ongeautoriseerd: voor het verzoek is gebruikersauthenticatie vereist.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>Betaling Vereist</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>Verboden - De server heeft het verzoek begrepen, maar weigert eraan te voldoen. Autorisatie zal niet helpen en het verzoek MAG NIET worden herhaald.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>Niet gevonden - De server heeft niets gevonden dat overeenkomt met de Request-URI. Er wordt niet aangegeven of de aandoening tijdelijk of permanent is.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>Methode niet toegestaan ​​- De methode die is opgegeven in de Request-Line is niet toegestaan ​​voor de resource die wordt geïdentificeerd door de Request-URI.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>Niet acceptabel - De door het verzoek geïdentificeerde bron is alleen in staat om antwoord-entiteiten te genereren die inhoudskenmerken hebben die niet acceptabel zijn volgens de accept-headers die in het verzoek zijn verzonden.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>Proxy-authenticatie vereist - Deze code is vergelijkbaar met 401 (niet-geautoriseerd), maar geeft aan dat de client zichzelf eerst moet authenticeren met de proxy.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>Verzoek time-out - De client heeft geen verzoek ingediend binnen de tijd dat de server klaar was om te wachten.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>Conflict - Het verzoek kan niet worden voltooid vanwege een conflict met de huidige status van de bron.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>Verdwenen - De gevraagde bron is niet langer beschikbaar op de server en er is geen doorstuuradres bekend. Deze aandoening zal naar verwachting als permanent worden beschouwd.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>Lengte vereist - De server weigert het verzoek te accepteren zonder een gedefinieerde inhoudslengte.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>Voorwaarde mislukt - De voorwaarde die is opgegeven in een of meer van de velden in de verzoekheader, werd geëvalueerd als onwaar toen deze op de server werd getest.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>Request Entity Too Large - De server weigert een verzoek te verwerken omdat de verzoekentiteit groter is dan de server wil of kan verwerken.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI Too Long - De server weigert het verzoek te verwerken omdat de Request-URI langer is dan de server wil interpreteren.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>Niet-ondersteund mediatype - De server weigert het verzoek te verwerken omdat de entiteit van het verzoek een indeling heeft die niet wordt ondersteund door de aangevraagde bron voor de gevraagde methode.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>Aangevraagd bereik niet bevredigbaar</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>Verwachting mislukt - De verwachting die is opgegeven in het veld Expect request-header (zie paragraaf 14.20) kon niet worden vervuld door deze server, of, als de server een proxy is, heeft de server ondubbelzinnig bewijs dat aan het verzoek niet kon worden voldaan door de volgende -hop-server.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>Interne serverfout - De server heeft een onverwachte omstandigheid aangetroffen waardoor deze niet aan het verzoek kon voldoen.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>Niet geïmplementeerd - De server ondersteunt niet de functionaliteit die nodig is om aan het verzoek te voldoen.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>Slechte gateway - De server, die als gateway of proxy fungeerde, ontving een ongeldig antwoord van de upstream-server waartoe hij toegang had om aan het verzoek te voldoen.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>Service niet beschikbaar - De server kan het verzoek momenteel niet verwerken vanwege tijdelijke overbelasting of onderhoud van de server.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>Gateway-time-out - De server, die fungeerde als gateway of proxy, ontving geen tijdige reactie van de upstream-server gespecificeerd door de URI (bijv. HTTP, FTP, LDAP) of een andere hulpserver (bijv. DNS) die nodig was om toegang te krijgen in proberen om het verzoek te voltooien.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>HTTP-versie niet ondersteund - De server ondersteunt de HTTP-protocolversie die in het verzoekbericht is gebruikt niet of weigert deze te ondersteunen.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>Onbekende statuscode</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>Systeemfout</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Vergunning</value>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Cultuur</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Over</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versie</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="SignOff" xml:space="preserve">
+    <value>Afmelden</value>
+  </data>
+  <data name="ErrorMessage.Invalid" xml:space="preserve">
+    <value>Ongeldig</value>
+  </data>
+  <data name="ErrorMessage.Required" xml:space="preserve">
+    <value>Verplicht</value>
+  </data>
+  <data name="Email.Noreply" xml:space="preserve">
+    <value>Deze e-mail is verzonden vanaf een niet-gecontroleerd e-mailadres, gelieve niet te antwoorden.</value>
+  </data>
+  <data name="Email.Verify.Body" xml:space="preserve">
+    <value>Dien de volgende link in uw webbrowser in voor e-mailvalidatie:</value>
+  </data>
+  <data name="Email.Verify.Subject" xml:space="preserve">
+    <value>Registratievalidatie voor CDCavell</value>
+  </data>
+  <data name="Request_Id" xml:space="preserve">
+    <value>Aanvraag ID</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Spellen</value>
+  </data>
+</root>

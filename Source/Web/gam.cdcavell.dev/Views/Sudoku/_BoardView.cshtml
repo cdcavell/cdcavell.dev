@@ -1,0 +1,63 @@
+﻿@using System.Dynamic;
+@using gam.cdcavell.dev.Services.Sudoku
+@using gam.cdcavell.dev.Models.Sudoku
+@model FullBoard
+
+<div>
+	@using (Html.BeginForm(null, null, FormMethod.Post, new { id="updateForm", name="updateForm", autocomplete="off", action=@Constants.CustomFormActionPath("Game", "UpdateGame") }))
+	{
+		int boardSize = Model.BoardSize;
+		int blockSize = Model.BlockSize;
+
+		@Html.HiddenFor(m => m.BoardNumber)
+		@Html.HiddenFor(m => m.CellFocus)
+
+		for (int x = 0; x < boardSize; x++)
+		{
+			if ((x != 0) && (x % blockSize == 0))
+			{
+				@:<br/>
+			}
+			
+			for (int y = 0; y < boardSize; y++)
+			{
+				if ((y != 0) && (y % blockSize == 0))
+				{
+					@:&nbsp;
+				}
+
+				string id = "cell" + Model.BoardList[x * boardSize + y].CellNumber;
+				string cellClass = "cell";
+
+				if (Model.CellFocus == id)
+					if (Model.Status != PuzzleStatus.Normal)
+							cellClass += " bg-danger";
+
+				Dictionary<string, object> properties = new()
+				{
+					{ "id", id },
+					{ "maxlength", "1" },
+					{ "size", "1" },
+					{ "autocomplete", "off" },
+					{ "class", cellClass }
+				};
+
+				if (Model.BoardList[x * boardSize + y].CellLocked)
+					properties.Add("disabled", "disabled");
+
+				var tbConfig = new ExpandoObject() as IDictionary<string, object>;
+				foreach (var property in properties)
+					tbConfig.Add(property.Key, property.Value);
+
+				@Html.TextBoxFor(m => m.BoardList[x * boardSize + y].Value, tbConfig)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].Value)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].XCoordinate)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].YCoordinate)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].BlockNumber)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].CellNumber)
+				@Html.HiddenFor(m => m.BoardList[x * boardSize + y].CellLocked)
+			}
+			<br/>
+		}
+	}
+</div>

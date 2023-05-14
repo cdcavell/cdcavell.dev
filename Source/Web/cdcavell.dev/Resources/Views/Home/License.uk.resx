@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>Ліцензія MIT</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>Авторські права (c) 2023 Крістофер Д. Кавелл</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>Цим надається безкоштовно будь-якій особі, яка отримує копію цього програмного забезпечення та пов’язаних файлів документації ("Програмне забезпечення"), діяти з Програмним забезпеченням без обмежень, включаючи, без обмежень, права на використання, копіювання, зміну, злиття , публікувати, розповсюджувати, субліцензувати та/або продавати копії Програмного забезпечення, а також дозволяти особам, яким надається Програмне забезпечення, робити це за наступних умов:</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>Вищенаведене повідомлення про авторські права та це повідомлення про дозвіл будуть включені в усі копії або значні частини Програмного забезпечення.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ «ЯК Є», БЕЗ БУДЬ-ЯКОГО ВИДУ, ЯВНИХ АБО НЕПРЯКВАНИХ ГАРАНТІЙ, ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЯ ГАРАНТІЯМИ ПРИГОДНОСТІ ДЛЯ ТОРГОВОГО ЗАБЕЗПЕЧЕННЯ, ПРИДІСТНОСТІ ДЛЯ ОПРЕДЕЛЕНОЇ МЕТИ ТА НЕПОРУШЕННЯ. НІ В НІКОМУ ВИПАДКУ АВТОРИ АБО ВЛАСНИКИ АВТОРСЬКОГО ПРАВ НЕ НЕСУТЬ ВІДПОВІДАЛЬНОСТІ ЗА БУДЬ-ЯКІ ПРЕЗЕНЗІЇ, ЗБИТКИ ЧИ ІНШУ ВІДПОВІДАЛЬНІСТЬ, ЧТО В ДІЇ ДОГОВОРУ, ДЕЛІКУ ЧИ ІНШЕ, ЩО ВИНИКАЮТЬ З ІНШИХ ЗВ'ЯЗКІВ ЧИ З ІНШИМИ ЗВ'ЯЗКАМИ ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ.</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>Головний веб-сайт</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>Ліцензування активів</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>Допоміжні активи</value>
+  </data>
+  <data name="license-content-description-2-p1" xml:space="preserve">
+    <value>Наведені вище активи знаходяться під ліцензією MIT/ISC:</value>
+  </data>
+  <data name="license-content-description-2-p2" xml:space="preserve">
+    <value>Цим надається безкоштовно будь-якій особі, яка отримує копію цього програмного забезпечення та пов’язаних файлів документації ("Програмне забезпечення"), діяти з Програмним забезпеченням без обмежень, включаючи, без обмежень, права на використання, копіювання, зміну, злиття , публікувати, розповсюджувати, субліцензувати та/або продавати копії Програмного забезпечення, а також дозволяти особам, яким надається Програмне забезпечення, робити це за наступних умов:</value>
+  </data>
+  <data name="license-content-description-2-p3" xml:space="preserve">
+    <value>Вищенаведене повідомлення про авторські права та це повідомлення про дозвіл будуть включені в усі копії або значні частини Програмного забезпечення.</value>
+  </data>
+  <data name="license-content-description-2-p4" xml:space="preserve">
+    <value>ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ «ЯК Є», БЕЗ БУДЬ-ЯКОГО ВИДУ, ЯВНИХ АБО НЕПРЯКВАНИХ ГАРАНТІЙ, ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЯ ГАРАНТІЯМИ ПРИГОДНОСТІ ДЛЯ ТОРГОВОГО ЗАБЕЗПЕЧЕННЯ, ПРИДІСТНОСТІ ДЛЯ ОПРЕДЕЛЕНОЇ МЕТИ ТА НЕПОРУШЕННЯ. НІ В НІКОМУ ВИПАДКУ АВТОРИ АБО ВЛАСНИКИ АВТОРСЬКОГО ПРАВ НЕ НЕСУТЬ ВІДПОВІДАЛЬНОСТІ ЗА БУДЬ-ЯКІ ПРЕЗЕНЗІЇ, ЗБИТКИ ЧИ ІНШУ ВІДПОВІДАЛЬНІСТЬ, ЧТО У ДІЇ ЗА ДОГОВОРУ, ДІЛІКТУ АБО ІНШЕ, ЩО ВИНИКАЮТЬ З ІНШИХ ЗВ'ЯЗКІВ ЧИ ЗА ІНШИМИ ЗВ'ЯЗКАМИ ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ.</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>Шрифт Awesome Free знаходиться під ліцензією MIT / SIL OLF / CC:</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>Шрифт Awesome Free безкоштовний, з відкритим вихідним кодом і зручний для GPL. Ви можете використовувати його для комерційних проектів, проектів з відкритим кодом або дійсно майже для того, що ви хочете.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p1" xml:space="preserve">
+    <value>Код: Ліцензія Массачусетського технологічного інституту</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p2" xml:space="preserve">
+    <value>У розділі Шрифт Awesome Free download ліцензія MIT застосовується до всіх файлів без шрифтів і без значків.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p3" xml:space="preserve">
+    <value>Авторське право 2022 Fonticons, Inc.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p4" xml:space="preserve">
+    <value>Цим надається безкоштовний дозвіл будь-якій особі, яка отримує копію цього програмного забезпечення та пов'язані з ним файли документації ("Програмне забезпечення"), на роботу з Програмним забезпеченням без обмежень, включаючи, без обмежень, права на використання, копіювання, зміну, злиття, публікацію, розповсюдження, субліцензію та/або продаж копій Програмного забезпечення, а також на дозвіл особам, яким надається Програмне забезпечення, робити це,  при дотриманні наступних умов:</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p5" xml:space="preserve">
+    <value>Наведене вище повідомлення про авторське право та це повідомлення про дозвіл мають бути включені до всіх копій або значних частин Програмного забезпечення.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p6" xml:space="preserve">
+    <value>ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ «ЯК Є» БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ, ЯВНИХ АБО НЕЯВНИХ, ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ ГАРАНТІЯМИ ТОВАРНОСТІ, ПРИДАТНОСТІ ДЛЯ ПЕВНОЇ МЕТИ ТА НЕПОРУШЕННЯ ПРАВ. НІ В ЯКОМУ РАЗІ АВТОРИ АБО АВТОРСЬКІ ПРАВА
+ВЛАСНИКИ НЕСУТЬ ВІДПОВІДАЛЬНІСТЬ ЗА БУДЬ-ЯКІ ПРЕТЕНЗІЇ, ЗБИТКИ АБО ІНШУ ВІДПОВІДАЛЬНІСТЬ, ЯК ПІД ЧАС ДІЇ ДОГОВОРУ, ТАК І ЦИВІЛЬНИХ ПРАВОПОРУШЕНЬ АБО ІНШИМ ЧИНОМ, ЩО ВИНИКАЮТЬ ВНАСЛІДОК, ВНАСЛІДОК АБО У ЗВ'ЯЗКУ З ПРОГРАМНИМ ЗАБЕЗПЕЧЕННЯМ, ВИКОРИСТАННЯМ АБО ІНШИМИ ДІЯМИ В ПРОГРАМНОМУ ЗАБЕЗПЕЧЕННІ.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p1" xml:space="preserve">
+    <value>Шрифти: Ліцензія SIL OFL 1.1</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p10" xml:space="preserve">
+    <value>"Оригінальна версія" відноситься до колекції компонентів програмного забезпечення шрифтів як
+розповсюджується Правовласником(ами).</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p11" xml:space="preserve">
+    <value>«Модифікована версія» відноситься до будь-якої похідної, зробленої шляхом додавання, видалення,
+або підставляючи — частково або повністю — будь-який з компонентів
+Оригінальна версія, змінивши формати або портувавши програмне забезпечення шрифтів на a
+нове середовище.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p12" xml:space="preserve">
+    <value>Під «Автором» мається на увазі будь-який конструктор, інженер, програміст, технічний
+письменник або інша особа, яка зробила внесок у Програмне забезпечення шрифтів.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13a" xml:space="preserve">
+    <value>ДОЗВІЛ &amp; УМОВИ</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13b" xml:space="preserve">
+    <value>Дозвіл цим надається безкоштовно будь-якій особі, яка отримує
+копію програмного забезпечення шрифтів для використання, вивчення, копіювання, об'єднання, вбудовування, зміни,
+розповсюджувати та продавати змінені та немодифіковані копії шрифту
+Програмне забезпечення, при дотриманні наступних умов:</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p14" xml:space="preserve">
+    <value>Ні програмне забезпечення шрифтів, ні будь-який з його окремих компонентів,
+в Оригінальній або Зміненій версіях, може продаватися самостійно.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p15" xml:space="preserve">
+    <value>Оригінальні або модифіковані версії програмного забезпечення шрифтів можуть бути в комплекті,
+розповсюджується та/або продається з будь-яким програмним забезпеченням за умови, що кожна копія
+містить вищезазначене повідомлення про авторське право та цю ліцензію. Це можуть бути
+включаються або як автономні текстові файли, заголовки, які читаються людиною, або
+у відповідних машиночитаних полях метаданих у тексті або
+двійкові файли до тих пір, поки ці поля можуть бути легко переглянуті користувачем.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p16" xml:space="preserve">
+    <value>Жодна модифікована версія програмного забезпечення шрифтів не може використовувати зарезервований шрифт
+Ім'я(и), якщо відповідний (-і) не надає явного письмового дозволу
+Правовласник. Це обмеження застосовується лише до основної назви шрифту як
+представлені користувачам.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p17" xml:space="preserve">
+    <value>Назва(и) правовласника(ів) або автора(ів) шрифту
+Програмне забезпечення не може використовуватися для просування, схвалення або реклами будь-яких
+Змінена версія, за винятком визнання внеску (внесків)
+Власники авторських прав та автор(и) або з їх явно написаними
+Дозволу.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p18" xml:space="preserve">
+    <value>Програмне забезпечення шрифтів, змінене або не змінене, частково або повністю,
+повинні бути повністю розподілені за цією ліцензією, і не повинні бути
+поширюється за будь-якою іншою ліцензією. Вимога до шрифтів до
+залишатися під цією ліцензією не поширюється на жоден створений документ
+використання програмного забезпечення шрифтів.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19a" xml:space="preserve">
+    <value>ПРИПИНЕННЯ</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19b" xml:space="preserve">
+    <value>Ця ліцензія стає недійсною, якщо будь-яка з перерахованих вище умов є
+не зустрілися.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p2" xml:space="preserve">
+    <value>У шрифті Awesome Free download ліцензія SIL OFL застосовується до всіх значків, упакованих як файли веб- та настільних шрифтів.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20a" xml:space="preserve">
+    <value>ЗАСТЕРЕЖЕННЯ</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20b" xml:space="preserve">
+    <value>ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ ШРИФТІВ НАДАЄТЬСЯ «ЯК Є», БЕЗ ЖОДНИХ ГАРАНТІЙ,
+ЯВНИХ АБО НЕПРЯМИХ, ВКЛЮЧАЮЧИ, АРЕМЕ НЕ ОБМЕЖУЮЧИСЬ, БУДЬ-ЯКІ ГАРАНТІЇ
+КОМЕРЦІЙНА ЦІЛЬНІСТЬ, ПРИДАТНІСТЬ ДЛЯ КОНКРЕТНОЇ МЕТИ ТА ВІДСУМНІСТЬ ПРАВ
+АВТОРСЬКИХ ПРАВ, ПАТЕНТІВ, ТОВАРНИХ ЗНАКІВ АБО ІНШИХ ПРАВ. У ЖОДНОМУ РАЗІ
+ВЛАСНИК АВТОРСЬКИХ ПРАВ НЕСЕ ВІДПОВІДАЛЬНІСТЬ ЗА БУДЬ-ЯКУ ПРЕТЕНЗІЮ, ЗБИТКИ АБО ІНШУ ВІДПОВІДАЛЬНІСТЬ,
+ВКЛЮЧАЮЧИ БУДЬ-ЯКІ ЗАГАЛЬНІ, СПЕЦІАЛЬНІ, НЕПРЯМІ, ВИПАДКОВІ АБО НАСЛІДКОВІ
+ЗБИТКИ, ЩО ВИНИКАЮТЬ У КОНТРАКТІ, ДЕЛІКТУ ЧИ ІНШИМ ЧИЛОМ
+ВІД, НЕВИКОРИСТАННЯ АБО НЕМОЖЛИВОСТІ ВИКОРИСТОВУВАТИ ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ ШРИФТОВ АБО ВІД
+ІНШІ ПЕРЕХОДИ З ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ШРИФТОВ.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p3" xml:space="preserve">
+    <value>Авторське право (c) 2022 Fonticons, Inc. із зарезервованою назвою шрифту: "Шрифт чудовий".</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p4" xml:space="preserve">
+    <value>Це програмне забезпечення для шрифтів ліцензовано за ліцензією SIL Open Font License, версія 1.1.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p5" xml:space="preserve">
+    <value>ЛІЦЕНЗІЯ НА ВІДКРИТИЙ ШРИФТ SIL Версія 1.1 - 26 лютого 2007</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6a" xml:space="preserve">
+    <value>ПРЕАМБУЛА</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6b" xml:space="preserve">
+    <value>Цілями ліцензії на відкриті шрифти (OFL) є стимулювання у всьому світі
+розробка спільних проектів шрифтів, для підтримки створення шрифтів
+зусиль академічних та мовних спільнот, а також забезпечити вільне та
+відкритий фреймворк, в якому шрифти можуть бути спільними та вдосконаленими у партнерстві з іншими.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p7" xml:space="preserve">
+    <value>OFL дозволяє використовувати ліцензовані шрифти, вивчати, змінювати та
+вільно перерозповсюджуються, доки вони не продаються самі по собі. The
+шрифти, включаючи будь-які похідні роботи, можна об’єднувати, вбудовувати,
+розповсюджується та/або продається з будь-яким програмним забезпеченням за умови, що будь-яке зарезервовано
+імена не використовуються в похідних роботах. Шрифти та похідні,
+однак не може бути випущений за жодним іншим типом ліцензії. The
+вимога щодо збереження шрифтів за цією ліцензією не поширюється
+до будь-якого документа, створеного за допомогою шрифтів або їх похідних.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8a" xml:space="preserve">
+    <value>ВИЗНАЧЕННЯ</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8b" xml:space="preserve">
+    <value>"Програмне забезпечення шрифтів" відноситься до набору файлів, випущених авторським правом
+Власник(и) за цією ліцензією і чітко позначений як такий. Це може
+включати вихідні файли, створювати скрипти і документацію.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p9" xml:space="preserve">
+    <value>"Зарезервоване ім'я шрифту" відноситься до будь-яких імен, указаних як такі після
+заява(и) про авторське право.</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p1" xml:space="preserve">
+    <value>Значки: Ліцензія CC BY 4.0</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p2" xml:space="preserve">
+    <value>Шрифт Awesome Free download ліцензований під ліцензією Creative Commons
+Міжнародна ліцензія Attribution 4.0 і застосовується до всіх упакованих значків
+як типи файлів SVG та JS.</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p1" xml:space="preserve">
+    <value>Присвоєння</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p2" xml:space="preserve">
+    <value>Зазначення авторства вимагається ліцензіями MIT, SIL OFL та CC BY. Завантажений шрифт
+Дивовижні безкоштовні файли вже містять вбудовані коментарі з достатньою кількістю
+атрибуція, тому вам не потрібно робити нічого додаткового при їх використанні
+файли в звичайному режимі.</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p1" xml:space="preserve">
+    <value>Значки брендів</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p2" xml:space="preserve">
+    <value>Всі значки бренду є товарними знаками їх відповідних власників. Використання цих
+торговельні марки не свідчать про схвалення власника торговельної марки шрифтом
+Чудово, ні навпаки. **Будь ласка, не використовуйте логотипи брендів для будь-яких цілей, крім
+представляти компанію, продукт або послугу, до яких вони посилаються.**</value>
+  </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>Вищезазначений актив знаходиться під їхньою власністю</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>Стандартна ліцензія</value>
+  </data>
+  <data name="license-content-description-5-p1a" xml:space="preserve">
+    <value>Вищевказаний актив знаходиться під</value>
+  </data>
+  <data name="license-content-description-5-p1b" xml:space="preserve">
+    <value>Відкрита ліцензія проекту Code (CPOL) 1.02</value>
+  </data>
+</root>

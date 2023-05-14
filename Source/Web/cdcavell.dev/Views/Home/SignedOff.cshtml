@@ -1,0 +1,49 @@
+﻿@using cdcavell.dev.Models.Home
+@model SignedOffModel
+@{
+    var requestId = Model?.RequestId;
+}
+
+<div class="container h-100">
+    <div class="row align-items-top justify-content-center">
+        <div class="col-12 text-center">
+
+            <div>
+
+                <div class="shadow alert alert-info text-start mb-1" role="alert" lang="@ViewBag.CultureName">
+                    <strong lang="@ViewBag.CultureName">@SharedLocalizer["StatusCode"]: 200 @Localizer["SignedOff-Label"]</strong>
+                    <br />
+                    @Localizer["SignedOff-Text"]
+                </div>
+
+            </div>
+            <p class="request-id text-start ms-2 mt-0">
+                @if (requestId != null)
+                {
+                    <span>@SharedLocalizer["Request_Id"]: <code>@requestId</code></span>
+                }
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row align-items-top justify-content-left">
+        <div class="col-12 text-left">
+
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="/js/home.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Home.SignedOff();
+        });
+
+    </script>
+}

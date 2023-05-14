@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.5.0</Version>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
+	<Authors>Christopher D. Cavell</Authors>
+	<Copyright>2023 - Christopher D. Cavell</Copyright>
+	<PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+</Project>

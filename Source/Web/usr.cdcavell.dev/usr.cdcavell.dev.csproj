@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+	    <ImplicitUsings>enable</ImplicitUsings>
+	    <Version>1.0.5.0</Version>
+	    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	    <DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
+	    <Authors>Christopher D. Cavell</Authors>
+	    <Copyright>2023 - Christopher D. Cavell</Copyright>
+	    <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+	    <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+	    <UserSecretsId>dcfb240c-3231-4e4c-bff0-e21c1d9f83f8</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Remove="bundleconfig.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="bundleconfig.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.16" />
+	    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+		<PackageReference Include="Serilog.Enrichers.CorrelationId" Version="3.0.1" />
+		<PackageReference Include="Serilog.Sinks.EventLog" Version="3.1.0" />
+		<PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
+		<PackageReference Include="System.Collections" Version="4.3.0" />
+	</ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Libraries\ClassLibrary.Mvc\ClassLibrary.Mvc.csproj" />
+    </ItemGroup>
+
+	<ItemGroup>
+		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
+		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
+		<_findLibraryFile Include="../../../Source/Xml/ClassLibrary.Common.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\img\" />
+	  <Folder Include="wwwroot\lib\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.ar.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.en-US.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.es.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.fr.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.ja.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.nl.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Views\Home\AccountInformation.uk.resx">
+	    <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+		<Exec Command="cd ../../../Source/Xml/" />
+		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
+	</Target>
+
+	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+		<Exec Command="cd ../../../Source/Xml/wiki/" />
+		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
+		<Exec Command="git add ." WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
+		<Exec Command="git commit -m &quot;Update wiki submodule&quot;" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
+			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
+		</Exec>
+		<Exec Command="Echo Skipped wiki origin push" Condition=" '@(ErrorCode)' != '0'" />
+		<Exec Command="git push origin master" WorkingDirectory="../../../Source/Xml/wiki/" Condition=" '@(ErrorCode)' == '0'" ContinueOnError="true" />
+	</Target>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿@model dis.cdcavell.dev.Models.Account.LogoutViewModel
+
+<div id="headerRow" class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-5 text-center m-auto pb-1" lang="@ViewBag.CultureName">@Localizer["logout-section-title"]</h1>
+    </div>
+</div>
+
+<form asp-action="Logout">
+    <input type="hidden" name="logoutId" value="@Model.LogoutId" />
+    <div class="form-group">
+        <button class="btn btn-primary" lang="@ViewBag.CultureName">@Localizer["yesButton"]</button>
+    </div>
+</form>
+
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Account.Logout();
+        });
+
+    </script>
+}

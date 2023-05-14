@@ -1,0 +1,42 @@
+﻿<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-4 text-center m-auto pb-3" lang="@ViewBag.CultureName">@Localizer["culture-section-title"]</h1>
+    </div>
+</div>
+
+<div class="row m-0 p-0 align-items-top justify-content-center">
+    <div class="col-12 ms-2 ps-2">
+
+        <div class="d-block d-sm-flex m-0 p-0">
+            <ul class="list-unstyled list-info m-auto">
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="en-US"><span lang="en-US" class="single-language">[ENG] English</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="nl"><span lang="nl" class="single-language">[DUT] Nederlands</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="fr"><span lang="fr" class="single-language">[FRE] français</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="es"><span lang="es" class="single-language">[SPA] Española</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="ja"><span lang="ja" class="single-language">[JAP] 日本</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="ar"><span lang="ar" class="single-language">[ARA] عربى</span></a></li>
+                <li class="culture-link m-3 mx-5"><a class="text-decoration-none text-light" href="/" data-culture="uk"><span lang="uk" class="single-language">[UKR] Україна</span></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/home.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="/js/home.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Home.Culture();
+        });
+
+    </script>
+}

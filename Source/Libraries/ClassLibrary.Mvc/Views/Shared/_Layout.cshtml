@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Christopher D. Cavell">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="cdcavell.dev" />
+    <meta property="og:title" content="@SharedLocalizer["Site-Title"]" />
+    <meta property="og:description" content="@SharedLocalizer["Site-Description"]" />
+    <meta property="og:image" content="https://cdcavell.dev/img/thumbnail.png" />
+    <meta property="og:url" content="https://cdcavell.dev/">
+    <meta property="og:type" content="website" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@@CDCavell" />
+    <meta property="twitter:creator" content="@@CDCavell" />
+    <meta property="twitter:title" content="@SharedLocalizer["Site-Title"]" />
+    <meta property="twitter:description" content="@SharedLocalizer["Site-Description"]" />
+    <meta property="twitter:image" content="https://cdcavell.dev/img/twitter-thumbnail.png" />
+
+    <meta name="description" content="@SharedLocalizer["Site-Title"]. @SharedLocalizer["Site-Description"]">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google-site-verification" content="v2DPETQobg3Ip1zEugzvNdHM9-oqH5TdPKq2ycrn1w0">
+
+    <title>@SharedLocalizer["Site-Title"]</title>
+    <base href="/" />
+
+    <link rel="icon" type="image/x-icon" href="_content/ClassLibrary.Mvc/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="_content/ClassLibrary.Mvc/img/favicon.ico" />
+
+    <link rel="alternate" hreflang="en-US" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=en-US&ui-culture=en-US")" />
+    <link rel="alternate" hreflang="nl" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=nl&ui-culture=nl")" />
+    <link rel="alternate" hreflang="fr" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=fr&ui-culture=fr")" />
+    <link rel="alternate" hreflang="es" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=es&ui-culture=es")" />
+    <link rel="alternate" hreflang="ja" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=ja&ui-culture=ja")" />
+    <link rel="alternate" hreflang="ar" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=ar&ui-culture=ar")" />
+    <link rel="alternate" hreflang="uk" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=uk&ui-culture=uk")" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="_content/ClassLibrary.Mvc/lib/bootstrap-5.2.3-dist/css/bootstrap.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="_content/ClassLibrary.Mvc/lib/fontawesome-free-6.4.0-web/css/all.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="_content/ClassLibrary.Mvc/css/site.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+
+    @RenderSection("styles", required: false)
+</head>
+<body class="bg-transparent" id="body">
+
+    @* --- Preloader --- *@
+    <div class="preloader">
+        <div class="preloader-block">
+            <div class="preloader-icon"><span class="loading-dot loading-dot-1"></span><span class="loading-dot loading-dot-2"></span><span class="loading-dot loading-dot-3"></span></div>
+        </div>
+    </div>
+
+    @* --- Navigation --- *@
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" data-scroll="" asp-controller="Home" asp-action="Index">
+                <img class="img-fluid logo pb-1" src="_content/ClassLibrary.Mvc/img/icon-light.png" alt="Logo" loading="lazy" decoding="async">
+                <span class="text-light ml-1">CDC<span class="text-lowercase">avell</span></span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul id="navbar-ul" class="navbar-nav ms-auto my-2 my-lg-0">
+                    @Html.Partial("_NavbarList")
+                    <li class="nav-item rounded">
+                        <a class="nav-link text-light text-center" asp-controller="Home" asp-action="Games" lang="@ViewBag.CultureName">
+                            <i class="fas fa-puzzle-piece text-grey ms-1 me-1" aria-hidden="true"></i>
+                            @SharedLocalizer["Games"]
+                        </a>
+                    </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link text-light text-center" asp-controller="Home" asp-action="About" lang="@ViewBag.CultureName">
+                            <i class="fas fa-circle-info text-grey ms-1 me-1" aria-hidden="true"></i>
+                            @SharedLocalizer["About"]
+                        </a>
+                    </li>
+                    <li class="nav-item rounded">
+                        <a class="nav-link text-light text-center" asp-controller="Home" asp-action="License" lang="@ViewBag.CultureName">
+                            <i class="fas fa-legal text-grey ms-1 me-1" aria-hidden="true"></i>
+                            @SharedLocalizer["License"]
+                        </a>
+                    </li>
+                    <li class="nav-item rounded nav-item-collapse">
+                        <a class="nav-link text-light text-center" asp-controller="Home" asp-action="Culture" lang="@ViewBag.CultureName">
+                            <i class="fas fa-language text-grey ms-1 me-1" aria-hidden="true"></i>
+                            @SharedLocalizer["Culture"]
+                        </a>
+                    </li>
+                    @if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <li class="nav-item rounded">
+                            <a class="nav-link text-light text-center" asp-controller="Home" asp-action="SignOff" lang="@ViewBag.CultureName">
+                                @Html.Gravatar(User.GetEmail().Trim(), size:18, htmlAttributes:new { @class = "rounded-circle ms-1 me-1", alt = "Gravatar" })
+                                @SharedLocalizer["SignOff"]
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item rounded">
+                            <a class="nav-link text-light text-center" asp-controller="Home" asp-action="SignIn" lang="@ViewBag.CultureName">
+                                <i class="fas fa-sign-in text-grey ms-1 me-1" aria-hidden="true"></i>
+                                @SharedLocalizer["SignIn"]
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @* --- Page Content --- *@
+    <div class="page-block h-100 mt-5 pt-3">
+        <div class="row page-content h-100 align-items-top justify-content-left text-light">
+            <div class="col-12 w-100 m-0 text-start">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @* --- Languages list --- *@
+    <div class="languages-block">
+        <ul id="languages-ul" class="list-unstyled languages-list">
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="en-US"><span class="single-language">ENG</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="nl"><span class="single-language">DUT</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="fr"><span class="single-language">FRE</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="es"><span class="single-language">SPA</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="ja"><span class="single-language">JAP</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="ar"><span class="single-language">ARA</span></a></li>
+            <li class="culture-link"><a class="text-decoration-none" href="/" data-culture="uk"><span class="single-language">UKR</span></a></li>
+        </ul>
+    </div>
+
+    @* --- External Links list --- *@
+    <div class="external-links-block">
+        <ul class="list-unstyled external-links-list">
+            <li><a class="text-decoration-none" href="https://www.google.com/" rel="external nofollow noopener noreferrer"><i class="single-external-link fa-brands fa-google" aria-hidden="true"></i></a></li>
+            <li><a class="text-decoration-none" href="https://www.bing.com/" rel="external nofollow noopener noreferrer"><i class="single-external-link fa-brands fa-microsoft" aria-hidden="true"></i></a></li>
+            <li><a class="text-decoration-none" href="https://duckduckgo.com/" rel="external nofollow noopener noreferrer"><i class="single-external-link fa-solid fa-magnifying-glass" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+    @* --- Version --- *@
+    <div class="version-block text-light">
+        <p class="m-0 p-0 pb-1" lang="@ViewBag.CultureName">
+            <a class="text-decoration-none text-light" href="https://github.com/cdcavell/cdcavell.dev/releases/tag/@AppSettings.AssemblyVersion()" rel="external nofollow noopener noreferrer" lang="@ViewBag.CultureName">
+                @SharedLocalizer["Version"]: @AppSettings.AssemblyVersion()
+            </a>
+        </p>
+    </div>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "__AjaxAntiForgeryForm", enctype = "application/x-www-form-urlencoded" }))
+    {
+        @Html.AntiForgeryToken()
+    }
+
+    <script src="_content/ClassLibrary.Mvc/lib/jquery-3.6.4.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="_content/ClassLibrary.Mvc/lib/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="_content/ClassLibrary.Mvc/js/site.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model dis.cdcavell.dev.Models.Account.LoggedOutViewModel
+
+<div id="headerRow" class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-5 text-center m-auto pb-1" lang="@ViewBag.CultureName">@Localizer["loggedOut-section-title"]</h1>
+    </div>
+</div>
+
+@if (Model.PostLogoutRedirectUri != null)
+{
+    <div lang="@ViewBag.CultureName">
+        @Localizer["loggedOut-section-d1"] <a class="PostLogoutRedirectUri" href="@Model.PostLogoutRedirectUri" lang="@ViewBag.CultureName">@Localizer["loggedOut-section-d2"]</a> @Localizer["loggedOut-section-d3"]
+        <span>@Model.ClientName</span> @Localizer["loggedOut-section-d4"].
+    </div>
+}
+
+@if (Model.SignOutIframeUrl != null)
+{
+    <iframe width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+}
+
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Account.LoggedOut();
+        });
+
+    </script>
+}

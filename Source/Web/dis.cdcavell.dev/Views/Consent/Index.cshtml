@@ -1,0 +1,122 @@
+﻿@model dis.cdcavell.dev.Models.Consent.ConsentViewModel
+
+<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-4 text-center m-auto pb-3" lang="@ViewBag.CultureName">@Model.ClientName @Localizer["consent-section-title"]</h1>
+    </div>
+</div>
+
+<div class="row m-0 p-0 align-items-top justify-content-center">  
+    <div class="col-12 ms-2 ps-2">
+
+        <p lang="@ViewBag.CultureName">@Localizer["consent-section-p1"]</p>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <partial name="_ValidationSummary" />
+            </div>
+        </div>
+
+        <form asp-action="Index">
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div class="row">
+                <div class="col-sm-8">
+                    @if (Model.IdentityScopes?.Any() ?? false)
+                    {
+                        <div class="form-group">
+                            <div class="card card-bg">
+                                <div class="card-header" lang="@ViewBag.CultureName">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @Localizer["consent-section-f1"]
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    @foreach (var scope in Model.IdentityScopes)
+                                    {
+                                        <partial name="_ScopeListItem" model="@scope" />
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    }
+
+                    @if (Model.ApiScopes?.Any() ?? false)
+                    {
+                        <div class="form-group">
+                            <div class="card card-bg">
+                                <div class="card-header" lang="@ViewBag.CultureName">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                    @Localizer["consent-section-f2"]
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    @foreach (var scope in Model.ApiScopes)
+                                    {
+                                        <partial name="_ScopeListItem" model="scope" />
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="form-group">
+                        <div class="card card-bg">
+                            <div class="card-header" lang="@ViewBag.CultureName">
+                                <span class="glyphicon glyphicon-tasks"></span>
+                                @Localizer["consent-section-f3"]
+                            </div>
+                            <div class="card-body">
+                                <input class="form-control" placeholder="Description or name of device" asp-for="Description" autofocus>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (Model.AllowRememberConsent)
+                    {
+                        <div class="form-group">
+                            <div class="form-check" lang="@ViewBag.CultureName">
+                                <input class="form-check-input" asp-for="RememberConsent">
+                                <label class="form-check-label" asp-for="RememberConsent" lang="@ViewBag.CultureName">
+                                    <strong lang="@ViewBag.CultureName">@Localizer["consent-section-f4"]</strong>
+                                </label>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4" lang="@ViewBag.CultureName">
+                    <button name="button" value="yes" class="btn btn-blue" autofocus lang="@ViewBag.CultureName">@Localizer["consent-section-f5"]</button>
+                    <button name="button" value="no" class="btn btn-green" lang="@ViewBag.CultureName">@Localizer["consent-section-f6"]</button>
+                </div>
+                <div class="col-sm-4 col-lg-auto">
+                    @if (Model.ClientUrl != null)
+                    {
+                        <a class="btn btn-outline-info" href="@Model.ClientUrl">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            <strong>@Model.ClientName</strong>
+                        </a>
+                    }
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Consent.Index();
+        });
+
+    </script>
+}

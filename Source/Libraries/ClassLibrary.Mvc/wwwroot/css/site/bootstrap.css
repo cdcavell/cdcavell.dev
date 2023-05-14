@@ -1,0 +1,66 @@
+﻿.card-bg {
+    background-color: rgba(40, 56, 35, 0.30);
+    opacity: .9;
+}
+
+.btn-blue {
+    background-color: rgba(11, 51, 86, 0.95);
+    border-color: rgba(12, 56, 94, 0.95);
+    color: rgba(244, 252, 248, 0.95)
+}
+
+    .btn-blue:hover {
+        background-color: rgba(15, 72, 122, 0.95);
+        border-color: rgba(16, 77, 130, 0.95);
+        color: rgba(238, 250, 244, 0.95)
+    }
+
+    .btn-blue:active {
+        background-color: rgba(11, 51, 86, 0.95) !important;
+        border-color: rgba(12, 56, 94, 0.95);
+        color: rgba(244, 252, 248, 0.95);
+        transform: translateY(4px);
+    }
+
+.btn-green {
+    background-color: rgba(15, 57, 31, 0.95);
+    border-color: rgba(15, 65, 35, 0.95);
+    color: rgba(244, 252, 248, 0.95);
+}
+
+    .btn-green:hover {
+        background-color: rgba(23, 90, 48, 0.95);
+        border-color: rgba(22, 99, 53, 0.95);
+        color: rgba(238, 250, 244, 0.95);
+    }
+
+    .btn-green:active {
+        background-color: rgba(15, 57, 31, 0.95) !important;
+        border-color: rgba(15, 65, 35, 0.95);
+        color: rgba(244, 252, 248, 0.95);
+        transform: translateY(4px);
+    }
+
+.form-control {
+    background-color: rgba(238, 250, 244, 0.75);
+}
+
+.form-control:focus {
+    background-color: rgba(238, 250, 244, 0.75);
+}
+
+.form-check-input {
+    background-color: rgba(238, 250, 244, 0.75);
+}
+
+.alert-danger {
+    background-color: rgba(254, 172, 169, 0.75);
+}
+
+.alert-warning {
+    background-color: rgba(233, 213, 87, 0.75);
+}
+
+.alert-info {
+    background-color: rgba(180, 204, 156, 0.75);
+}

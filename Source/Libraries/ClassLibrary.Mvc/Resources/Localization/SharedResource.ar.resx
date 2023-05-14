@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>حالة النموذج غير صالحة</value>
+  </data>
+  <data name="Site-Description" xml:space="preserve">
+    <value>تطوير مستمر لتطبيق .NET 6.0 MVC</value>
+  </data>
+  <data name="Site-Title" xml:space="preserve">
+    <value>موقع شخصي لكريستوفر دي كافيل</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>كود الحالة</value>
+  </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>يكمل</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>تبديل البروتوكولات</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>خلقت</value>
+  </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>قبلت</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>معلومات غير موثوقة</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>لا يوجد محتوى</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>إعادة تعيين المحتوى</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>المحتوى الجزئي</value>
+  </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>خيارات متعددة - يتوافق المورد المطلوب مع أي مجموعة من التمثيلات ، ولكل منها موقعها المحدد ، ويتم توفير معلومات التفاوض التي يقودها الوكيل (القسم 12) بحيث يمكن للمستخدم (أو وكيل المستخدم) تحديد التمثيل المفضل وإعادة توجيه طلبه إلى هذا الموقع.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>تم النقل بشكل دائم - تم تعيين المورد المطلوب URI دائم جديد وأي مراجع مستقبلية لهذا المورد يجب أن تستخدم أحد URIs التي تم إرجاعها.</value>
+  </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>تم العثور عليه - يوجد المورد المطلوب مؤقتًا ضمن URI مختلف. نظرًا لأنه قد يتم تغيير إعادة التوجيه في بعض الأحيان ، يجب على العميل الاستمرار في استخدام Request-URI للطلبات المستقبلية.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>راجع أخرى - يمكن العثور على الاستجابة للطلب ضمن URI مختلف ويجب استرجاعها باستخدام طريقة GET على هذا المورد.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>غير معدّل - إذا قام العميل بتنفيذ طلب GET مشروط وكان الوصول مسموحًا به ، ولكن لم يتم تعديل المستند ، فيجب أن يستجيب الخادم برمز الحالة هذا. يجب ألا تحتوي الاستجابة 304 على نص الرسالة ، وبالتالي يتم إنهاؤها دائمًا بواسطة أول سطر فارغ بعد حقول الرأس.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>استخدام الوكيل - يجب الوصول إلى المورد المطلوب من خلال الوكيل المقدم من خلال حقل الموقع. يعطي حقل الموقع URI للوكيل. من المتوقع أن يكرر المستلم هذا الطلب الفردي عبر الوكيل.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>غير مستخدم - تم استخدام رمز الحالة 306 في إصدار سابق من المواصفات ، ولم يعد مستخدمًا ، وتم حجز الرمز.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>إعادة توجيه مؤقتة - يوجد المورد المطلوب مؤقتًا ضمن URI مختلف. نظرًا لأنه قد يتم تغيير إعادة التوجيه في بعض الأحيان ، يجب على العميل الاستمرار في استخدام Request-URI للطلبات المستقبلية.</value>
+  </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>طلب غير صالح - تعذر على الخادم فهم الطلب بسبب صياغة غير صحيحة. يجب ألا يكرر العميل طلبه بدون تعديلات.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>غير مصرح به - يتطلب الطلب مصادقة المستخدم.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>الدفع مطلوب</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>ممنوع - فهم الخادم الطلب ، لكنه رفض تنفيذه. لن يساعد التفويض ولا يجب تكرار الطلب.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>غير موجود - لم يعثر الخادم على أي شيء يطابق طلب URI. لا يوجد مؤشر على ما إذا كانت الحالة مؤقتة أم دائمة.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>الطريقة غير مسموح بها - الطريقة المحددة في سطر الطلب غير مسموح بها للمورد المحدد بواسطة معرف URI للطلب.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>غير مقبول - المورد المحدد بواسطة الطلب قادر فقط على إنشاء كيانات استجابة لها خصائص محتوى غير مقبولة وفقًا لعناوين القبول المرسلة في الطلب.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>مطلوب مصادقة الوكيل - هذا الرمز مشابه لـ 401 (غير مصرح به) ، لكنه يشير إلى أنه يجب على العميل أولاً مصادقة نفسه مع الوكيل.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>مهلة الطلب - لم يقدم العميل طلبًا خلال الوقت الذي كان الخادم فيه جاهزًا للانتظار.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>تعارض - تعذر إكمال الطلب نظرًا لوجود تعارض مع الحالة الحالية للمورد.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>ذهب - لم يعد المورد المطلوب متاحًا على الخادم ولم يعد عنوان إعادة التوجيه معروفًا. من المتوقع أن تعتبر هذه الحالة دائمة.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>الطول المطلوب - يرفض الخادم قبول الطلب بدون محتوى محدد - الطول.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>فشل الشرط المسبق - الشرط المسبق المقدم في واحد أو أكثر من حقول عنوان الطلب التي تم تقييمها على خطأ عند اختبارها على الخادم.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>كيان الطلب كبير جدًا - يرفض الخادم معالجة الطلب لأن كيان الطلب أكبر مما يرغب الخادم في معالجته أو يمكنه معالجته.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI طويل جدًا - يرفض الخادم خدمة الطلب لأن Request-URI أطول مما يرغب الخادم في تفسيره.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>نوع وسائط غير مدعوم - يرفض الخادم خدمة الطلب لأن تنسيق كيان الطلب غير مدعوم من قبل المورد المطلوب للطريقة المطلوبة.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>النطاق المطلوب غير كافٍ</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>فشل التوقع - لا يمكن تلبية التوقع الوارد في حقل عنوان طلب توقع (انظر القسم 14.20) بواسطة هذا الخادم ، أو إذا كان الخادم وكيلاً ، فإن الخادم لديه دليل لا لبس فيه على أنه لا يمكن تلبية الطلب من قبل التالي خادم متجر.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>خطأ داخلي في الخادم - واجه الخادم حالة غير متوقعة منعته من تلبية الطلب.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>لم يتم التنفيذ - لا يدعم الخادم الوظيفة المطلوبة لتنفيذ الطلب.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>بوابة غير صالحة - تلقى الخادم ، أثناء عمله كبوابة أو وكيل ، استجابة غير صالحة من الخادم الرئيسي الذي وصل إليه في محاولة لتلبية الطلب.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>الخدمة غير متوفرة - يتعذر على الخادم حاليًا معالجة الطلب بسبب التحميل الزائد المؤقت أو صيانة الخادم.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>مهلة البوابة - لم يتلق الخادم ، أثناء عمله كبوابة أو وكيل ، استجابة في الوقت المناسب من الخادم الرئيسي المحدد بواسطة URI (مثل HTTP و FTP و LDAP) أو بعض الخادم الإضافي (مثل DNS) الذي يحتاجه للوصول في محاولة استكمال الطلب.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>إصدار HTTP غير مدعوم - لا يدعم الخادم أو يرفض دعم إصدار بروتوكول HTTP الذي تم استخدامه في رسالة الطلب.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>رمز حالة غير معروف</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>خطأ في النظام</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>رخصة</value>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>ثقافة</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>إصدار</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="SignOff" xml:space="preserve">
+    <value>تسجيل خروج</value>
+  </data>
+  <data name="ErrorMessage.Invalid" xml:space="preserve">
+    <value>غير صالح</value>
+  </data>
+  <data name="ErrorMessage.Required" xml:space="preserve">
+    <value>مطلوب</value>
+  </data>
+  <data name="Email.Noreply" xml:space="preserve">
+    <value>تم إرسال هذا البريد الإلكتروني من عنوان بريد إلكتروني غير مراقب ، يرجى عدم الرد.</value>
+  </data>
+  <data name="Email.Verify.Body" xml:space="preserve">
+    <value>الرجاء إرسال الرابط التالي في متصفح الويب الخاص بك للتحقق من صحة البريد الإلكتروني:</value>
+  </data>
+  <data name="Email.Verify.Subject" xml:space="preserve">
+    <value>التحقق من صحة التسجيل لـ CDCavell</value>
+  </data>
+  <data name="Request_Id" xml:space="preserve">
+    <value>طلب معرف</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>ألعاب</value>
+  </data>
+</root>

@@ -1,0 +1,44 @@
+﻿@using gam.cdcavell.dev.Services.Sudoku
+@using gam.cdcavell.dev.Models.Sudoku
+@model FullBoard
+
+<div class="container m-0 p-0 h-100 w-100">
+    <div class="row m-0 p-0 h-100 align-items-center justify-content-center">
+
+        <div class="text-center">
+            <partial name="@Constants.CustomViewPath("_BoardView")" />
+        </div>
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="Button Group">
+                <a role="button" class="btn btn-green btn-small shadow m-2" href='@Url.Action("NewGame", "Game")' lang="@ViewBag.CultureName">@Localizer["New Game"]</a>
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "resetForm", name = "resetForm", autocomplete = "off", action = @Constants.CustomFormActionPath("Game", "ResetGame") }))
+                {
+                    @Html.HiddenFor(m => m.BoardNumber)
+                    <button type="button" class="btn btn-green btn-small shadow m-2" name="resetFormButton" id="resetFormButton" lang="@ViewBag.CultureName">@Localizer["Reset Game"]</button>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<input type="hidden" id="cultureId" name="cultureId" value="@ViewBag.CultureName">
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/sudoku.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="/js/sudoku.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Sudoku.Game();
+        });
+
+    </script>
+}

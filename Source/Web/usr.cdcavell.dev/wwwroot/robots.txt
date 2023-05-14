@@ -1,0 +1,19 @@
+﻿User-agent: googlebot
+allow: *
+
+User-agent: bingbot
+allow: *
+
+User-agent: *
+Crawl-delay: 300
+Disallow: /signin-oidc
+Disallow: /SetCulture/
+Disallow: /Error/
+Disallow: /SignIn/
+Disallow: /SignOff/
+Disallow: /FrontChannelLogout/
+Disallow: /*/SetCulture/
+Disallow: /*/Error/
+Disallow: /*/SignIn/
+Disallow: /*/SignOff/
+Disallow: /*/FrontChannelLogout/

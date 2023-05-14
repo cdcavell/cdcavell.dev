@@ -1,0 +1,38 @@
+﻿
+<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-4 text-center m-auto pb-3" lang="@ViewBag.CultureName">@Localizer["about-section-title"]</h1>
+    </div>
+</div>
+
+<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <div class="about-img-div float-start m-0 me-4 mb-4 p-0">
+            <img class="img-thumbnail img-fluid rounded-circle" src="_content/ClassLibrary.Mvc/img/Me.jpg" alt="Chris Cavell" />
+        </div>
+        <p class="mt-5 pt-3 w-100" lang="@ViewBag.CultureName">@Localizer["about-content-p1"]</p>
+        <p class="w-100" lang="@ViewBag.CultureName">@Localizer["about-content-p2"]</p>
+        <p class="w-100" lang="@ViewBag.CultureName">@Localizer["about-content-p3"]</p>
+        <p class="w-100" lang="@ViewBag.CultureName">@Localizer["about-content-p4"]</p>
+        <p class="w-100" lang="@ViewBag.CultureName">@Localizer["about-content-p5"]</p>
+    </div>
+</div>
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/home.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script src="/js/home.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Home.About();
+        });
+
+    </script>
+}

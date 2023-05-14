@@ -1,0 +1,80 @@
+﻿@using ClassLibrary.Mvc.Models.Home
+@model ErrorViewModel
+@{
+    var StatusCode = Model?.StatusCode;
+    var status = Model?.StatusMessage;
+    var requestId = Model?.RequestId;
+    var exception = (AppSettings.IsDevelopment()) ? Model?.Exception : null;
+}
+
+<div class="container h-100">
+    <div class="row align-items-top justify-content-center">
+        <div class="col-12 text-center">
+
+            <div>
+
+                <div class="shadow alert alert-danger text-start mb-1" role="alert">
+                    <strong>@SharedLocalizer["StatusCode"]: @StatusCode.ToString() @SharedLocalizer["StatusCode-Title"]</strong>
+                    @if (status != null)
+                    {
+                        <br />@Html.Raw(status)
+                    }
+                </div>
+                <p class="request-id text-start ms-2 mt-0">
+                    @if (requestId != null)
+                    {
+                        <span>@SharedLocalizer["Request_Id"]: <code>@requestId</code></span>
+                    }
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row align-items-top justify-content-left">
+        <div class="col-12 text-left">
+
+            @if ((exception != null) && (!exception.Message.Equals("Empty Exception", StringComparison.OrdinalIgnoreCase)))
+            {
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <p class="">
+                                <ul class="">
+                                    <li><b>Exception Message:</b> @exception.Message</li>
+                                    <li><b>Exception Source:</b> @exception.Source</li>
+                                    <li><b>Exception StackTrace:</b><br /><span style="white-space: pre-line">@exception.StackTrace</span></li>
+                                </ul>
+
+                                @if (exception.InnerException != null)
+                                {
+                                    <ul class="">
+                                        <li><b>Inner Exception Message:</b> @exception.InnerException.Message</li>
+                                        <li><b>Inner Exception Source:</b> @exception.InnerException.Source</li>
+                                        <li><b>Inner Exception StackTrace:</b><br /><span style="white-space: pre-line">@exception.InnerException.StackTrace</span></li>
+                                    </ul>
+                                }
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            WebBase.Error();
+        });
+
+    </script>
+}

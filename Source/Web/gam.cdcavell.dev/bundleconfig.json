@@ -1,0 +1,53 @@
+[
+  {
+    "outputFileName": "wwwroot/css/application.min.css",
+    "inputFiles": [
+      "wwwroot/css/application/!(*.min).css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/home.min.css",
+    "inputFiles": [
+      "wwwroot/css/home/!(*.min).css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/sudoku.min.css",
+    "inputFiles": [
+      "wwwroot/css/sudoku/!(*.min).css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/application.min.js",
+    "inputFiles": [
+      "wwwroot/js/application/!(*.min).js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/home.min.js",
+    "inputFiles": [
+      "wwwroot/js/home/!(*.min).js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/sudoku.min.js",
+    "inputFiles": [
+      "wwwroot/js/sudoku/!(*.min).js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

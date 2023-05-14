@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>Недійсний стан моделі</value>
+  </data>
+  <data name="Site-Description" xml:space="preserve">
+    <value>Постійна розробка програми .NET 6.0 MVC.</value>
+  </data>
+  <data name="Site-Title" xml:space="preserve">
+    <value>Персональний сайт Крістофера Д. Кавелла</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>Код статусу</value>
+  </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>Продовжуйте</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>Протоколи перемикання</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>гаразд</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>Створено</value>
+  </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>Прийнято</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>Неавторизована інформація</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>Немає вмісту</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>Скинути вміст</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>Частковий вміст</value>
+  </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Кілька варіантів – запитуваний ресурс відповідає будь-якому з набору представлень, кожне з яких має власне конкретне розташування, і надається керована агентом інформація про переговори (розділ 12), щоб користувач (або агент користувача) міг вибрати бажане представлення. і перенаправити запит на це місце.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Переміщено назавжди – запитаному ресурсу було призначено новий постійний URI, і будь-які майбутні посилання на цей ресурс ПОВИННІ використовувати один із повернутих URI.</value>
+  </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Знайдено – запитуваний ресурс тимчасово знаходиться під іншим URI. Оскільки перенаправлення іноді може бути змінено, клієнту СЛІД продовжувати використовувати Request-URI для майбутніх запитів.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Див. Інше. Відповідь на запит можна знайти за іншим URI і ПОВИННА отримати за допомогою методу GET на цьому ресурсі.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>Не змінено – якщо клієнт виконав умовний запит GET і доступ дозволений, але документ не був змінений, сервер ПОВИНЕН відповісти цим кодом стану. Відповідь 304 НЕ ПОВИНЕН містити тіло повідомлення і, таким чином, завжди закінчується першим порожнім рядком після полів заголовка.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Використовувати проксі – доступ до запитуваного ресурсу ПОВИНЕН здійснювати через проксі-сервер, зазначений у полі Місцезнаходження. Поле Location містить URI проксі-сервера. Очікується, що одержувач повторить цей єдиний запит через проксі-сервер.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Не використовується — код статусу 306 використовувався в попередній версії специфікації, більше не використовується, а код зарезервовано.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Тимчасове переспрямування – запитуваний ресурс тимчасово знаходиться під іншим URI. Оскільки перенаправлення МОЖЕ іноді змінюватися, клієнту СЛІД продовжувати використовувати Request-URI для майбутніх запитів.</value>
+  </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>Поганий запит – запит не може бути зрозумілий сервером через неправильний синтаксис. Клієнт НЕ ПОВИНЕН повторювати запит без змін.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>Неавторизований – запит вимагає аутентифікації користувача.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>Потрібна оплата</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>Заборонено – сервер зрозумів запит, але відмовляється його виконувати. Авторизація не допоможе, і запит НЕ МАЄ повторюватися.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>Не знайдено – сервер не знайшов нічого, що відповідає запиту URI. Не вказано, чи є цей стан тимчасовим чи постійним.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>Метод не дозволений — метод, зазначений у рядку запиту, не дозволений для ресурсу, визначеного запитом URI.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>Неприйнятно – ресурс, ідентифікований запитом, здатний генерувати лише об’єкти відповіді, які мають характеристики вмісту, неприйнятні відповідно до заголовків прийняття, надісланих у запиті.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>Потрібна автентифікація проксі-сервера — цей код схожий на 401 (неавторизований), але вказує, що клієнт повинен спочатку аутентифікуватися за допомогою проксі-сервера.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>Тайм-аут запиту – клієнт не зробив запит протягом часу, який сервер був готовий чекати.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>Конфлікт – запит не може бути виконано через конфлікт із поточним станом ресурсу.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>Зникло – запитаний ресурс більше не доступний на сервері, а адреса пересилання не відома. Очікується, що цей стан буде вважатися постійним.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>Необхідна довжина — сервер відмовляється прийняти запит без визначеної довжини вмісту.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>Помилка попередньої умови – передумова, наведена в одному або кількох полях заголовка запиту, оцінена як хибна, коли вона була перевірена на сервері.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>Занадто великий об’єкт запиту – сервер відмовляється обробити запит, оскільки об’єкт запиту є більшим, ніж сервер бажає або може обробити.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI занадто довгий – сервер відмовляється обслуговувати запит, оскільки Request-URI довший, ніж сервер готовий інтерпретувати.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>Непідтримуваний тип медіа – сервер відмовляється обслуговувати запит, оскільки сутність запиту має формат, який не підтримується запитуваним ресурсом для запитуваного методу.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>Запитаний діапазон не задовольняється</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>Очікування не виконано — очікування, наведене в полі заголовка запиту Expect (див. розділ 14.20), не може бути виконане цим сервером, або, якщо сервер є проксі, сервер має недвозначні докази того, що запит не може бути виконаний наступним - сервер стрибків.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>Внутрішня помилка сервера. Сервер зіткнувся з несподіваною умовою, яка завадила йому виконати запит.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>Не реалізовано — сервер не підтримує функції, необхідні для виконання запиту.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>Поганий шлюз. Сервер, виконуючи роль шлюзу або проксі, отримав недійсну відповідь від вищестоящого сервера, до якого він звертався, намагаючись виконати запит.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>Служба недоступна – сервер наразі не може обробити запит через тимчасове перевантаження або обслуговування сервера.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>Час очікування шлюзу. Сервер, виконуючи роль шлюзу або проксі, не отримав своєчасну відповідь від сервера, що вказується в URI (наприклад, HTTP, FTP, LDAP) або іншого допоміжного сервера (наприклад, DNS), до якого йому потрібно було отримати доступ в намагається виконати запит.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>Версія HTTP не підтримується – сервер не підтримує або відмовляється підтримувати версію протоколу HTTP, яка була використана в повідомленні запиту.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>Невідомий код статусу</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>Системна помилка</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Ліцензія</value>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Культура</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>про</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версія</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Увійти</value>
+  </data>
+  <data name="SignOff" xml:space="preserve">
+    <value>Підписати</value>
+  </data>
+  <data name="ErrorMessage.Invalid" xml:space="preserve">
+    <value>Недійсний</value>
+  </data>
+  <data name="ErrorMessage.Required" xml:space="preserve">
+    <value>вимагається</value>
+  </data>
+  <data name="Email.Noreply" xml:space="preserve">
+    <value>Цей електронний лист надіслано з неконтрольованої електронної адреси, будь ласка, не відповідайте.</value>
+  </data>
+  <data name="Email.Verify.Body" xml:space="preserve">
+    <value>Будь ласка, надішліть таке посилання у своєму веб-переглядачі для підтвердження електронної пошти:</value>
+  </data>
+  <data name="Email.Verify.Subject" xml:space="preserve">
+    <value>Перевірка реєстрації для CDCavell</value>
+  </data>
+  <data name="Request_Id" xml:space="preserve">
+    <value>Ідентифікатор запиту</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Ігри</value>
+  </data>
+</root>

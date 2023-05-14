@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>Licence MIT</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>Copyright (c) 2023 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>L'autorisation est par la présente accordée, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le "Logiciel"), de traiter le Logiciel sans restriction, y compris, sans limitation, les droits d'utilisation, de copie, de modification, de fusion , publier, distribuer, sous-licencier et/ou vendre des copies du Logiciel, et permettre aux personnes auxquelles le Logiciel est fourni de le faire, sous réserve des conditions suivantes :</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>L'avis de droit d'auteur ci-dessus et cet avis d'autorisation doivent être inclus dans toutes les copies ou parties substantielles du logiciel.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU TITULAIRES DE DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGES OU AUTRE RESPONSABILITÉ, QU'IL SOIT DANS UNE ACTION DE CONTRAT, DÉLIT OU AUTRE, DÉCOULANT DE, OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>Licences d'actifs</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>Site Web principal</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>Actifs de soutien</value>
+  </data>
+  <data name="license-content-description-2-p1" xml:space="preserve">
+    <value>Les actifs ci-dessus sont sous licence MIT/ISC :</value>
+  </data>
+  <data name="license-content-description-2-p2" xml:space="preserve">
+    <value>L'autorisation est par la présente accordée, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le "Logiciel"), de traiter le Logiciel sans restriction, y compris, sans limitation, les droits d'utilisation, de copie, de modification, de fusion , publier, distribuer, sous-licencier et/ou vendre des copies du Logiciel, et permettre aux personnes auxquelles le Logiciel est fourni de le faire, sous réserve des conditions suivantes :</value>
+  </data>
+  <data name="license-content-description-2-p3" xml:space="preserve">
+    <value>L'avis de droit d'auteur ci-dessus et cet avis d'autorisation doivent être inclus dans toutes les copies ou parties substantielles du logiciel.</value>
+  </data>
+  <data name="license-content-description-2-p4" xml:space="preserve">
+    <value>LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU TITULAIRES DE DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGES OU AUTRE RESPONSABILITÉ, QU'IL SOIT DANS UNE ACTION DE CONTRAT, DÉLIT OU AUTRE, DÉCOULANT DE, OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>Font Awesome Free est sous licence MIT/SIL OLF/CC :</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>Font Awesome Free est gratuit, open source et compatible avec la GPL. Vous pouvez l’utiliser pour des projets commerciaux, des projets open source ou presque tout ce que vous voulez.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p1" xml:space="preserve">
+    <value>Code : Licence MIT</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p2" xml:space="preserve">
+    <value>Dans le téléchargement gratuit de Font Awesome, la licence MIT s’applique à tous les fichiers sans police et sans icône.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p3" xml:space="preserve">
+    <value>Droits d’auteur 2022 Fonticons, Inc.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p4" xml:space="preserve">
+    <value>La permission est accordée par les présentes, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le « Logiciel »), de traiter le Logiciel sans restriction, y compris, sans s’y limiter, les droits d’utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licence et/ou de vente de copies du Logiciel, et de permettre aux personnes à qui le Logiciel est fourni de le faire,  sous réserve des conditions suivantes :</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p5" xml:space="preserve">
+    <value>L’avis de droit d’auteur ci-dessus et cet avis d’autorisation doivent être inclus dans toutes les copies ou parties substantielles du Logiciel.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p6" xml:space="preserve">
+    <value>LE LOGICIEL EST FOURNI « EN L’ÉTAT », SANS GARANTIE D’AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S’Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D’ADÉQUATION À UN USAGE PARTICULIER ET D’ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU LES DROITS D’AUTEUR NE PEUVENT
+LES TITULAIRES SONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS LE CADRE D’UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT DE, HORS OU EN RELATION AVEC LE LOGICIEL OU L’UTILISATION OU D’AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p1" xml:space="preserve">
+    <value>Polices: SIL OFL 1.1 Licence</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p10" xml:space="preserve">
+    <value>« Version originale » fait référence à la collection de composants du logiciel de polices en tant que
+distribué(s) par le(s) titulaire(s) des droits d’auteur.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p11" xml:space="preserve">
+    <value>« Version modifiée » fait référence à tout dérivé fait en ajoutant, en supprimant,
+ou en substituant— en tout ou en partie — l’un des composants de l'
+Version originale, en changeant de format ou en portant le logiciel de polices vers un
+nouvel environnement.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p12" xml:space="preserve">
+    <value>« Auteur » désigne tout concepteur, ingénieur, programmeur, technicien
+écrivain ou autre personne ayant contribué au Logiciel de polices.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13a" xml:space="preserve">
+    <value>AUTORISATION &amp; CONDITIONS</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13b" xml:space="preserve">
+    <value>L’autorisation est accordée, gratuitement, à toute personne obtenant
+une copie du Logiciel de polices, pour utiliser, étudier, copier, fusionner, intégrer, modifier,
+redistribuer et vendre des copies modifiées et non modifiées de la police
+Logiciel, sous réserve des conditions suivantes :</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p14" xml:space="preserve">
+    <value>Ni le Logiciel de Polices ni aucun de ses composants individuels,
+en version originale ou modifiée, peut être vendu par lui-même.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p15" xml:space="preserve">
+    <value>Les versions originales ou modifiées du logiciel de polices peuvent être regroupées,
+redistribué et/ou vendu avec tout logiciel, à condition que chaque copie
+contient l’avis de droit d’auteur ci-dessus et cette licence. Ceux-ci peuvent être
+inclus sous forme de fichiers texte autonomes, d’en-têtes lisibles par l’homme ou
+dans les champs de métadonnées appropriés lisibles par machine dans le texte ou
+fichiers binaires tant que ces champs peuvent être facilement visualisés par l’utilisateur.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p16" xml:space="preserve">
+    <value>Aucune version modifiée du logiciel de polices ne peut utiliser la police réservée
+Nom(s) sauf autorisation écrite explicite accordée par le
+Titulaire des droits d’auteur. Cette restriction s’applique uniquement au nom de police principal en tant que
+présenté aux utilisateurs.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p17" xml:space="preserve">
+    <value>Le(s) nom(s) du (des) titulaire(s) des droits d’auteur ou du ou des auteurs de la police
+Le logiciel ne doit pas être utilisé pour promouvoir, approuver ou annoncer
+Version modifiée, sauf pour accuser réception de la ou des contributions de l'
+Titulaire(s) des droits d’auteur et auteur(s) ou avec leur(s) écrit explicite
+autorisation.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p18" xml:space="preserve">
+    <value>Le Logiciel de polices, modifié ou non, en partie ou en totalité,
+doit être distribué entièrement sous cette licence, et ne doit pas être
+distribué sous toute autre licence. L’exigence pour les polices à
+rester sous cette licence ne s’applique à aucun document créé
+à l’aide du logiciel de polices.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19a" xml:space="preserve">
+    <value>TERMINAISON</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19b" xml:space="preserve">
+    <value>Cette licence devient nulle et non avenue si l’une des conditions ci-dessus est
+non satisfait.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p2" xml:space="preserve">
+    <value>Dans le téléchargement gratuit de Font Awesome, la licence SIL OFL s’applique à toutes les icônes
+empaquetés sous forme de fichiers de polices Web et de bureau.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20a" xml:space="preserve">
+    <value>DÉMENTI</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20b" xml:space="preserve">
+    <value>LE LOGICIEL DE POLICES EST FOURNI "TEL QUEL", SANS GARANTIE D'AUCUNE SORTE,
+EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, TOUTE GARANTIE DE
+QUALITÉ MARCHANDE, ADÉQUATION À UN USAGE PARTICULIER ET ABSENCE DE CONTREFAÇON
+DE COPYRIGHT, BREVET, MARQUE COMMERCIALE OU AUTRE DROIT. EN AUCUN CAS LE
+LE TITULAIRE DU COPYRIGHT EST RESPONSABLE DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ,
+Y COMPRIS TOUT GÉNÉRAL, SPÉCIAL, INDIRECT, ACCESSOIRE OU CONSÉCUTIF
+DOMMAGES, QUE CE SOIT DANS UNE ACTION CONTRACTUELLE, DÉLICTUELLE OU AUTRE, DÉCOULANT
+DE, HORS DE L'UTILISATION OU DE L'INCAPACITÉ D'UTILISER LE LOGICIEL DE POLICES OU DE
+AUTRES TRAITEMENTS DANS LE LOGICIEL DE POLICES.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p3" xml:space="preserve">
+    <value>Copyright (c) 2022 Fonticons, Inc. avec nom de police réservé: « Font Awesome ».</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p4" xml:space="preserve">
+    <value>Ce logiciel de polices est sous licence SIL Open Font License, version 1.1.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p5" xml:space="preserve">
+    <value>SIL OPEN FONT LICENSE Version 1.1 - 26 février 2007</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6a" xml:space="preserve">
+    <value>PRÉAMBULE</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6b" xml:space="preserve">
+    <value>Les objectifs de l’Open Font License (OFL) sont de stimuler le monde entier
+développement de projets de polices collaboratifs, pour soutenir la création de polices
+les efforts des communautés académiques et linguistiques, et de fournir un
+cadre ouvert dans lequel les polices peuvent être partagées et améliorées en partenariat avec d’autres.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p7" xml:space="preserve">
+    <value>L'OFL permet aux polices sous licence d'être utilisées, étudiées, modifiées et
+redistribués librement tant qu'ils ne sont pas vendus par eux-mêmes. La
+les polices, y compris toutes les œuvres dérivées, peuvent être regroupées, intégrées,
+redistribué et/ou vendu avec tout logiciel à condition que tout produit réservé
+les noms ne sont pas utilisés par les œuvres dérivées. Les polices et dérivés,
+cependant, ne peut être publié sous aucun autre type de licence. La
+l'exigence que les polices restent sous cette licence ne s'applique pas
+à tout document créé à l'aide des polices ou de leurs dérivés.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8a" xml:space="preserve">
+    <value>DÉFINITIONS</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8b" xml:space="preserve">
+    <value>« Logiciel de polices » fait référence à l’ensemble des fichiers publiés par le Droit d’auteur
+Titulaire(s) sous cette licence et clairement marqué(s) comme tel. Cela peut
+inclure des fichiers sources, des scripts de build et de la documentation.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p9" xml:space="preserve">
+    <value>« Nom de police réservé » fait référence à tous les noms spécifiés comme tels après le
+déclaration(s) de droit d’auteur.</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p1" xml:space="preserve">
+    <value>Icônes : licence CC BY 4.0</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p2" xml:space="preserve">
+    <value>Le téléchargement gratuit de Font Awesome est sous licence Creative Commons
+Attribution 4.0 Licence internationale et s’applique à toutes les icônes empaquetées
+en tant que types de fichiers SVG et JS.</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p1" xml:space="preserve">
+    <value>Attribution</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p2" xml:space="preserve">
+    <value>L’attribution est requise par les licences MIT, SIL OFL et CC BY. Police téléchargée
+Les fichiers gratuits impressionnants contiennent déjà des commentaires intégrés avec suffisamment de
+attribution, vous ne devriez donc pas avoir besoin de faire quoi que ce soit de plus lors de l’utilisation de ces
+fichiers normalement.</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p1" xml:space="preserve">
+    <value>Icônes de marque</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p2" xml:space="preserve">
+    <value>Toutes les icônes de marque sont des marques commerciales de leurs propriétaires respectifs. L’utilisation de ces
+marques n’indique pas l’approbation du titulaire de la marque par Font
+Génial, ni l’inverse. **Veuillez ne pas utiliser les logos de la marque à quelque fin que ce soit, sauf
+pour représenter l’entreprise, le produit ou le service auquel ils se réfèrent.**</value>
+  </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>L'actif ci-dessus est sous leur</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>Licence standard</value>
+  </data>
+  <data name="license-content-description-5-p1a" xml:space="preserve">
+    <value>L'actif ci-dessus est sous</value>
+  </data>
+  <data name="license-content-description-5-p1b" xml:space="preserve">
+    <value>La licence ouverte de projet de code (CPOL) 1.02</value>
+  </data>
+</root>

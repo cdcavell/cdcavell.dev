@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Version>1.0.5.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
+    <Authors>Christopher D. Cavell</Authors>
+    <Copyright>2023 - Christopher D. Cavell</Copyright>
+    <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\NewFolder\**" />
+    <Content Remove="Services\NewFolder\**" />
+    <EmbeddedResource Remove="Services\NewFolder\**" />
+    <None Remove="Services\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<SupportedPlatform Include="browser" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Include="bundleconfig.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Duende.IdentityServer.EntityFramework.Storage" Version="6.1.7" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.16" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary.Common\ClassLibrary.Common.csproj" />
+  </ItemGroup>
+
+
+
+</Project>

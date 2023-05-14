@@ -1,0 +1,15 @@
+﻿.external-links-block {
+    bottom: 54px;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}
+
+.external-links-list .single-external-link {
+    color: #e6e6e6;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: x-large;
+}

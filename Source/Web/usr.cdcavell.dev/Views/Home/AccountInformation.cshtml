@@ -1,0 +1,66 @@
+﻿@using usr.cdcavell.dev.Models.Apis.User
+@model UserRolesModel
+
+<div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-4 text-center m-auto pb-3" lang="@ViewBag.CultureName">@Localizer["account-information-section-title"]</h1>
+    </div>
+</div>
+
+<form asp-route="New" class="ms-5 me-5 mt-2 mb-2 p-0" id="Form">
+
+    <div class="d-flex flex-row">
+        <div class="flex-column align-self-center justify-content-center me-2">
+            <a class="text-decoration-none" href="https://en.gravatar.com/" rel="external nofollow noopener" target="_blank">
+                <h6 class="fs-6 text-center fw-light m-0 mb-1 p-0">
+                    <small class="fs-6 text-muted m-0 p-0">
+                        Gravatar
+                    </small>
+                </h6>
+                @Html.Gravatar(Model.Email, size:100, htmlAttributes:new { @class = "rounded", alt = "Gravatar" })
+            </a>
+        </div>
+        <div class="flex-column flex-fill ms-2">
+            <div class="form-group">
+                <small class="form-text font-weight-bold" lang="@ViewBag.CultureName">@Localizer["DisplayName"] &nbsp;&nbsp;&nbsp; @Html.ValidationMessageFor(model => model.DisplayName, "", new { @class = "text-danger" })</small>
+                @if (Model.LockNameEmail)
+                {
+                    <input class="form-control form-control-sm" asp-for="DisplayName" readonly>
+                }
+                else
+                {
+                    <input class="form-control form-control-sm" asp-for="DisplayName" autofocus>
+                }
+            </div>
+            <div class="form-group mt-2">
+                <small class="form-text font-weight-bold" lang="@ViewBag.CultureName">@Localizer["Email"] &nbsp;&nbsp;&nbsp; @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })</small>
+                @if (Model.LockNameEmail)
+                {
+                    <input class="form-control form-control-sm" asp-for="Email" readonly>
+                }
+                else
+                {
+                    <input class="form-control form-control-sm" asp-for="Email" autofocus>
+                }
+            </div>
+        </div>
+    </div>
+
+</form>
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Home.Status();
+        });
+
+    </script>
+}

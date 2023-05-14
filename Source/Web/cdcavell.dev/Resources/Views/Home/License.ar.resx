@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>للتكنولوجياترخيص معهد ماساتشوستس</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>حقوق النشر (c) 2023 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>يُمنح الإذن بموجب هذا ، مجانًا ، لأي شخص يحصل على نسخة من هذا البرنامج وملفات التوثيق المرتبطة به ("البرنامج") ، للتعامل في البرنامج دون قيود ، بما في ذلك على سبيل المثال لا الحصر حقوق الاستخدام والنسخ والتعديل والدمج ونشر و / أو توزيع و / أو ترخيص من الباطن و / أو بيع نسخ من البرنامج ، والسماح للأشخاص الذين تم توفير البرنامج لهم بالقيام بذلك ، وفقًا للشروط التالية:</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>يجب تضمين إشعار حقوق النشر أعلاه وإشعار الإذن هذا في جميع النسخ أو الأجزاء الأساسية من البرنامج.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>يتم توفير البرنامج "كما هو" ، دون أي ضمان من أي نوع ، صريحًا أو ضمنيًا ، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق والملاءمة لغرض معين وعدم الانتهاك. لا يتحمل المؤلفون أو حاملو حقوق الطبع والنشر بأي حال من الأحوال المسؤولية عن أي مطالبة أو أضرار أو أي مسؤولية أخرى ، سواء كان ذلك في إطار عقد أو ضرر أو غير ذلك ، ينشأ عن أو خارج أو فيما يتعلق بالبرنامج أو الاستخدام أو المعاملات الأخرى في البرمجيات.</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>ترخيص الأصول</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>الموقع الرئيسي</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>الأصول الداعمة</value>
+  </data>
+  <data name="license-content-description-2-p1" xml:space="preserve">
+    <value>الأصول المذكورة أعلاه تخضع لترخيص معهد ماساتشوستس للتكنولوجيا / مركز الدراسات الدولي:</value>
+  </data>
+  <data name="license-content-description-2-p2" xml:space="preserve">
+    <value>يُمنح الإذن بموجب هذا ، مجانًا ، لأي شخص يحصل على نسخة من هذا البرنامج وملفات التوثيق المرتبطة به ("البرنامج") ، للتعامل في البرنامج دون قيود ، بما في ذلك على سبيل المثال لا الحصر حقوق الاستخدام والنسخ والتعديل والدمج ونشر و / أو توزيع و / أو ترخيص من الباطن و / أو بيع نسخ من البرنامج ، والسماح للأشخاص الذين تم توفير البرنامج لهم بالقيام بذلك ، وفقًا للشروط التالية:</value>
+  </data>
+  <data name="license-content-description-2-p3" xml:space="preserve">
+    <value>يجب تضمين إشعار حقوق النشر أعلاه وإشعار الإذن هذا في جميع النسخ أو الأجزاء الأساسية من البرنامج.</value>
+  </data>
+  <data name="license-content-description-2-p4" xml:space="preserve">
+    <value>يتم توفير البرنامج "كما هو" ، دون أي ضمان من أي نوع ، صريحًا أو ضمنيًا ، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق والملاءمة لغرض معين وعدم الانتهاك. لا يتحمل المؤلفون أو حاملو حقوق الطبع والنشر بأي حال من الأحوال المسؤولية عن أي مطالبة أو أضرار أو أي مسؤولية أخرى ، سواء كان ذلك في إطار عقد أو ضرر أو غير ذلك ، ينشأ عن أو خارج أو فيما يتعلق بالبرنامج أو الاستخدام أو المعاملات الأخرى في البرمجيات.</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>الخط رهيبة الحرة تحت رخصة MIT / SIL OLF / CC:</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>Font Awesome Free مجاني ومفتوح المصدر وصديق ل GPL. يمكنك استخدامه للمشاريع التجارية أو المشاريع مفتوحة المصدر أو أي شيء تريده تقريبا.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p1" xml:space="preserve">
+    <value>الرمز: ترخيص معهد ماساتشوستس للتكنولوجيا</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p2" xml:space="preserve">
+    <value>في تنزيل Font Awesome Free ، ينطبق ترخيص MIT على جميع الملفات غير الخطية وغير الرمزية.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p3" xml:space="preserve">
+    <value>حقوق الطبع والنشر 2022 Fonticons, Inc.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p4" xml:space="preserve">
+    <value>يتم منح الإذن بموجب هذا ، مجانا ، لأي شخص يحصل على نسخة من هذا البرنامج وملفات الوثائق المرتبطة به ("البرنامج") ، للتعامل في البرنامج دون قيود ، بما في ذلك على سبيل المثال لا الحصر حقوق استخدام البرنامج ونسخه وتعديله ودمجه ونشره وتوزيعه وترخيصه من الباطن و / أو بيع نسخ منه ، والسماح للأشخاص الذين تم تزويد البرنامج بهم بالقيام بذلك ،  تخضع للشروط التالية:</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p5" xml:space="preserve">
+    <value>يجب تضمين إشعار حقوق الطبع والنشر أعلاه وإشعار الإذن هذا في جميع النسخ أو أجزاء كبيرة من البرنامج.</value>
+  </data>
+  <data name="license-content-description-3-p3-l1-p6" xml:space="preserve">
+    <value>يتم توفير البرنامج "كما هو" ، دون ضمان من أي نوع ، صريح أو ضمني ، بما في ذلك على سبيل المثال لا الحصر ضمانات التسويق والملاءمة لغرض معين وعدم الانتهاك. لا يجوز بأي حال من الأحوال المؤلفين أو حقوق الطبع والنشر
+يكون أصحاب البرامج مسؤولين عن أي مطالبة أو أضرار أو مسؤولية أخرى، سواء في إجراء تعاقدي أو ضرر أو غير ذلك، تنشأ عن البرنامج أو عنه أو فيما يتعلق به أو الاستخدام أو التعاملات الأخرى في البرنامج.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p1" xml:space="preserve">
+    <value>الخطوط: SIL OFL 1.1 ترخيص</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p10" xml:space="preserve">
+    <value>يشير "الإصدار الأصلي" إلى مجموعة مكونات برنامج الخط على النحو التالي:
+موزعة من قبل صاحب (أصحاب) حقوق الطبع والنشر.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p11" xml:space="preserve">
+    <value>تشير "النسخة المعدلة" إلى أي مشتق يتم إجراؤه عن طريق الإضافة إلى أو حذف أو حذف
+أو استبدال - جزئيا أو كليا - بأي من مكونات
+الإصدار الأصلي، عن طريق تغيير التنسيقات أو عن طريق نقل برنامج الخط إلى
+بيئة جديدة.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p12" xml:space="preserve">
+    <value>يشير مصطلح "المؤلف" إلى أي مصمم أو مهندس أو مبرمج أو تقني
+كاتب أو أي شخص آخر ساهم في برنامج الخط.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13a" xml:space="preserve">
+    <value>الإذن والشروط</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p13b" xml:space="preserve">
+    <value>يمنح الإذن بموجب هذا ، مجانا ، لأي شخص يحصل على
+نسخة من برنامج الخط ، لاستخدام ، دراسة ، نسخ ، دمج ، تضمين ، تعديل ،
+إعادة توزيع وبيع نسخ معدلة وغير معدلة من الخط
+البرنامج، وفقا للشروط التالية:</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p14" xml:space="preserve">
+    <value>لا برنامج الخط ولا أي من مكوناته الفردية ،
+في الإصدارات الأصلية أو المعدلة، يمكن بيعها من تلقاء نفسها.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p15" xml:space="preserve">
+    <value>قد يتم تجميع الإصدارات الأصلية أو المعدلة من برنامج الخط ،
+إعادة توزيعها و / أو بيعها مع أي برنامج ، شريطة أن تكون كل نسخة
+يحتوي على إشعار حقوق الطبع والنشر أعلاه وهذا الترخيص. هذه يمكن أن تكون
+مضمنة إما كملفات نصية مستقلة أو رؤوس قابلة للقراءة من قبل الإنسان أو
+في حقول بيانات التعريف المناسبة القابلة للقراءة آليا داخل النص أو
+الملفات الثنائية طالما أن هذه الحقول يمكن عرضها بسهولة من قبل المستخدم.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p16" xml:space="preserve">
+    <value>لا يجوز لأي إصدار معدل من برنامج الخط استخدام الخط المحجوز
+الاسم (الأسماء) ما لم يتم منح إذن كتابي صريح من قبل الجهة المقابلة
+صاحب حقوق الطبع والنشر. ينطبق هذا القيد فقط على اسم الخط الأساسي ك
+المقدمة للمستخدمين.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p17" xml:space="preserve">
+    <value>اسم (أسماء) صاحب (أصحاب) حقوق الطبع والنشر أو مؤلف (مؤلفي) الخط
+لا يجوز استخدام البرامج للترويج أو تأييد أو الإعلان عن أي
+النسخة المعدلة، باستثناء الإقرار بمساهمة (مساهمات)
+صاحب (أصحاب) حقوق الطبع والنشر والمؤلف (المؤلفون) أو مع كتابتهم الصريحة
+إذن.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p18" xml:space="preserve">
+    <value>برنامج الخط، المعدل أو غير المعدل، جزئيا أو كليا،
+يجب أن تكون موزعة بالكامل بموجب هذا الترخيص ، ويجب ألا تكون
+موزعة بموجب أي ترخيص آخر. متطلبات الخطوط إلى
+البقاء تحت هذا الترخيص لا ينطبق على أي مستند تم إنشاؤه
+باستخدام برنامج الخط.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19a" xml:space="preserve">
+    <value>انهاء</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p19b" xml:space="preserve">
+    <value>يصبح هذا الترخيص لاغيا وباطلا إذا كان أي من الشروط المذكورة أعلاه
+لم يتم الوفاء بها.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p2" xml:space="preserve">
+    <value>في تنزيل Font Awesome Free ، ينطبق ترخيص SIL OFL على جميع الرموز
+يتم تعبئتها كملفات خطوط الويب وسطح المكتب.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20a" xml:space="preserve">
+    <value>اخلاء المسؤوليه</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p20b" xml:space="preserve">
+    <value>يتم توفير برنامج FONT "كما هو" ، بدون أي ضمان من أي نوع ،
+صريحة أو ضمنية ، بما في ذلك على سبيل المثال لا الحصر أي ضمانات لـ
+القابلية للتسويق والملاءمة لغرض معين وعدم الانتهاك
+حقوق الطبع والنشر أو براءة الاختراع أو العلامة التجارية أو أي حق آخر. لا يجوز في أي حال من الأحوال أن
+يكون حامل حقوق الطبع والنشر مسؤولاً عن أي مطالبة أو أضرار أو مسؤولية أخرى ،
+بما في ذلك أي عام أو خاص أو غير مباشر أو عرضي أو تبعي
+الأضرار ، سواء كانت ناجمة عن عقد أو ضرر أو غير ذلك
+من أو خارج الاستخدام أو عدم القدرة على استخدام برنامج FONT أو من
+معاملات أخرى في برنامج FONT.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p3" xml:space="preserve">
+    <value>حقوق الطبع والنشر (ج) 2022 Fonticons، Inc. مع اسم الخط المحجوز: "الخط رائع".</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p4" xml:space="preserve">
+    <value>برنامج الخط هذا مرخص بموجب ترخيص SIL Open Font ، الإصدار 1.1.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p5" xml:space="preserve">
+    <value>ترخيص الخط المفتوح SIL الإصدار 1.1 - 26 فبراير 2007</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6a" xml:space="preserve">
+    <value>الديباجه</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p6b" xml:space="preserve">
+    <value>أهداف ترخيص الخط المفتوح (OFL) هي التحفيز في جميع أنحاء العالم
+تطوير مشاريع الخطوط التعاونية ، لدعم إنشاء الخط
+جهود المجتمعات الأكاديمية واللغوية، وتوفير بيئة حرة و
+إطار مفتوح يمكن من خلاله مشاركة الخطوط وتحسينها بالشراكة مع الآخرين.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p7" xml:space="preserve">
+    <value>يسمح OFL باستخدام الخطوط المرخصة ودراستها وتعديلها و
+يعاد توزيعها بحرية طالما لم يتم بيعها بأنفسهم. ال
+يمكن تجميع الخطوط ، بما في ذلك أي أعمال مشتقة ،
+أعيد توزيعها و / أو بيعها مع أي برنامج بشرط أن يكون أي منها محجوزًا
+الأسماء لا تستخدم من قبل الأعمال المشتقة. الخطوط والمشتقات ،
+ومع ذلك ، لا يمكن تحريره بموجب أي نوع آخر من الترخيص. ال
+لا ينطبق شرط بقاء الخطوط تحت هذا الترخيص
+إلى أي مستند تم إنشاؤه باستخدام الخطوط أو مشتقاتها.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8a" xml:space="preserve">
+    <value>التعاريف</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p8b" xml:space="preserve">
+    <value>يشير "برنامج الخط" إلى مجموعة الملفات التي أصدرتها حقوق الطبع والنشر
+صاحب (أصحاب) بموجب هذا الترخيص وملحوظ بوضوح على هذا النحو. قد يؤدي ذلك إلى
+تضمين الملفات المصدر وإنشاء البرامج النصية والوثائق.</value>
+  </data>
+  <data name="license-content-description-3-p3-l2-p9" xml:space="preserve">
+    <value>يشير "اسم الخط المحجوز" إلى أي أسماء محددة على هذا النحو بعد
+بيان (بيانات) حقوق الطبع والنشر.</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p1" xml:space="preserve">
+    <value>الأيقونات: رخصة CC BY 4.0</value>
+  </data>
+  <data name="license-content-description-3-p3-l3-p2" xml:space="preserve">
+    <value>الخط رهيبة تحميل مجاني مرخص بموجب المشاع الإبداعي
+الإسناد 4.0 رخصة دولية وينطبق على جميع الأيقونات المعبأة
+كأنواع ملفات SVG و JS.</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p1" xml:space="preserve">
+    <value>اسناد</value>
+  </data>
+  <data name="license-content-description-3-p3-l4-p2" xml:space="preserve">
+    <value>الإسناد مطلوب من قبل معهد ماساتشوستس للتكنولوجيا و SIL OFL و CC بواسطة التراخيص. الخط الذي تم تنزيله
+ملفات مجانية رائعة تحتوي بالفعل على تعليقات مضمنة مع ما يكفي
+الإسناد ، لذلك يجب ألا تحتاج إلى القيام بأي شيء إضافي عند استخدام هذه
+الملفات بشكل طبيعي.</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p1" xml:space="preserve">
+    <value>أيقونات العلامة التجارية</value>
+  </data>
+  <data name="license-content-description-3-p3-l5-p2" xml:space="preserve">
+    <value>جميع أيقونات العلامات التجارية هي علامات تجارية لأصحابها. استخدام هذه
+العلامات التجارية لا تشير إلى تأييد صاحب العلامة التجارية بواسطة الخط
+رائع ، ولا العكس. ** يرجى عدم استخدام شعارات العلامة التجارية لأي غرض باستثناء
+لتمثيل الشركة أو المنتج أو الخدمة التي يشيرون إليها.**</value>
+  </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>الأصول المذكورة أعلاه تحت</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>رخصة عادية</value>
+  </data>
+  <data name="license-content-description-5-p1a" xml:space="preserve">
+    <value>الأصل أعلاه تحت</value>
+  </data>
+  <data name="license-content-description-5-p1b" xml:space="preserve">
+    <value>رخصة مشروع Code Open (CPOL) 1.02</value>
+  </data>
+</root>

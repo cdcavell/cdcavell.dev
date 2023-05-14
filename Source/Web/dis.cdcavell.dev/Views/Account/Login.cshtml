@@ -1,0 +1,106 @@
+﻿@model dis.cdcavell.dev.Models.Account.LoginViewModel
+
+<div id="headerRow" class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-5 text-center m-auto pb-1" lang="@ViewBag.CultureName">@Localizer["login-section-title"]</h1>
+    </div>
+</div>
+
+
+    @if (Model.EnableLocalLogin)
+    {
+    <div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+        <div class="col-sm-6 m-0 p-0">
+            <div class="card card-bg m-0 p-0">
+                <div class="card-header m-0 border-bottom-0">
+                    <h4 class="m-0 p-0" lang="@ViewBag.CultureName">@Localizer["LocalAccount"]</h4>
+                </div>
+
+                <div class="card-body m-0">
+                    <form asp-route="Login">
+                        <input type="hidden" asp-for="ReturnUrl" />
+
+                        <div class="form-group" lang="@ViewBag.CultureName">
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger font-weight-bold" })
+                            <input class="form-control" placeholder="@Localizer["Username"]" asp-for="Username" autofocus>
+                        </div>
+                        <div class="form-group mt-2" lang="@ViewBag.CultureName">
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger font-weight-bold" })
+                            <input type="password" class="form-control" placeholder="@Localizer["Password"]" asp-for="Password" autocomplete="off">
+                        </div>
+                        @if (Model.AllowRememberLogin)
+                        {
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" asp-for="RememberLogin">
+                                    <label class="form-check-label" asp-for="RememberLogin" lang="@ViewBag.CultureName">
+                                        @Localizer["RememberMyLogin"]
+                                    </label>
+                                </div>
+                            </div>
+                        }
+                        <div class="d-flex flex-row-reverse">
+                            <button class="btn btn-green shadow ms-1" name="button" value="cancel" lang="@ViewBag.CultureName">@Localizer["CancelButton"]</button>
+                            <button class="btn btn-blue shadow" name="button" value="login" lang="@ViewBag.CultureName">@Localizer["LoginButton"]</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    @if (Model.VisibleExternalProviders.Any())
+    {
+    <div class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+        <div class="col-sm-6 m-0 p-0">
+            <div class="card card-bg m-0 p-0">
+                <div class="card-header m-0 border-bottom-0">
+                    <h4 lang="@ViewBag.CultureName">@Localizer["ExternalAccount"]</h4>
+                </div>
+                <div class="card-body m-0 py-1">
+                    <ul class="list-inline text-center">
+                        @foreach (var provider in Model.VisibleExternalProviders)
+                        {
+                            <li class="list-inline-item mb-2">
+                                <a class="btn btn-green shadow"
+                           asp-controller="External"
+                           asp-action="Challenge"
+                           asp-route-scheme="@provider.AuthenticationScheme"
+                           asp-route-returnUrl="@Model.ReturnUrl">
+                                    @provider.DisplayName
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
+    {
+    <div class="alert alert-warning m-0 p-0" lang="@ViewBag.CultureName">
+        <strong lang="@ViewBag.CultureName">@Localizer["alertWarningStrong"]</strong>
+            @Localizer["alertWarning"]
+    </div>
+    }
+
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Account.Login();
+        });
+
+    </script>
+}

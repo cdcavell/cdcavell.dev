@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PuzzleSetup>
+  <Puzzle>
+    <Number>1</Number>
+    <Difficulty>Tough</Difficulty>
+    <Cells>
+      <Cell index="2" value="3" />
+      <Cell index="5" value="1" />
+      <Cell index="8" value="9" />
+      <Cell index="9" value="4" />
+      <Cell index="15" value="1" />
+      <Cell index="19" value="9" />
+      <Cell index="21" value="7" />
+      <Cell index="22" value="3" />
+      <Cell index="25" value="8" />
+      <Cell index="31" value="1" />
+      <Cell index="33" value="5" />
+      <Cell index="35" value="8" />
+      <Cell index="39" value="4" />
+      <Cell index="41" value="3" />
+      <Cell index="45" value="5" />
+      <Cell index="47" value="1" />
+      <Cell index="49" value="2" />
+      <Cell index="55" value="7" />
+      <Cell index="58" value="8" />
+      <Cell index="59" value="5" />
+      <Cell index="61" value="6" />
+      <Cell index="65" value="4" />
+      <Cell index="71" value="1" />
+      <Cell index="72" value="8" />
+      <Cell index="75" value="6" />
+      <Cell index="78" value="7" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>2</Number>
+    <Difficulty>Fiendish</Difficulty>
+    <Cells>
+      <Cell index="5" value="3" />
+      <Cell index="10" value="8" />
+      <Cell index="13" value="4" />
+      <Cell index="15" value="3" />
+      <Cell index="16" value="6" />
+      <Cell index="18" value="4" />
+      <Cell index="23" value="2" />
+      <Cell index="25" value="9" />
+      <Cell index="26" value="1" />
+      <Cell index="28" value="5" />
+      <Cell index="32" value="8" />
+      <Cell index="34" value="2" />
+      <Cell index="38" value="9" />
+      <Cell index="42" value="4" />
+      <Cell index="46" value="6" />
+      <Cell index="48" value="2" />
+      <Cell index="52" value="8" />
+      <Cell index="54" value="5" />
+      <Cell index="55" value="9" />
+      <Cell index="57" value="7" />
+      <Cell index="62" value="6" />
+      <Cell index="64" value="3" />
+      <Cell index="65" value="7" />
+      <Cell index="67" value="9" />
+      <Cell index="70" value="5" />
+      <Cell index="75" value="6" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>3</Number>
+    <Difficulty>Tough</Difficulty>
+    <Cells>
+      <Cell index="1" value="8" />
+      <Cell index="2" value="4" />
+      <Cell index="8" value="2" />
+      <Cell index="12" value="1" />
+      <Cell index="13" value="2" />
+      <Cell index="22" value="6" />
+      <Cell index="23" value="4" />
+      <Cell index="24" value="5" />
+      <Cell index="28" value="7" />
+      <Cell index="29" value="1" />
+      <Cell index="32" value="2" />
+      <Cell index="34" value="4" />
+      <Cell index="36" value="9" />
+      <Cell index="44" value="5" />
+      <Cell index="46" value="4" />
+      <Cell index="48" value="8" />
+      <Cell index="51" value="7" />
+      <Cell index="52" value="3" />
+      <Cell index="56" value="2" />
+      <Cell index="57" value="4" />
+      <Cell index="58" value="1" />
+      <Cell index="67" value="8" />
+      <Cell index="68" value="9" />
+      <Cell index="72" value="7" />
+      <Cell index="78" value="6" />
+      <Cell index="79" value="9" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>4</Number>
+    <Difficulty>Fiendish</Difficulty>
+    <Cells>
+      <Cell index="0" value="3" />
+      <Cell index="1" value="9" />
+      <Cell index="3" value="6" />
+      <Cell index="7" value="1" />
+      <Cell index="9" value="6" />
+      <Cell index="12" value="9" />
+      <Cell index="13" value="5" />
+      <Cell index="20" value="4" />
+      <Cell index="21" value="3" />
+      <Cell index="27" value="2" />
+      <Cell index="28" value="3" />
+      <Cell index="32" value="5" />
+      <Cell index="35" value="6" />
+      <Cell index="38" value="1" />
+      <Cell index="42" value="4" />
+      <Cell index="45" value="4" />
+      <Cell index="48" value="2" />
+      <Cell index="52" value="5" />
+      <Cell index="53" value="7" />
+      <Cell index="59" value="3" />
+      <Cell index="60" value="9" />
+      <Cell index="67" value="6" />
+      <Cell index="68" value="2" />
+      <Cell index="71" value="3" />
+      <Cell index="73" value="1" />
+      <Cell index="77" value="9" />
+      <Cell index="79" value="6" />
+      <Cell index="80" value="8" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>5</Number>
+    <Difficulty>Fiendish</Difficulty>
+    <Cells>
+      <Cell index="0" value="2" />
+      <Cell index="3" value="8" />
+      <Cell index="14" value="3" />
+      <Cell index="20" value="4" />
+      <Cell index="21" value="9" />
+      <Cell index="24" value="5" />
+      <Cell index="25" value="6" />
+      <Cell index="30" value="7" />
+      <Cell index="31" value="9" />
+      <Cell index="33" value="6" />
+      <Cell index="36" value="3" />
+      <Cell index="40" value="2" />
+      <Cell index="44" value="1" />
+      <Cell index="47" value="2" />
+      <Cell index="49" value="5" />
+      <Cell index="50" value="8" />
+      <Cell index="55" value="7" />
+      <Cell index="56" value="1" />
+      <Cell index="59" value="9" />
+      <Cell index="60" value="4" />
+      <Cell index="66" value="6" />
+      <Cell index="77" value="5" />
+      <Cell index="80" value="8" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>6</Number>
+    <Difficulty>Fiendish</Difficulty>
+    <Cells>
+      <Cell index="4" value="7" />
+      <Cell index="6" value="1" />
+      <Cell index="7" value="9" />
+      <Cell index="8" value="6" />
+      <Cell index="12" value="5" />
+      <Cell index="16" value="4" />
+      <Cell index="23" value="6" />
+      <Cell index="24" value="5" />
+      <Cell index="26" value="2" />
+      <Cell index="30" value="8" />
+      <Cell index="33" value="6" />
+      <Cell index="35" value="3" />
+      <Cell index="37" value="4" />
+      <Cell index="43" value="5" />
+      <Cell index="45" value="9" />
+      <Cell index="47" value="8" />
+      <Cell index="50" value="2" />
+      <Cell index="54" value="6" />
+      <Cell index="56" value="1" />
+      <Cell index="57" value="2" />
+      <Cell index="64" value="7" />
+      <Cell index="68" value="1" />
+      <Cell index="72" value="2" />
+      <Cell index="73" value="3" />
+      <Cell index="74" value="9" />
+      <Cell index="76" value="6" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>7</Number>
+    <Difficulty>Tough</Difficulty>
+    <Cells>
+      <Cell index="1" value="4" />
+      <Cell index="3" value="8" />
+      <Cell index="10" value="6" />
+      <Cell index="12" value="4" />
+      <Cell index="14" value="7" />
+      <Cell index="16" value="5" />
+      <Cell index="17" value="8" />
+      <Cell index="18" value="3" />
+      <Cell index="20" value="7" />
+      <Cell index="24" value="9" />
+      <Cell index="30" value="7" />
+      <Cell index="31" value="2" />
+      <Cell index="34" value="1" />
+      <Cell index="38" value="8" />
+      <Cell index="42" value="5" />
+      <Cell index="46" value="7" />
+      <Cell index="49" value="6" />
+      <Cell index="50" value="8" />
+      <Cell index="56" value="6" />
+      <Cell index="60" value="4" />
+      <Cell index="62" value="9" />
+      <Cell index="63" value="8" />
+      <Cell index="64" value="9" />
+      <Cell index="66" value="5" />
+      <Cell index="68" value="4" />
+      <Cell index="70" value="3" />
+      <Cell index="77" value="6" />
+      <Cell index="79" value="8" />
+    </Cells>
+  </Puzzle>
+  <Puzzle>
+    <Number>8</Number>
+    <Difficulty>Fiendish</Difficulty>
+    <Cells>
+      <Cell index="1" value="7" />
+      <Cell index="4" value="4" />
+      <Cell index="7" value="5" />
+      <Cell index="9" value="8" />
+      <Cell index="14" value="6" />
+      <Cell index="15" value="3" />
+      <Cell index="22" value="1" />
+      <Cell index="25" value="8" />
+      <Cell index="27" value="5" />
+      <Cell index="30" value="9" />
+      <Cell index="34" value="6" />
+      <Cell index="35" value="2" />
+      <Cell index="45" value="2" />
+      <Cell index="46" value="4" />
+      <Cell index="50" value="3" />
+      <Cell index="53" value="9" />
+      <Cell index="55" value="6" />
+      <Cell index="58" value="9" />
+      <Cell index="65" value="7" />
+      <Cell index="66" value="5" />
+      <Cell index="71" value="4" />
+      <Cell index="74" value="1" />
+      <Cell index="76" value="2" />
+      <Cell index="79" value="3" />
+    </Cells>
+  </Puzzle>
+</PuzzleSetup>

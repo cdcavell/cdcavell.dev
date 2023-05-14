@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PuzzleSetup>
+  <Puzzle>
+    <Number>1</Number>
+    <Difficulty />
+    <Cells>
+      <Cell index="2" value="3" />
+      <Cell index="5" value="1" />
+      <Cell index="8" value="9" />
+      <Cell index="9" value="4" />
+      <Cell index="15" value="1" />
+      <Cell index="19" value="9" />
+      <Cell index="21" value="7" />
+      <Cell index="22" value="3" />
+      <Cell index="25" value="8" />
+      <Cell index="31" value="1" />
+      <Cell index="33" value="5" />
+      <Cell index="35" value="8" />
+      <Cell index="39" value="4" />
+      <Cell index="41" value="3" />
+      <Cell index="45" value="5" />
+      <Cell index="47" value="1" />
+      <Cell index="49" value="2" />
+      <Cell index="55" value="7" />
+      <Cell index="58" value="8" />
+      <Cell index="59" value="5" />
+      <Cell index="61" value="6" />
+      <Cell index="65" value="4" />
+      <Cell index="71" value="1" />
+      <Cell index="72" value="8" />
+      <Cell index="75" value="6" />
+      <Cell index="78" value="7" />
+    </Cells>
+  </Puzzle>
+</PuzzleSetup>

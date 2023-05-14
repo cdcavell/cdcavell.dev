@@ -1,0 +1,110 @@
+﻿# For most projects, this workflow file will not need changing; you simply need
+# to commit it to your repository.
+#
+# You may wish to alter this file to override the set of languages analyzed,
+# or to provide custom queries or build logic.
+name: "Develop CodeQL Analysis"
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  allowed-branch:
+    runs-on: ubuntu-latest
+    name: Allowed Branch
+    steps:
+    # To use this repository's private action,
+    # you must check out the repository
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Validate action step
+      id: allowed-branch
+      uses: cdcavell/allowed-branch-javascript-action@v2
+      with:
+        allowed-branch: 'feature/*, revert-*-feature/*'
+  analyze:
+    needs: allowed-branch
+    name: Analyze
+    #runs-on: ubuntu-latest
+    runs-on: windows-latest
+    #runs-on: windows-2019
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # Override automatic language detection by changing the below list
+        # Supported options are ['csharp', 'cpp', 'go', 'java', 'javascript', 'python']
+        language: ['csharp', 'javascript']
+        # Learn more...
+        # https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#overriding-automatic-language-detection
+
+    steps:
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    #    include-prerelease: false
+
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    #  with:
+    #    # We must fetch at least the immediate parents so that if this is
+    #    # a pull request then we can checkout the head.
+    #    fetch-depth: 2
+
+    # If this run was triggered by a pull request event, then checkout
+    # the head of the pull request instead of the merge commit.
+    #- run: git checkout HEAD^2
+    #  if: ${{ github.event_name == 'pull_request' }}
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        # If you wish to specify custom queries, you can do so here or in a config file.
+        # By default, queries listed here will override any specified in a config file. 
+        # Prefix the list here with "+" to use these queries and those in the config file.
+        # queries: ./path/to/local/query, your-org/your-repo/queries@main
+
+    # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
+    # If this step fails, then you should remove it and run the build manually (see below)
+    #- name: Autobuild
+    #  uses: github/codeql-action/autobuild@v2
+
+    # ℹ️ Command-line programs to run using the OS shell.
+    # 📚 https://git.io/JvXDl
+
+    # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
+    #    and modify them (or add more) to build your code if your project
+    #    uses a compiled language
+
+    - run: |
+       dotnet build --no-self-contained --use-current-runtime
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+
+  sync-branch:
+    # https://github.com/pascalgn/automerge-action
+    needs: analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Automerge 
+        uses: "cdcavell/automerge-action@v0.12.0"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_LABELS: ""
+          MERGE_REMOVE_LABELS: ""
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_FORKS: "false"
+          MERGE_RETRIES: "6"
+          MERGE_RETRY_SLEEP: "10000"
+          MERGE_DELETE_BRANCH: "false"
+          UPDATE_LABELS: ""
+          UPDATE_METHOD: "merge"
+

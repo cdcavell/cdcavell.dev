@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>無効なモデル状態</value>
+  </data>
+  <data name="Site-Description" xml:space="preserve">
+    <value>.NET 6.0MVCアプリケーションの進行中の開発。</value>
+  </data>
+  <data name="Site-Title" xml:space="preserve">
+    <value>Christopher D.Cavellの個人ウェブサイト</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>ステータスコード</value>
+  </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>継続する</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>プロトコルの切り替え</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>わかった</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>作成した</value>
+  </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>受け入れられました</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>信頼できない情報</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>コンテンツなし</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>コンテンツをリセット</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>部分的なコンテンツ</value>
+  </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>複数の選択肢-要求されたリソースは、それぞれが独自の特定の場所を持つ一連の表現のいずれかに対応し、ユーザー（またはユーザーエージェント）が優先表現を選択できるように、エージェント主導のネゴシエーション情報（セクション12）が提供されますリクエストをその場所にリダイレクトします。</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>永続的に移動-要求されたリソースには新しい永続的なURIが割り当てられており、このリソースへの今後の参照では、返されたURIの1つを使用する必要があります。</value>
+  </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>見つかりました-要求されたリソースは一時的に別のURIの下にあります。リダイレクトは時々変更される可能性があるため、クライアントは今後のリクエストに引き続きRequest-URIを使用する必要があります。</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>その他を参照-リクエストへの応答は別のURIで見つけることができ、そのリソースでGETメソッドを使用して取得する必要があります。</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>変更されていない-クライアントが条件付きGET要求を実行し、アクセスが許可されているが、ドキュメントが変更されていない場合、サーバーはこのステータスコードで応答する必要があります。 304応答にはメッセージ本文を含めることはできません。したがって、ヘッダーフィールドの後の最初の空の行で常に終了します。</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>プロキシを使用-要求されたリソースは、[場所]フィールドで指定されたプロキシを介してアクセスする必要があります。 Locationフィールドは、プロキシのURIを示します。受信者は、プロキシを介してこの単一の要求を繰り返すことが期待されます。</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>未使用-306ステータスコードは、以前のバージョンの仕様で使用されていましたが、現在は使用されておらず、コードは予約されています。</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>一時的なリダイレクト-要求されたリソースは、別のURIの下に一時的に存在します。リダイレクトは時々変更される可能性があるため、クライアントは今後のリクエストに引き続きRequest-URIを使用する必要があります。</value>
+  </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>不正なリクエスト-構文が正しくないため、サーバーはリクエストを理解できませんでした。クライアントは、変更せずに要求を繰り返すべきではありません（SHOULDNOT）。</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>Unauthorized-リクエストにはユーザー認証が必要です。</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>支払いが必要</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>禁止-サーバーは要求を理解しましたが、要求を満たすことを拒否しています。承認は役に立たず、リクエストは繰り返されるべきではありません。</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>見つかりません-サーバーはRequest-URIに一致するものを見つけられませんでした。状態が一時的であるか永続的であるかは示されません。</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>メソッドは許可されていません-Request-Lineで指定されたメソッドは、Request-URIで識別されたリソースには許可されていません。</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>受け入れられない-リクエストによって識別されたリソースは、リクエストで送信された受け入れヘッダーに従って受け入れられないコンテンツ特性を持つ応答エンティティのみを生成できます。</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>プロキシ認証が必要-このコードは401（Unauthorized）に似ていますが、クライアントが最初にプロキシで自身を認証する必要があることを示しています。</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>要求のタイムアウト-サーバーが待機する準備ができている時間内に、クライアントが要求を生成しませんでした。</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>競合-リソースの現在の状態と競合しているため、リクエストを完了できませんでした。</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>なくなった-要求されたリソースはサーバーで使用できなくなり、転送アドレスは不明です。この状態は永続的であると見なされると予想されます。</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>必要な長さ-サーバーは、Content-Lengthが定義されていないリクエストの受け入れを拒否します。</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>前提条件が失敗しました-1つ以上のリクエストヘッダーフィールドで指定された前提条件は、サーバーでテストされたときにfalseと評価されました。</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>リクエストエンティティが大きすぎます-リクエストエンティティがサーバーが処理しようとしている、または処理できるサイズよりも大きいため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URIが長すぎます-Request-URIがサーバーが解釈しようとしている長さよりも長いため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>サポートされていないメディアタイプ-リクエストのエンティティが、リクエストされたメソッドのリクエストされたリソースでサポートされていない形式であるため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>要求された範囲が満たされていません</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>期待値が失敗しました-Expectrequest-headerフィールド（セクション14.20を参照）で指定された期待値は、このサーバーでは満たすことができませんでした。または、サーバーがプロキシである場合、サーバーは、次のサーバーで要求を満たすことができなかったという明確な証拠を持っています。 -ホップサーバー。</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>内部サーバーエラー-サーバーで予期しない状態が発生したため、サーバーは要求を実行できませんでした。</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>実装されていません-サーバーは、要求を満たすために必要な機能をサポートしていません。</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>不正なゲートウェイ-サーバーはゲートウェイまたはプロキシとして機能しているときに、要求を実行しようとしてアクセスしたアップストリームサーバーから無効な応答を受信しました。</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>サービスを利用できません-サーバーの一時的な過負荷またはメンテナンスのため、サーバーは現在リクエストを処理できません。</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>ゲートウェイタイムアウト-サーバーはゲートウェイまたはプロキシとして機能しているときに、URI（HTTP、FTP、LDAPなど）またはアクセスする必要のある他の補助サーバー（DNSなど）で指定されたアップストリームサーバーからタイムリーな応答を受信しませんでしたリクエストを完了しようとしています。</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>HTTPバージョンがサポートされていません-サーバーは、要求メッセージで使用されたHTTPプロトコルバージョンをサポートしていないか、サポートを拒否しています。</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>不明なステータスコード</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>システムエラー</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>文化</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>約</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="SignOff" xml:space="preserve">
+    <value>サインオフ</value>
+  </data>
+  <data name="ErrorMessage.Invalid" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="ErrorMessage.Required" xml:space="preserve">
+    <value>必須</value>
+  </data>
+  <data name="Email.Noreply" xml:space="preserve">
+    <value>このメールは、監視されていないメール アドレスから送信されたものです。返信しないでください。</value>
+  </data>
+  <data name="Email.Verify.Body" xml:space="preserve">
+    <value>電子メールの検証のために、Web ブラウザで次のリンクを送信してください。</value>
+  </data>
+  <data name="Email.Verify.Subject" xml:space="preserve">
+    <value>CDCavell の登録検証</value>
+  </data>
+  <data name="Request_Id" xml:space="preserve">
+    <value>リクエストID</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>ゲーム</value>
+  </data>
+</root>

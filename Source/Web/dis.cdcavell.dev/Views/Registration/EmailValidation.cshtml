@@ -1,0 +1,43 @@
+﻿@{
+    var email = ViewData["Email"] as string;
+    var confirmationLink = ViewData["ConfirmationLink"] as string;
+}
+<div id="headerRow" class="row m-0 p-0 mb-4 align-items-top justify-content-center">
+    <div class="col-12 m-0 p-0 w-100">
+        <h1 class="display-5 text-center m-auto pb-1" lang="@ViewBag.CultureName">@Localizer["registration-section-title"]</h1>
+    </div>
+</div>
+<p lang="@ViewBag.CultureName">
+    @Localizer["paragrph", @email ?? string.Empty]
+</p>
+
+@if (!string.IsNullOrEmpty(confirmationLink))
+{
+    Uri? uriResult;
+    bool result = Uri.TryCreate(confirmationLink, UriKind.Absolute, out uriResult)
+        && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+
+    if (result)
+    {
+        <p class="text-center">
+            <a class="btn btn btn-warning" href="@uriResult?.AbsoluteUri" role="button" lang="@ViewBag.CultureName">@Localizer["email-confirmation-link"]</a>
+        </p>
+    }
+}
+
+@section styles
+{
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/application.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
+}
+
+@section scripts
+{
+    <script src="/js/application.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
+    <script nonce="@ViewBag.ScriptNonce">
+
+        $(document).ready(function () {
+            Registration.EmailValidation();
+        });
+
+    </script>
+}
