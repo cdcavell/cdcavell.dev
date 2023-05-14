@@ -1,0 +1,3 @@
+[submodule "Source/Xml/wiki"]
+	path = Source/Xml/wiki
+	url = https://github.com/cdcavell/cdcavell.dev.wiki.git
