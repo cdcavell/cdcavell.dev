@@ -90,6 +90,7 @@ jobs:
     # https://github.com/pascalgn/automerge-action
     needs: analyze
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@main
 
