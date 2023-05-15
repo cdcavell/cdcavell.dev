@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary.Data</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Data.ApplicationDbBackup">
+            <summary>
+            Static class used to backup current application SQLLite database.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/06/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbBackup.Run(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Backup current application SQLLite database. Method will retain the latest three copies of database.
+            </summary>
+            <param name="app">IApplicationBuilder</param>
+            <method>Run(IApplicationBuilder app)</method>
+        </member>
+        <member name="T:ClassLibrary.Data.ApplicationDbContext">
+            <summary>
+            DbContext for Application and IdentityServer data.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+            <seealso cref="T:Duende.IdentityServer.EntityFramework.Interfaces.IConfigurationDbContext" />
+            <seealso cref="T:Duende.IdentityServer.EntityFramework.Interfaces.IPersistedGrantDbContext" />
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/25/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ApplicationStoreOptions">
+            <summary>
+            IdentityServer Configuration store options.
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ConfigurationStoreOptions">
+            <summary>
+            IdentityServer Configuration store options.
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.OperationalStoreOptions">
+            <summary>
+            IdentityServer Operational store options.
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ClassLibrary.Data.ApplicationDbContext},Microsoft.Extensions.Logging.ILogger{ClassLibrary.Data.ApplicationDbContext},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the ApplicationDbContext&lt;TContext&gt; class.
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+            <seealso cref="T:Duende.IdentityServer.EntityFramework.Interfaces.IConfigurationDbContext" />
+            <param name="options">DbContextOptions&lt;ApplicationDbContext&gt;</param>
+            <param name="logger">ILogger&lt;ApplicationDbContext&gt;</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <method>
+            ApplicationDbContext(
+                DbContextOptions&lt;ApplicationDbContext;&gt; options,
+                ILogger&lt;ApplicationDbContext&gt; logger,
+                IHttpContextAccessor httpContextAccessor
+            ) : base(options)
+            </method>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.AuditHistory">
+            <value>DbSet&lt;AuditHistory&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.Clients">
+            <value>DbSet&lt;Client&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ClientCorsOrigins">
+            <value>DbSet&lt;ClientCorsOrigin&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.IdentityResources">
+            <value>DbSet&lt;IdentityResource&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ApiResources">
+            <value>DbSet&lt;ApiResource&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ApiScopes">
+            <value>DbSet&lt;ApiScope&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.IdentityProviders">
+            <value>DbSet&lt;IdentityProvider&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.PersistedGrants">
+            <value>DbSet&lt;PersistedGrant&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.DeviceFlowCodes">
+            <value>DbSet&lt;DeviceFlowCodes&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.Keys">
+            <value>DbSet&lt;Key&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.ServerSideSessions">
+            <value>DbSet&lt;ServerSideSession&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.ApplicationDbContext.Registration">
+            <value>DbSet&lt;AuditHistory&gt;</value>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating method
+            &lt;br /&gt;&lt;br /&gt;
+            Customize the ASP.NET Identity model and override the defaults if needed.
+            For example, you can rename the ASP.NET Identity table names and more.
+            Add your customizations after calling base.OnModelCreating(builder);
+            </summary>
+            <param name="modelBuilder">ModelBuilder</param>
+            <method>OnModelCreating(ModelBuilder modelBuilder)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            OnConfiguring method
+            </summary>
+            <param name="optionsBuilder">DbContextOptionsBuilder</param>
+            <method>OnConfiguring(DbContextOptionsBuilder optionsBuilder)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.HasUnsavedChanges">
+            <summary>
+            Checks for any unsaved INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>bool</returns>
+            <method>HasUnsavedChanges()</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.SaveChanges(System.Boolean)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>int</returns>
+            <method>SaveChanges(bool acceptAllChangesOnSuccess = true)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <param name="cancellationToken">CancellationToken</param>
+            <returns>Task&lt;int&gt;</returns>
+            <method>SaveChangesAsync(CancellationToken cancellationToken = default)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.OnBeforeSaveChanges(System.String)">
+            <summary>
+            Save audit entities that have all the modifications and return list of entries 
+            where the value of some properties are unknown at this step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <returns>List&lt;AuditEntry&gt;</returns>
+            <method>OnBeforeSaveChanges(string userId)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.OnAfterSaveChanges(System.Collections.Generic.List{ClassLibrary.Data.Models.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChanges(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.OnAfterSaveChangesAsync(System.Collections.Generic.List{ClassLibrary.Data.Models.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChangesAsync(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.RemoveAuditRecords">
+            <summary>
+            Remove audit records greater than 60 days old
+            </summary>
+            <method>RemoveAuditRecords()</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.Migrate(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Method to apply database migrations.
+            &lt;br/&gt;&lt;br/&gt;
+            To Initialize Migration: 
+             `dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            To Update Migration:     
+             `dotnet ef migrations add Update_ApplicationDb_YYYYMMDD --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            &lt;br/&gt;&lt;br/&gt;
+            EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+            Install EF Core Tools: `dotnet tool install --global dotnet-ef`
+            Upgrade EF Core Tools: `dotnet tool update --global dotnet-ef`
+            Before you can use the tools on a specific project, you'll need to add the Microsoft.EntityFrameworkCore.Design package to it.
+            </summary>
+            <returns>Task&lt;IEnumerable&lt;string&gt;&gt;</returns>
+            <method>Migrate(IApplicationBuilder app)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.ApplicationDbContext.InitializeDatabase(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Load objects to database
+            </summary>
+            <returns>Task&lt;IEnumerable&lt;KeyValuePair&lt;LogLevel, string&gt;&gt;&gt;</returns>
+            <method>InitializeDatabase(IApplicationBuilder app)</method>
+        </member>
+        <member name="T:ClassLibrary.Data.Extensions.IEnumerableExtentions">
+            <summary>
+            Extension methods to log Enumerable records.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Extensions.IEnumerableExtentions.Logger">
+            <value>ILogger</value>
+        </member>
+        <member name="M:ClassLibrary.Data.Extensions.IEnumerableExtentions.LogRecords``1(System.Collections.Generic.IEnumerable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Log returned records meeting specific parameters.
+            </summary>
+            <param name="enumerable">IEnumerable&lt;T&gt;</param>
+            <param name="expression">Expression&lt;Func&lt;T, bool&gt;&gt;</param>
+            <returns>IEnumerable&lt;T&gt;</returns>
+            <method>LogRecords&lt;T&gt;(this IEnumerable&lt;T&gt; enumerable, Expression&lt;Func&lt;T, bool&gt;&gt; expression)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.Extensions.IEnumerableExtentions.LogAllRecords``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Log all returned records.
+            </summary>
+            <param name="enumerable">IEnumerable&lt;T&gt;</param>
+            <returns>IEnumerable&lt;T&gt;</returns>
+            <method>LogAllRecords&lt;T&gt;(this IEnumerable&lt;T&gt; enumerable)</method>
+        </member>
+        <member name="T:ClassLibrary.Data.Extensions.ModelBuilderExtensions">
+            <summary>
+            Extension methods to define the database schema for the application data stores.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Data.Extensions.ModelBuilderExtensions.ConfigureApplicationContext(Microsoft.EntityFrameworkCore.ModelBuilder,ClassLibrary.Data.Options.ApplicationStoreOptions)">
+            <summary>
+            Configures the AuditHistory context.
+            </summary>
+            <param name="modelBuilder">The model builder.</param>
+            <param name="storeOptions">The store options.</param>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.UserStatus">
+            <summary>
+            ApplicationUser Status Enum
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="F:ClassLibrary.Data.Models.UserStatus.New">
+            <summary>New User</summary>
+        </member>
+        <member name="F:ClassLibrary.Data.Models.UserStatus.Pending">
+            <summary>Pending Registration Validation</summary>
+        </member>
+        <member name="F:ClassLibrary.Data.Models.UserStatus.Active">
+            <summary>Active User</summary>
+        </member>
+        <member name="F:ClassLibrary.Data.Models.UserStatus.Disabled">
+            <summary>Disabled User</summary>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.ApplicationUser">
+            <summary>
+            ApplicationUser Entity
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 10/03/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.ApplicationUser.#ctor">
+            <summary>
+            Initializes a user identity
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.ApplicationUser.SubjectId">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.ApplicationUser.Status">
+            <value>enum</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.ApplicationUser.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.ApplicationUser.Claims">
+            <value>ICollection&lt;IdentityUserClaim&lt;string&gt;&gt;</value>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.AuditEntry">
+            <summary>
+            AuditEntry Record
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/07/2022 | Duende IdentityServer Development |~ 
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.AuditEntry.#ctor(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="entry">EntityEntry</param>
+            <method>AuditEntry(EntityEntry entry)</method>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.Entry">
+            <value>EntityEntry</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.TableName">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.State">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.Application">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.ModifiedOn">
+            <value>DateTime</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.KeyValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.OriginalValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.CurrentValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.TemporaryProperties">
+            <value>List&lt;PropertyEntry&gt;</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditEntry.HasTemporaryProperties">
+            <value>bool</value>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.AuditEntry.ToAuditHistory">
+            <summary>
+            Audit History record to write
+            </summary>
+            <method>ToAuditHistory()</method>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.AuditHistory">
+            <summary>
+            AuditHistory Entity Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.ModifiedOn">
+            <value>DateTime?</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.Application">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.Entity">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.State">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.KeyValues">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.OriginalValues">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.AuditHistory.CurrentValues">
+            <value>string</value>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.DataModel`1">
+            <summary>
+            DataModel Class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.DataModel`1.Guid">
+            <value>Guid</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.DataModel`1.IsNew">
+            <value>bool</value>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.DataModel`1.AddUpdate(ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to add new or update existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>AddUpdate(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.DataModel`1.Delete(ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to remove existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>Delete(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.DataModel`1.Equals(ClassLibrary.Data.Models.DataModel{`0})">
+            <summary>
+            Equality method.
+            </summary>
+            <param name="obj">DataModel&lt;T&gt;</param>
+            <method>Equals(DataModel&lt;T&gt; obj)</method>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.IDataModel`1">
+            <summary>
+            DataModel Interface
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.IDataModel`1.Guid">
+            <value>Guid</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.IDataModel`1.IsNew">
+            <value>bool</value>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.IDataModel`1.AddUpdate(ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to add new or update existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>AddUpdate(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.IDataModel`1.Delete(ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to remove existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>Delete(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:ClassLibrary.Data.Models.IDataModel`1.Equals(`0)">
+            <summary>
+            Equality method.
+            </summary>
+            <param name="obj">DataModel&lt;T&gt;</param>
+            <method>Equals(DataModel&lt;T&gt; obj)</method>
+        </member>
+        <member name="T:ClassLibrary.Data.Models.Registration">
+            <summary>
+            AuditHistory Entity Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.UserId">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.Email">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.Provider">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.ProviderUserId">
+            <value>string</value>
+        </member>
+        <member name="P:ClassLibrary.Data.Models.Registration.GeneratedOn">
+            <value>DateTime</value>
+        </member>
+        <member name="T:ClassLibrary.Data.Options.ApplicationStoreOptions">
+            <summary>
+            Options for configuring ApplicationDbContext
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.1.0 | 09/05/2022 | Data Access Layer Development |~ 
+            </revision>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.ConfigureDbContext">
+            <summary>
+            Callback to configure the EF DbContext.
+            </summary>
+            <value>
+            The configure database context.
+            </value>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.ResolveDbContextOptions">
+            <summary>
+            Callback in DI resolve the EF DbContextOptions. If set, ConfigureDbContext will not be used.
+            </summary>
+            <value>
+            The configure database context.
+            </value>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.DefaultSchema">
+            <summary>
+            Gets or sets the default schema.
+            </summary>
+            <value>
+            The default schema.
+            </value>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.AuditHistory">
+            <summary>
+            Gets or sets the AuditHistory table configuration.
+            </summary>
+            <value>
+            The AuditHistory.
+            </value>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.EnablePooling">
+            <summary>
+            Gets or set if EF DbContext pooling is enabled.
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Data.Options.ApplicationStoreOptions.PoolSize">
+            <summary>
+            Gets or set the pool size to use when DbContext pooling is enabled. If not set, the EF default is used.
+            </summary>
+        </member>
+    </members>
+</doc>

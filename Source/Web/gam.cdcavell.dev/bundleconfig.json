@@ -6,12 +6,6 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/css/home.min.css",
-    "inputFiles": [
-      "wwwroot/css/home/!(*.min).css"
-    ]
-  },
-  {
     "outputFileName": "wwwroot/css/sudoku.min.css",
     "inputFiles": [
       "wwwroot/css/sudoku/!(*.min).css"

@@ -1,0 +1,1777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dis.cdcavell.dev</name>
+    </assembly>
+    <members>
+        <member name="T:dis.cdcavell.dev.Apis.ApiBaseController`1">
+            <class>ApiBaseController</class>
+            <summary>
+            Base controller class for application apis
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/26/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._logger">
+            <value>ILogger</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._webHostEnvironment">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._httpContextAccessor">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._localizer">
+            <value>IStringLocalizer</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._sharedLocalizer">
+            <value>IStringLocalizer&lt;SharedResource&gt;</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._roleManager">
+            <value>RoleManager&lt;IdentityRole&gt;</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._userManager">
+            <value>UserManager&lt;ApplicationUser&gt;</value>
+        </member>
+        <member name="F:dis.cdcavell.dev.Apis.ApiBaseController`1._logMessage">
+            <value>string</value>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.ApiBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger&lt;T&gt;</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="roleManager">RoleManager&lt;IdentityRole&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <method>
+            ApiBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                RoleManager&lt;IdentityRole&gt; roleManager,
+                UserManager&lt;ApplicationUser&gt; userManager
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.ApiBaseController`1.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action method is invoked
+            </summary>
+            <param name="context">ActionExecutingContext</param>
+            <method>OnActionExecuting(ActionExecutingContext context)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.ApiBaseController`1.LogException(System.Exception)">
+            <summary>
+            Called to log and return exception
+            </summary>
+            <param name="exception">Exception</param>
+            <method>LogException(Exception exception)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Apis.RoleController">
+            <class>RoleController</class>
+            <summary>
+            Custom IdentityServer API Endpoints
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.RoleController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Apis.RoleController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Apis.RoleController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger&lt;RoleController&gt;</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;RoleController&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="roleManager">RoleManager&lt;IdentityRole&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;RoleController&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;RoleController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                RoleManager&lt;IdentityRole&gt; roleManager,
+                UserManager&lt;ApplicationUser&gt; userManager
+            ) : base(
+               logger,
+               webHostEnvironment,
+               httpContextAccessor,
+               appSettingsService,
+               localizer,
+               sharedLocalizer,
+               roleManager,
+               userManager
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.RoleController.Listing">
+            <summary>
+            Returns Role Listing
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Listing()</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Apis.UserController">
+            <class>UserController</class>
+            <summary>
+            Custom IdentityServer API Endpoints
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Apis.UserController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Apis.UserController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger&lt;UserController&gt;</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;UserController&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="roleManager">RoleManager&lt;IdentityRole&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;UserController&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;UserController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                RoleManager&lt;IdentityRole&gt; roleManager,
+                UserManager&lt;ApplicationUser&gt; userManager
+            ) : base(
+               logger,
+               webHostEnvironment,
+               httpContextAccessor,
+               appSettingsService,
+               localizer,
+               sharedLocalizer,
+               roleManager,
+               userManager
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Apis.UserController.Listing">
+            <summary>
+            Returns User Listing
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Listing()</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.AccountController">
+            <summary>
+            Diagnostics controller class
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.1 | 12/13/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 12/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/08/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Duende.IdentityServer.Services.IEventService,Microsoft.AspNetCore.Authentication.IAuthenticationHandlerProvider,Microsoft.AspNetCore.Identity.SignInManager{ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser},ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="clientStore">IClientStore</param>
+            <param name="events">IEventService</param>
+            <param name="interaction">IIdentityServerInteractionService</param>
+            <param name="schemeProvider">IAuthenticationSchemeProvider</param>
+            <param name="authenticationHandlerProvider">IAuthenticationHandlerProvider</param>
+            <param name="signInManager">SignInManager&lt;ApplicationUser&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>
+            public AccountController(
+                ILogger&lt;AccountController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;AccountController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+                IIdentityServerInteractionService interaction,
+                IClientStore clientStore,
+                IAuthenticationSchemeProvider schemeProvider,
+                IEventService events,
+                IAuthenticationHandlerProvider authenticationHandlerProvider,
+                SignInManager&lt;ApplicationUser&gt; signInManager,
+                UserManager&lt;ApplicationUser&gt; userManager,
+                ApplicationDbContext dbContext
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.Login(System.String)">
+            <summary>
+            Entry point into the login workflow
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Login(string returnUrl)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.Login(dis.cdcavell.dev.Models.Account.LoginInputModel,System.String)">
+            <summary>
+            Handle postback from username/password login
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Login(LoginInputModel model, string button)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.Logout(System.String)">
+            <summary>
+            Show logout page
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Logout(string logoutId)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.Logout(dis.cdcavell.dev.Models.Account.LogoutInputModel)">
+            <summary>
+            Handle logout page postback
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Logout(LogoutInputModel model)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.AccountController.AccessDenied">
+            <summary>
+            Access Denied
+            </summary>
+            <returns>IActionResult</returns>
+            <method>AccessDenied</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.ApplicationBaseController`1">
+            <class>ApplicationBaseController</class>
+            <summary>
+            Base controller class for application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/24/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Controllers.ApplicationBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ApplicationBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ApplicationBaseController`1.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Called after the action method has been invoked
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ApplicationBaseController`1.ValidateCaptchaToken(dis.cdcavell.dev.Models.CaptchaInputModel)">
+            <summary>
+            Validate returned captcha token
+            &lt;br /&gt;&lt;br /&gt;
+            https://www.google.com/recaptcha/about/
+            </summary>
+            <param name="model">CaptchaInputModel</param>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>ValidateCaptchaToken(CaptchaInputModel model)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.ConsentController">
+            <summary>
+            Consent Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 12/11/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/08/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ConsentController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.ConsentController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.ConsentController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Services.IEventService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="interaction">IIdentityServerInteractionService</param> 
+            <param name="events">IEventService</param>
+            <method>
+            public ConsentController(
+                ILogger&lt;ConsentController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;ConsentController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+                IIdentityServerInteractionService interaction,
+                IEventService events
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ConsentController.Index(System.String)">
+            <summary>
+            Shows the consent screen
+            </summary>
+            <param name="returnUrl">string</param>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index(string returnUrl)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ConsentController.Index(dis.cdcavell.dev.Models.Consent.ConsentInputModel)">
+            <summary>
+            Handles the consent screen postback
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index(ConsentInputModel model)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ConsentController.CreateScopeViewModel(Duende.IdentityServer.Validation.ParsedScopeValue,Duende.IdentityServer.Models.ApiScope,System.Boolean)">
+            <summary>
+            Create scope view model
+            </summary>
+            <returns>ScopeViewModel</returns>
+            <method>CreateScopeViewModel(ParsedScopeValue parsedScopeValue, ApiScope apiScope, bool check)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.DeviceController">
+            <summary>
+            Device Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 01/21/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DeviceController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.DeviceController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.DeviceController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IDeviceFlowInteractionService,Duende.IdentityServer.Services.IEventService,Microsoft.Extensions.Options.IOptions{Duende.IdentityServer.Configuration.IdentityServerOptions})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="interaction">IIdentityServerInteractionService</param>
+            <param name="eventService">IEventService</param>
+            <param name="options">IOptions&gt;IdentityServerOptions&lt;</param>
+            <method>
+            public DeviceController(
+                ILogger&lt;DeviceController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;DeviceController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+                IDeviceFlowInteractionService interaction, 
+                IEventService eventService, 
+                IOptions&lt;IdentityServerOptions&gt; options
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DeviceController.Index">
+            <summary>
+            Index Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index()</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DeviceController.UserCodeCapture(System.String)">
+            <summary>
+            UserCodeCapture Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>UserCodeCapture(string userCode)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DeviceController.Callback(dis.cdcavell.devModels.Device.DeviceAuthorizationInputModel)">
+            <summary>
+            Callback Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Callback(DeviceAuthorizationInputModel model)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DeviceController.CreateScopeViewModel(Duende.IdentityServer.Validation.ParsedScopeValue,Duende.IdentityServer.Models.ApiScope,System.Boolean)">
+            <summary>
+            CreateScopeViewModel Method
+            </summary>
+            <returns>ScopeViewModel</returns>
+            <method>CreateScopeViewModel(ParsedScopeValue parsedScopeValue, ApiScope apiScope, bool check)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.DiagnosticsController">
+            <summary>
+            Diagnostics controller class
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 01/21/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DiagnosticsController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.DiagnosticsController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.DiagnosticsController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public DiagnosticsController(
+                ILogger&lt;DiagnosticsController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;DiagnosticsController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.DiagnosticsController.Index">
+            <summary>
+            Index action method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.ExternalController">
+            <summary>
+            External Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 12/11/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ExternalController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.ExternalController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.ExternalController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Duende.IdentityServer.Services.IEventService,Microsoft.AspNetCore.Authentication.IAuthenticationHandlerProvider,Microsoft.AspNetCore.Identity.SignInManager{ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="clientStore">IClientStore</param>
+            <param name="events">IEventService</param>
+            <param name="interaction">IIdentityServerInteractionService</param>
+            <param name="schemeProvider">IAuthenticationSchemeProvider</param>
+            <param name="authenticationHandlerProvider">IAuthenticationHandlerProvider</param>
+            <param name="signInManager">SignInManager&lt;ApplicationUser&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <method>
+            public ExternalController(
+                ILogger&lt;ExternalController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                IIdentityServerInteractionService interaction,
+                IClientStore clientStore,
+                IAuthenticationSchemeProvider schemeProvider,
+                IEventService events,
+                IAuthenticationHandlerProvider authenticationHandlerProvider,
+                SignInManager&lt;ApplicationUser&gt; signInManager,
+                UserManager&lt;ApplicationUser&gt; userManager
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ExternalController.Challenge(System.String,System.String)">
+            <summary>
+            initiate roundtrip to external authentication provider
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Challenge(string scheme, string returnUrl)</method>
+            <exception cref="T:System.Exception">invalid return URL</exception>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.ExternalController.Callback">
+            <summary>
+            Post processing of external authentication
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Callback()</method>
+            <exception cref="T:System.Exception">External authentication error</exception>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            | Christopher D. Cavell | 1.0.4.0 | 02/25/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.SignIn">
+            <summary>
+            SignIn method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>SignIn()</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.SignedOff">
+            <summary>
+            SignedOff
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>SignedOff()</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.Index">
+            <summary>
+            Public Index method
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.License">
+            <summary>
+            Public License method
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.Culture">
+            <summary>
+            Public Culture method
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.About">
+            <summary>
+            Public About method
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.HomeController.Games">
+            <summary>
+            Public Games method
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="T:dis.cdcavell.dev.Controllers.RegistrationController">
+            <summary>
+            Registration controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 05/11/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.1 | 12/13/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 12/12/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Controllers.RegistrationController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{dis.cdcavell.dev.Controllers.RegistrationController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser},ClassLibrary.Data.ApplicationDbContext,ClassLibrary.Mvc.Services.Email.IEmailService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <param name="dbContext">ApplicationDbContext</param>
+            <param name="emailService">IEmailService</param>
+            <method>
+            public RegistrationController(
+                ILogger&lt;RegistrationController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;RegistrationController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                UserManager&lt;ApplicationUser&gt; userManager,
+                ApplicationDbContext dbContext,
+                IEmailService emailService
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.New">
+            <summary>
+            Entry point into the new registration workflow 
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.New(dis.cdcavell.dev.Models.Registration.RegistrationViewModel)">
+            <summary>
+            Handle postback from new registration
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.EmailValidation">
+            <summary>
+            Email validation notice 
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>EmailValidation()</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.Pending">
+            <summary>
+            Entry point into the pending registration workflow 
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Controllers.RegistrationController.ConfirmEmail(System.String,System.String)">
+            <summary>
+            Email confirmation
+            </summary>
+            <param name="token">string</param>
+            <param name="email">string</param>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>ConfirmEmail(string token, string email)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Extensions.IdentityServerExtensions">
+            <summary>
+            Extension methods used within IdentityServer classes.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/08/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Extensions.IdentityServerExtensions.IsNativeClient(Duende.IdentityServer.Models.AuthorizationRequest)">
+            <summary>
+            Checks if the redirect URI is for a native client.
+            </summary>
+            <param name="context">AuthorizationRequest</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:dis.cdcavell.dev.Extensions.IdentityServerExtensions.LoadingPage(Microsoft.AspNetCore.Mvc.Controller,System.String,System.String)">
+            <summary>
+            Checks if the redirect URI is for a native client.
+            </summary>
+            <param name="controller">Controller</param>
+            <param name="viewName">string</param>
+            <param name="redirectUri">string</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:dis.cdcavell.dev.Filters.SecurityHeadersAttribute">
+            <summary>
+            Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved.
+            Licensed under the Apache License, Version 2.0. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/31/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/11/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Filters.SecurityHeadersAttribute.#ctor(ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>SecurityHeadersAttribute(AppSettings appSettings)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Filters.SecurityHeadersAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            Executes before result execution
+            &lt;br /&gt;&lt;br /&gt;
+            CSP Evaluator: https://csp-evaluator.appspot.com/
+            </summary>
+            <param name="context">ResultExecutingContext</param>
+            <method>OnResultExecuting(ResultExecutingContext context)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Filters.SecurityHeadersAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Executes after action method execution to set script nonce
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+            <method>OnActionExecuted(ActionExecutedContext context)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Account.LoggedOutViewModel">
+            <summary>
+            Logged Out View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.PostLogoutRedirectUri">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.ClientName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.SignOutIframeUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.AutomaticRedirectAfterSignOut">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.LogoutId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.TriggerExternalSignout">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoggedOutViewModel.ExternalAuthenticationScheme">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Account.LoginInputModel">
+            <summary>
+            Login Input Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Models.Account.LoginInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginInputModel.Username">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginInputModel.Password">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginInputModel.RememberLogin">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginInputModel.ReturnUrl">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Account.LoginViewModel">
+            <summary>
+            Login View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.AllowRememberLogin">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.EnableLocalLogin">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.ExternalProviders">
+            <value>IEnumerable&lt;ExternalProvider&gt;</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.VisibleExternalProviders">
+            <value>IEnumerable&lt;ExternalProvider&gt;</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.IsExternalLoginOnly">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LoginViewModel.ExternalLoginScheme">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Account.LogoutInputModel">
+            <summary>
+            Logout Input Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 10/08/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Models.Account.LogoutInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LogoutInputModel.LogoutId">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Account.LogoutViewModel">
+            <summary>
+            Logout View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Account.LogoutViewModel.ShowLogoutPrompt">
+            <value>bool</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Apis.Role.RoleClaimsModel">
+            <summary>
+            Role Claims Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 01/01/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.Role.RoleClaimsModel.Claims">
+            <value>List&lt;Claim&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Apis.User.UserRolesModel">
+            <summary>
+            User Roles Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.User.UserRolesModel.SubjectId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.User.UserRolesModel.Status">
+            <value>enum</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.User.UserRolesModel.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.User.UserRolesModel.Email">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Apis.User.UserRolesModel.Roles">
+            <value>List&lt;string&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">IConfiguration</param>
+            <method>AppSettings(IConfiguration configuration)</method>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.AppSettings.ConnectionStrings">
+            <value>ConnectionStrings</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.AppSettings.EmailService">
+            <value>EmailService</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.AppSettings.Authentication">
+            <value>Authentication</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.Authentication">
+            <summary>
+            Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.3 | 12/14/2022 | Migrate to universeodon.com |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.IdP">
+            <value>IdP</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.Universeodon">
+            <value>OAuth</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.GitHub">
+            <value>GitHub</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.Microsoft">
+            <value>Microsoft</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.Google">
+            <value>Googel</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Authentication.reCAPTCHA">
+            <value>reCAPTCHA</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.ConnectionStrings.EntityFrameworkConnection">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.EmailService">
+            <summary>
+            Email service model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/13/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.Host">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.Port">
+            <value>int</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.EnableSsl">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.UserId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.Password">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.EmailService.Email">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.GitHub">
+            <summary>
+            GitHub Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/11/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.GitHub.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.GitHub.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.Google">
+            <summary>
+            Google Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Google.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Google.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.IdP">
+            <summary>
+            IdP model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.IdP.Authority">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.IdP.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.IdP.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.Microsoft">
+            <summary>
+            Microsoft Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/11/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Microsoft.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.Microsoft.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.OAuth">
+            <summary>
+            OAuth Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/11/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.OAuth.AuthorizationEndpoint">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.OAuth.TokenEndpoint">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.OAuth.UserInformationEndpoint">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.OAuth.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.OAuth.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.AppSettings.reCAPTCHA">
+            <summary>
+            reCAPTCHA Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.reCAPTCHA.SiteKey">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.AppSettings.reCAPTCHA.SecretKey">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.CaptchaInputModel">
+            <summary>
+            Captcha input model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Models.CaptchaInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaInputModel.CaptchaToken">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.CaptchaResponse">
+            <summary>
+            Captcha response model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.success">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.challenge_ts">
+            <value>DateTime</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.hostname">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.score">
+            <value>double</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.action">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.CaptchaResponse.ErrorCodes">
+            <value>object[]</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Consent.ConsentInputModel">
+            <summary>
+            Consent Input Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Models.Consent.ConsentInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentInputModel.Button">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentInputModel.ScopesConsented">
+            <value>IEnumerable&lt;string&gt;</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentInputModel.RememberConsent">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentInputModel.ReturnUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentInputModel.Description">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Consent.ConsentViewModel">
+            <summary>
+            Consent View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.ClientName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.ClientUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.ClientLogoUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.AllowRememberConsent">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.IdentityScopes">
+            <value>IEnumerable&lt;ScopeViewModel&gt;</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ConsentViewModel.ApiScopes">
+            <value>IEnumerable&lt;ScopeViewModel&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Consent.ProcessConsentResult">
+            <summary>
+            Process Consent Result Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.IsRedirect">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.RedirectUri">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.Client">
+            <value>Client</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.ShowView">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.ViewModel">
+            <value>ConsentViewModel</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.HasValidationError">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Consent.ProcessConsentResult.ValidationError">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Device.DeviceAuthorizationViewModel">
+            <summary>
+            Device Authorization View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Device.DeviceAuthorizationViewModel.UserCode">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Device.DeviceAuthorizationViewModel.ConfirmUserCode">
+            <value>bool</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Diagnostics.DiagnosticsViewModel">
+            <summary>
+            Redirect link information.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Models.Diagnostics.DiagnosticsViewModel.#ctor(Microsoft.AspNetCore.Authentication.AuthenticateResult)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="result">AuthenticateResult</param>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Diagnostics.DiagnosticsViewModel.AuthenticateResult">
+            <value>AuthenticateResult</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Diagnostics.DiagnosticsViewModel.Clients">
+            <value>IEnumerable&lt;string&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.External.ExternalProvider">
+            <summary>
+            External Provider Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.External.ExternalProvider.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.External.ExternalProvider.AuthenticationScheme">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Grants.GrantsViewModel">
+            <summary>
+            Grants View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantsViewModel.Grants">
+            <value>IEnumerable&lt;GrantViewModel&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Grants.GrantViewModel">
+            <summary>
+            Grant View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.ClientName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.ClientUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.ClientLogoUrl">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.Description">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.Created">
+            <value>DateTime</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.Expires">
+            <value>DateTime?</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.IdentityGrantNames">
+            <value>IEnumerable&lt;string&gt;</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Grants.GrantViewModel.ApiGrantNames">
+            <value>IEnumerable&lt;string&gt;</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.RedirectViewModel">
+            <summary>
+            Redirect link information.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.RedirectViewModel.RedirectUrl">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.Registration.RegistrationViewModel">
+            <summary>
+            Registration View Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 11/12/2022 | User Registration Development |~ 
+            </revision>
+        </member>
+        <member name="F:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.Email">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.LockNameEmail">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.Id">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.Provider">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.ProviderUserId">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.Registration.RegistrationViewModel.IsSubmit">
+            <value>bool</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Models.ScopeViewModel">
+            <summary>
+            Scope View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.Value">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.Description">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.Emphasize">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.Required">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Models.ScopeViewModel.Checked">
+            <value>bool</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Options.AccountOptions">
+            <summary>
+            Account Options
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.3.0 | 11/11/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/08/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.AllowLocalLogin">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.AllowRememberLogin">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.RememberMeLoginDuration">
+            <value>TimeSpan</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.ShowLogoutPrompt">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.AutomaticRedirectAfterSignOut">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.AccountOptions.InvalidCredentialsErrorMessage">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Options.ConsentOptions">
+            <summary>
+            Consent Options
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.ConsentOptions.EnableOfflineAccess">
+            <value>bool</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.ConsentOptions.OfflineAccessDisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.ConsentOptions.OfflineAccessDescription">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.ConsentOptions.MustChooseOneErrorMessage">
+            <value>string</value>
+        </member>
+        <member name="P:dis.cdcavell.dev.Options.ConsentOptions.InvalidSelectionErrorMessage">
+            <value>string</value>
+        </member>
+        <member name="T:dis.cdcavell.dev.Services.CustomEventService">
+            <summary>
+            Custom event store class
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 10/01/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Services.CustomEventService.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Services.CustomEventService},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Constructor method.
+            </summary>
+            <param name="logger">ILogger&lt;CustomEventService&gt;</param>
+            <param name="httpContextAccessor">HttpContextAccessor</param>
+            <returns>Task</returns>
+            <method>
+            CustomEventService(
+                ILogger&lt;CustomEventService&gt; logger,
+                IHttpContextAccessor httpContextAccessor
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Services.CustomEventService.PersistAsync(Duende.IdentityServer.Events.Event)">
+            <summary>
+            Method used to act on event.
+            </summary>
+            <param name="evt">Event</param>
+            <returns>Task</returns>
+            <method>PersistAsync(Event evt)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Services.CustomProfileService">
+            <summary>
+            Class to retrieve user claims from a data source
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/20/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Services.CustomProfileService.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Services.CustomProfileService},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.AspNetCore.Identity.IUserClaimsPrincipalFactory{ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.UserManager{ClassLibrary.Data.Models.ApplicationUser},ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Constructor method.
+            </summary>
+            <param name="logger">ILogger&lt;CustomProfileService&gt;</param>
+            <param name="httpContextAccessor">HttpContextAccessor</param>
+            <param name="userClaimsPrincipalFactory">IUserClaimsPrincipalFactory&lt;ApplicationUser&gt;</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>
+            CustomProfileService(
+                ILogger&lt;CustomProfileService&gt; logger,
+                IHttpContextAccessor httpContextAccessor,
+                IUserClaimsPrincipalFactory&lt;ApplicationUser&gt; userClaimsPrincipalFactory,
+                UserManager&lt;ApplicationUser&gt; userManager,
+                ApplicationDbContext dbContext
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Services.CustomProfileService.GetProfileDataAsync(Duende.IdentityServer.Models.ProfileDataRequestContext)">
+            <summary>
+            This method adds claims that should go into the token to context. IssuedClaims
+            </summary>
+            <param name="context">ProfileDataRequestContext</param>
+            <returns>Task</returns>
+            <method>GetProfileDataAsync(ProfileDataRequestContext context)</method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Services.CustomProfileService.IsActiveAsync(Duende.IdentityServer.Models.IsActiveContext)">
+            <summary>
+            Returns if ApplicationUser is active or not
+            </summary>
+            <param name="context">ProfileDataRequestContext</param>
+            <returns>Task</returns>
+            <method>IsActiveAsync(IsActiveContext context)</method>
+        </member>
+        <member name="T:dis.cdcavell.dev.Validators.CustomTokenRequestValidator">
+            <summary>
+            Custom validation of token request
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:dis.cdcavell.dev.Validators.CustomTokenRequestValidator.#ctor(Microsoft.Extensions.Logging.ILogger{dis.cdcavell.dev.Validators.CustomTokenRequestValidator},Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Data.ApplicationDbContext,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method.
+            </summary>
+            <param name="logger">ILogger&lt;CustomTokenRequestValidator&gt;</param>
+            <param name="httpContextAccessor">HttpContextAccessor</param>
+            <param name="dbContext">ApplicationDbContext</param>
+            <param name="appSettingsService">IAppSetingsService</param>
+            <method>
+            CustomTokenRequestValidator(
+                ILogger&lt;CustomTokenRequestValidator&gt; logger,
+                IHttpContextAccessor httpContextAccessor,
+                ApplicationDbContext dbContext,
+                IAppSetingsService appSettingService
+            )
+            </method>
+        </member>
+        <member name="M:dis.cdcavell.dev.Validators.CustomTokenRequestValidator.ValidateAsync(Duende.IdentityServer.Validation.CustomTokenRequestValidationContext)">
+            <summary>
+            Validation of token request
+            </summary>
+            <param name="context">CustomTokenRequestValidationContext</param>
+            <returns>Task</returns>
+            <method>ValidateAsync(CustomTokenRequestValidationContext context)</method>
+        </member>
+        <member name="T:dis.cdcavell.devModels.Device.DeviceAuthorizationInputModel">
+            <summary>
+            Device Authorization Input Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.2.0 | 09/24/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="P:dis.cdcavell.devModels.Device.DeviceAuthorizationInputModel.UserCode">
+            <value>string</value>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.WebApplicationExtensions">
+            <summary>
+            The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
+            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            | Christopher D. Cavell | 1.0.3.3 | 12/14/2022 | Migrate to universeodon.com |~ 
+            | Christopher D. Cavell | 1.0.3.0 | 12/11/2022 | User Registration Development |~ 
+            | Christopher D. Cavell | 1.0.2.0 | 10/02/2022 | Duende IdentityServer Development |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Method used to add services to the container.
+            </summary>
+            <param name="builder">WebApplicationBuilder</param>
+            <returns>WebApplication</returns>
+            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            Method used to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">WebApplication</param>
+            <returns>Task&lt;WebApplication&gt;</returns>
+            <method>ConfigurePipeline(this WebApplication app)</method>
+        </member>
+    </members>
+</doc>
