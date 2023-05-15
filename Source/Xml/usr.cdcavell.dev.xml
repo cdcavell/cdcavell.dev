@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>usr.cdcavell.dev</name>
+    </assembly>
+    <members>
+        <member name="T:usr.cdcavell.dev.Controllers.ApplicationBaseController`1">
+            <class>ApplicationBaseController</class>
+            <summary>
+            Base controller class for application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="F:usr.cdcavell.dev.Controllers.ApplicationBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.ApplicationBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.ApplicationBaseController`1.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Called after the action method has been invoked
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.ApplicationBaseController`1.ValidateCaptchaToken(usr.cdcavell.dev.Models.CaptchaInputModel)">
+            <summary>
+            Validate returned captcha token
+            &lt;br /&gt;&lt;br /&gt;
+            https://www.google.com/recaptcha/about/
+            </summary>
+            <param name="model">CaptchaInputModel</param>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>ValidateCaptchaToken(CaptchaInputModel model)</method>
+        </member>
+        <member name="T:usr.cdcavell.dev.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            | Christopher D. Cavell | 1.0.4.0 | 02/25/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{usr.cdcavell.dev.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{usr.cdcavell.dev.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.SignIn">
+            <summary>
+            SignIn method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>SignIn()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.SignOff">
+            <summary>
+            SignOff method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>SignOff()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.FrontChannelLogout(System.String)">
+            <summary>
+            Front Channel SLO Logout method
+            &lt;br /&gt;&lt;br /&gt;
+            https://andersonnjen.com/2019/03/22/identityserver4-global-logout/
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>FrontChannelLogout(string sid)</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.SignedOff">
+            <summary>
+            Public SignedOff method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>SignedOff()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.AccountInformation">
+            <summary>
+            Public Status method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>AccountInformation()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.Index">
+            <summary>
+            Public Index method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Index()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.License">
+            <summary>
+            Public License method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>License()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.Culture">
+            <summary>
+            Public Culture method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Culture()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.About">
+            <summary>
+            Public About method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>About()</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Controllers.HomeController.Games">
+            <summary>
+            Public Games method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Games()</method>
+        </member>
+        <member name="T:usr.cdcavell.dev.Filters.SecurityHeadersAttribute">
+            <summary>
+            Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved.
+            Licensed under the Apache License, Version 2.0. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/31/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:usr.cdcavell.dev.Filters.SecurityHeadersAttribute.#ctor(ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>SecurityHeadersAttribute(AppSettings appSettings)</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Filters.SecurityHeadersAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            Executes before result execution
+            &lt;br /&gt;&lt;br /&gt;
+            CSP Evaluator: https://csp-evaluator.appspot.com/
+            </summary>
+            <param name="context">ResultExecutingContext</param>
+            <method>OnResultExecuting(ResultExecutingContext context)</method>
+        </member>
+        <member name="M:usr.cdcavell.dev.Filters.SecurityHeadersAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Executes after action method execution to set script nonce
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+            <method>OnActionExecuted(ActionExecutedContext context)</method>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.Apis.Role.RoleClaimsModel">
+            <summary>
+            Role Claims Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 01/01/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.Role.RoleClaimsModel.Claims">
+            <value>List&lt;Claim&gt;</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.Apis.User.UserRolesModel">
+            <summary>
+            User Claims Model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.SubjectId">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.Status">
+            <value>enum</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.Email">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.Roles">
+            <value>List&lt;string&gt;</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.Apis.User.UserRolesModel.LockNameEmail">
+            <value>bool</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.Apis.User.UserStatus">
+            <summary>
+            ApplicationUser Status Enum
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 02/21/2023 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="F:usr.cdcavell.dev.Models.Apis.User.UserStatus.New">
+            <summary>New User</summary>
+        </member>
+        <member name="F:usr.cdcavell.dev.Models.Apis.User.UserStatus.Pending">
+            <summary>Pending Registration Validation</summary>
+        </member>
+        <member name="F:usr.cdcavell.dev.Models.Apis.User.UserStatus.Active">
+            <summary>Active User</summary>
+        </member>
+        <member name="F:usr.cdcavell.dev.Models.Apis.User.UserStatus.Disabled">
+            <summary>Disabled User</summary>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.AppSettings.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/24/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:usr.cdcavell.dev.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">IConfiguration</param>
+            <method>AppSettings(IConfiguration configuration)</method>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.AppSettings.Authentication">
+            <value>Authentication</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.AppSettings.Authentication">
+            <summary>
+            Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.Authentication.IdP">
+            <value>IdP</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.Authentication.reCAPTCHA">
+            <value>reCAPTCHA</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.AppSettings.IdP">
+            <summary>
+            IdP model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/24/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.IdP.Authority">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.IdP.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.IdP.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.AppSettings.reCAPTCHA">
+            <summary>
+            reCAPTCHA Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.reCAPTCHA.SiteKey">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.AppSettings.reCAPTCHA.SecretKey">
+            <value>string</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.CaptchaInputModel">
+            <summary>
+            Captcha input model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/30/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="F:usr.cdcavell.dev.Models.CaptchaInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaInputModel.CaptchaToken">
+            <value>string</value>
+        </member>
+        <member name="T:usr.cdcavell.dev.Models.CaptchaResponse">
+            <summary>
+            Captcha response model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/29/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.success">
+            <value>bool</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.challenge_ts">
+            <value>DateTime</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.hostname">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.score">
+            <value>double</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.action">
+            <value>string</value>
+        </member>
+        <member name="P:usr.cdcavell.dev.Models.CaptchaResponse.ErrorCodes">
+            <value>object[]</value>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.WebApplicationExtensions">
+            <summary>
+            The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
+            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.4.0 | 12/28/2022 | User Role Claims Development |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Method used to add services to the container.
+            </summary>
+            <param name="builder">WebApplicationBuilder</param>
+            <returns>WebApplication</returns>
+            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            Method used to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">WebApplication</param>
+            <returns>WebApplication</returns>
+            <method>ConfigurePipeline(this WebApplication app)</method>
+        </member>
+    </members>
+</doc>

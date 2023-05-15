@@ -1,0 +1,814 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>gam.cdcavell.dev</name>
+    </assembly>
+    <members>
+        <member name="T:gam.cdcavell.dev.Controllers.ApplicationBaseController`1">
+            <class>ApplicationBaseController</class>
+            <summary>
+            Base controller class for application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="F:gam.cdcavell.dev.Controllers.ApplicationBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.ApplicationBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            )
+            </method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.ApplicationBaseController`1.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Called after the action method has been invoked
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.ApplicationBaseController`1.ValidateCaptchaToken(gam.cdcavell.dev.Models.CaptchaInputModel)">
+            <summary>
+            Validate returned captcha token
+            &lt;br /&gt;&lt;br /&gt;
+            https://www.google.com/recaptcha/about/
+            </summary>
+            <param name="model">CaptchaInputModel</param>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>ValidateCaptchaToken(CaptchaInputModel model)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Controllers.HomeController">
+            <summary>
+            MVC Sudoku 4 by AmosLong&lt;br /Gt;&lt;br /gt;
+            &lt;hr /&gt; https://www.codeproject.com/Articles/1119451/MVC-Sudoku &lt;hr /&gt;
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{gam.cdcavell.dev.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{gam.cdcavell.dev.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.Index">
+            <summary>
+            Public Index method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Index()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.SignIn">
+            <summary>
+            SignIn method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>SignIn()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.SignOff">
+            <summary>
+            SignOff method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>SignOff()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.FrontChannelLogout(System.String)">
+            <summary>
+            Front Channel SLO Logout method
+            &lt;br /&gt;&lt;br /&gt;
+            https://andersonnjen.com/2019/03/22/identityserver4-global-logout/
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>FrontChannelLogout(string sid)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.SignedOff">
+            <summary>
+            Public SignedOff method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>SignedOff()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.License">
+            <summary>
+            Public License method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>License()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.Culture">
+            <summary>
+            Public Culture method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Culture()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.About">
+            <summary>
+            Public About method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>About()</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.HomeController.Games">
+            <summary>
+            Public Games method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Games()</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Controllers.Sudoku.BuilderController">
+            <summary>
+            Sudoku Builder controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/13/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.BuilderController.#ctor(Microsoft.Extensions.Logging.ILogger{gam.cdcavell.dev.Controllers.Sudoku.BuilderController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{gam.cdcavell.dev.Controllers.Sudoku.BuilderController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},gam.cdcavell.dev.Services.Sudoku.IPuzzleSaver,gam.cdcavell.dev.Services.Sudoku.IPuzzleService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="saver">IPuzzleSaver</param>
+            <param name="service">IPuzzleService</param>
+            <method>
+            public BuilderController(
+                ILogger&lt;BuilderController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;BuilderController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                IPuzzleSaver saver,
+                IPuzzleService service
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.BuilderController.SavePuzzleSetup(gam.cdcavell.dev.Models.Sudoku.FullBoard)">
+            <summary>
+            Save puzzle setup HttpPost method
+            </summary>
+            <param name="board">FullBoard</param>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.BuilderController.SavePuzzleSetup">
+            <summary>
+            Save puzzle setup HttpGet method
+            </summary>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="T:gam.cdcavell.dev.Controllers.Sudoku.GameController">
+            <summary>
+            Sudoku Game controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/14/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.#ctor(Microsoft.Extensions.Logging.ILogger{gam.cdcavell.dev.Controllers.Sudoku.GameController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{gam.cdcavell.dev.Controllers.Sudoku.GameController},Microsoft.Extensions.Localization.IStringLocalizer{ClassLibrary.Mvc.Localization.SharedResource},gam.cdcavell.dev.Services.Sudoku.IPuzzleLoader,gam.cdcavell.dev.Services.Sudoku.IPuzzleSaver,gam.cdcavell.dev.Services.Sudoku.IPuzzleService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="loader">IPuzzleLoader</param>
+            <param name="saver">IPuzzleSaver</param>
+            <param name="service">IPuzzleService</param>
+            <method>
+            public GameController(
+                ILogger&lt;GameController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;GameController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer,
+                IPuzzleLoader loader,
+                IPuzzleSaver saver, 
+                IPuzzleService service
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
+            </method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.NewGame">
+            <summary>
+            New Game
+            </summary>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.UpdateGame(gam.cdcavell.dev.Models.Sudoku.FullBoard)">
+            <summary>
+            Update Game
+            </summary>
+            <param name="board">FullBoard</param>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.ResetGame(gam.cdcavell.dev.Models.Sudoku.FullBoard)">
+            <summary>
+            Reset Game
+            </summary>
+            <param name="board">FullBoard</param>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.SaveGame(gam.cdcavell.dev.Models.Sudoku.FullBoard)">
+            <summary>
+            Save Game
+            </summary>
+            <param name="board">FullBoard</param>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Controllers.Sudoku.GameController.LoadGame">
+            <summary>
+            Load Game
+            </summary>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="T:gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository">
+            <summary>
+            Description of IPuzzleRepository.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository.LoadPuzzleSetupXDoc">
+            <summary>
+            Load puzzle setup
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository.LoadSavedGameXDoc">
+            <summary>
+            Load saved game
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository.SavePuzzleSetupXDoc(System.Xml.Linq.XDocument)">
+            <summary>
+            Load puzzle setup XDoc
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository.SaveSavedGameXDoc(System.Xml.Linq.XDocument)">
+            <summary>
+            Save saved game XDoc
+            </summary>
+        </member>
+        <member name="T:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository">
+            <summary>
+            Description of XmlFilePuzzleRepository.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository.#ctor">
+            <summary>
+            Constructor method
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository.LoadPuzzleSetupXDoc">
+            <summary>
+            load puzzle setup
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository.LoadSavedGameXDoc">
+            <summary>
+            Load saved game
+            </summary>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository.SavePuzzleSetupXDoc(System.Xml.Linq.XDocument)">
+            <summary>
+            Save puzzle setup
+            </summary>
+            <param name="xDoc">XDocument</param>
+        </member>
+        <member name="M:gam.cdcavell.dev.DataLayer.Sudoku.XmlFilePuzzleRepository.SaveSavedGameXDoc(System.Xml.Linq.XDocument)">
+            <summary>
+            Save saved game
+            </summary>
+            <param name="xDoc">XDocument</param>
+        </member>
+        <member name="T:gam.cdcavell.dev.Filters.SecurityHeadersAttribute">
+            <summary>
+            Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved.
+            Licensed under the Apache License, Version 2.0. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Filters.SecurityHeadersAttribute.#ctor(ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>SecurityHeadersAttribute(AppSettings appSettings)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Filters.SecurityHeadersAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            Executes before result execution
+            &lt;br /&gt;&lt;br /&gt;
+            CSP Evaluator: https://csp-evaluator.appspot.com/
+            </summary>
+            <param name="context">ResultExecutingContext</param>
+            <method>OnResultExecuting(ResultExecutingContext context)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Filters.SecurityHeadersAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Executes after action method execution to set script nonce
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+            <method>OnActionExecuted(ActionExecutedContext context)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.AppSettings.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">IConfiguration</param>
+            <method>AppSettings(IConfiguration configuration)</method>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.AppSettings.Authentication">
+            <value>Authentication</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.AppSettings.Authentication">
+            <summary>
+            Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.Authentication.IdP">
+            <value>IdP</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.Authentication.reCAPTCHA">
+            <value>reCAPTCHA</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.AppSettings.IdP">
+            <summary>
+            IdP model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.IdP.Authority">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.IdP.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.IdP.ClientSecret">
+            <value>string</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.AppSettings.reCAPTCHA">
+            <summary>
+            reCAPTCHA Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.reCAPTCHA.SiteKey">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.AppSettings.reCAPTCHA.SecretKey">
+            <value>string</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.CaptchaInputModel">
+            <summary>
+            Captcha input model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="F:gam.cdcavell.dev.Models.CaptchaInputModel.BindProperties">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaInputModel.CaptchaToken">
+            <value>string</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.CaptchaResponse">
+            <summary>
+            Captcha response model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/11/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.success">
+            <value>bool</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.challenge_ts">
+            <value>DateTime</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.hostname">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.score">
+            <value>double</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.action">
+            <value>string</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.CaptchaResponse.ErrorCodes">
+            <value>object[]</value>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.Sudoku.Cell">
+            <summary>
+             Cell class domain model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/14/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.XCoordinate">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.YCoordinate">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.BlockNumber">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.Value">
+            <value>int?</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.CellNumber">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.Cell.CellLocked">
+            <value>bool</value>
+        </member>
+        <member name="M:gam.cdcavell.dev.Models.Sudoku.Cell.#ctor">
+            <summary>
+            Constructor method
+            </summary>
+        </member>
+        <member name="T:gam.cdcavell.dev.Models.Sudoku.FullBoard">
+            <summary>
+            FullBoard view model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/13/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.BoardList">
+            <value>List&lt;Cell&gt;</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.BoardNumber">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.Status">
+            <value>PuzzleStatus</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.BoardSize">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.BlockSize">
+            <value>int</value>
+        </member>
+        <member name="P:gam.cdcavell.dev.Models.Sudoku.FullBoard.CellFocus">
+            <value>string?</value>
+        </member>
+        <member name="M:gam.cdcavell.dev.Models.Sudoku.FullBoard.#ctor">
+            <summary>
+            Constructor method
+            </summary>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.Constants">
+            <summary>
+            Description of Constants.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.IPuzzleLoader">
+            <summary>
+            Description of IPuzzleLoader.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleLoader.LoadNewPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Load new puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>LoadPuzzle(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleLoader.ReloadPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32)">
+            <summary>
+            Reload puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>ReloadPuzzle(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleLoader.LoadSavedPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Load saved puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>LoadSavedPuzzle(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.IPuzzleSaver">
+            <summary>
+            Description of IPuzzleSaver.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleSaver.SaveGame(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32)">
+            <summary>
+            Save game
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>SaveGame(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleSaver.SavePuzzleSetup(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Load puzzle setup
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>SavePuzzleSetup(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.IPuzzleService">
+            <summary>
+            Description of IPuzzleService.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleService.SetupBoard">
+            <summary>
+            Set up board
+            </summary>
+            <returns>List&lt;Cell&gt;</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.IPuzzleService.GetPuzzleStatus(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell})">
+            <summary>
+            Returns puzzle status
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <returns>PuzzleStatus</returns>
+            <method>GetPuzzleStatus(List&lt;Cell&gt; cellList)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.PuzzleStatus">
+            <summary>
+            Puzzle status enumerations
+            </summary>
+        </member>
+        <member name="F:gam.cdcavell.dev.Services.Sudoku.PuzzleStatus.Normal">
+            <summary>Normal status</summary>
+        </member>
+        <member name="F:gam.cdcavell.dev.Services.Sudoku.PuzzleStatus.Invalid">
+            <summary>Invalid status</summary>
+        </member>
+        <member name="F:gam.cdcavell.dev.Services.Sudoku.PuzzleStatus.Complete">
+            <summary>Complete status</summary>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.PuzzleService">
+            <summary>
+            This class provides all the methods needed to play a game of Sudoku.
+            It initializes a Sudoku board, and determines the status of a puzzle.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/13/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.PuzzleService.SetupBoard">
+            <summary>
+            Setup board
+            </summary>
+            <returns>List&lt;Cell&gt;</returns>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.PuzzleService.GetPuzzleStatus(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell})">
+            <summary>
+            Return puzzle status
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <returns>PuzzleStatus</returns>
+            <method>GetPuzzleStatus(List&lt;Cell&gt; cellList)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleLoader">
+            <summary>
+            This class loads SuDoku puzzles that have been saved as Xml Documents.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleLoader.#ctor(gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="puzzleRepository">IPuzzleRepository</param>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleLoader.LoadNewPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Load new puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>LoadNewPuzzle(List&lt;Cell&gt; cellList, out int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleLoader.ReloadPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32)">
+            <summary>
+            Reload puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>ReloadPuzzle(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleLoader.LoadSavedPuzzle(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Load saved puzzle
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>LoadSavedPuzzle(List&lt;Cell&gt; cellList, out int puzzleNumber)</method>
+        </member>
+        <member name="T:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleSaver">
+            <summary>
+            This class saves a Sudoku puzzle as an Xml Document.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleSaver.#ctor(gam.cdcavell.dev.DataLayer.Sudoku.IPuzzleRepository)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="xDocPuzzleRepository">IPuzzleRepository</param>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleSaver.SaveGame(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32)">
+            <summary>
+            Save game
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>SaveGame(List&lt;Cell&gt; cellList, int puzzleNumber)</method>
+        </member>
+        <member name="M:gam.cdcavell.dev.Services.Sudoku.XDocPuzzleSaver.SavePuzzleSetup(System.Collections.Generic.List{gam.cdcavell.dev.Models.Sudoku.Cell},System.Int32@)">
+            <summary>
+            Save game
+            </summary>
+            <param name="cellList">List&lt;Cell&gt;</param>
+            <param name="puzzleNumber">int</param>
+            <method>SaveGame(List&lt;Cell&gt; cellList, ref int puzzleNumber)</method>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.WebApplicationExtensions">
+            <summary>
+            The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
+            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 1.0.5.0 | 05/12/2023 | Game Development - Sudoku |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Method used to add services to the container.
+            </summary>
+            <param name="builder">WebApplicationBuilder</param>
+            <returns>WebApplication</returns>
+            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            Method used to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">WebApplication</param>
+            <returns>WebApplication</returns>
+            <method>ConfigurePipeline(this WebApplication app)</method>
+        </member>
+    </members>
+</doc>
