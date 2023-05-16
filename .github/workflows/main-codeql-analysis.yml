@@ -6,6 +6,8 @@
 name: "CodeQL Analysis"
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -13,6 +15,9 @@ jobs:
   allowed-branch:
     runs-on: ubuntu-latest
     name: Allowed Branch
+
+    if: ${{ github.event_name == 'pull_request' }}
+
     steps:
     # To use this repository's private action,
     # you must check out the repository
@@ -26,9 +31,17 @@ jobs:
   analyze:
     needs: allowed-branch
     name: Analyze
-    #runs-on: ubuntu-latest
     runs-on: windows-latest
-    #runs-on: windows-2019
+
+    if: ${{ github.event_name == 'pull_request' }}
+
+    permissions:
+      # required for all workflows
+      security-events: write
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
 
     strategy:
       fail-fast: false
@@ -89,6 +102,9 @@ jobs:
   dependency-review:
     needs: analyze
     runs-on: ubuntu-latest
+
+    if: ${{ github.event_name == 'pull_request' }}
+
     steps:
       - name: 'Checkout Repository'
         uses: actions/checkout@v3
@@ -99,6 +115,9 @@ jobs:
     # https://github.com/pascalgn/automerge-action
     needs: dependency-review
     runs-on: ubuntu-latest
+
+    if: ${{ github.event_name == 'pull_request' }}
+
     steps:
       - uses: actions/checkout@main
 

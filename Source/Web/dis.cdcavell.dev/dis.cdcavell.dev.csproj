@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<Version>1.0.5.0</Version>
+	<Version>1.0.5.1</Version>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
 	<Authors>Christopher D. Cavell</Authors>
