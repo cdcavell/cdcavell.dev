@@ -47,9 +47,10 @@
 		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
 		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
 		<_findLibraryFile Include="../../../Source/Xml/ClassLibrary.Common.dll" />
+		<_findEnvironmentFile Include="../../../EnvironmentVariables/cdcavell.dev.txt" />
 	</ItemGroup>
 
-	<Target Name="BuildXmlToMarkdown" AfterTargets="CopyXmlToMarkdown" DependsOnTargets="CopyXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
+	<Target Name="BuildXmlToMarkdown" AfterTargets="CopyXmlToMarkdown" DependsOnTargets="CopyXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)') AND Exists('@(_findEnvironmentFile)')">
 		<Exec Command="cd ../../../Source/Xml/" />
 		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
 	</Target>
