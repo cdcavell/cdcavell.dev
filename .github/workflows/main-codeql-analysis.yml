@@ -26,9 +26,15 @@ jobs:
   analyze:
     needs: allowed-branch
     name: Analyze
-    #runs-on: ubuntu-latest
     runs-on: windows-latest
-    #runs-on: windows-2019
+
+    permissions:
+      # required for all workflows
+      security-events: write
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
 
     strategy:
       fail-fast: false

@@ -78,6 +78,7 @@ $ New-EventLog -LogName cdcavell.dev -Source usr.cdcavell.dev
 
 | Build | Date | Description |
 |-------|------|-------------|
+| 1.0.5.1 | 05/16/2023 | __Update GitHub Actions__ |
 | 1.0.5.0 | 05/15/2023 | __Game Development - Sudoku__ |
 | 1.0.4.0 | 05/14/2023 | __User Role Claims Development__ |
 | 1.0.3.3 | 12/14/2022 | __Migrate to universeodon.com__ |
