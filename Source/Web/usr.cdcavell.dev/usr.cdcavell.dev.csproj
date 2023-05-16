@@ -4,7 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
 	    <ImplicitUsings>enable</ImplicitUsings>
-	    <Version>1.0.5.1</Version>
+	    <Version>1.0.5.2</Version>
 	    <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	    <DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
 	    <Authors>Christopher D. Cavell</Authors>
@@ -73,8 +73,8 @@
 	</ItemGroup>
 
 	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)') AND Exists('@(_findEnvironmentFile)')">
-		<Exec Command="cd ../../../Source/Xml/" />
-		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
+		<Exec Command="cd ../../../Source/Xml/" Condition="Exists('@(_findEnvironmentFile)')" />
+		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" Condition="Exists('@(_findEnvironmentFile)')" />
 	</Target>
 
 	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)') AND Exists('@(_findEnvironmentFile)')">

@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Version>1.0.5.1</Version>
+    <Version>1.0.5.2</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
     <Authors>Christopher D. Cavell</Authors>
