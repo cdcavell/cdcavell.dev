@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+@if (User.Identity?.IsAuthenticated ?? false)
+{
+    <meta http-equiv="refresh" content="900;URL='/Home/SignOff'" />
+}
+
     <meta name="author" content="Christopher D. Cavell">
 
     <meta property="og:locale" content="en_US" />
